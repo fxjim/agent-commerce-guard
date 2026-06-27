@@ -1,0 +1,31 @@
+{
+  "name": "Agent Commerce Guard Base USDC Payment Request",
+  "product": "Agent Commerce Guard",
+  "version": "1.0.0",
+  "type": "base-usdc-erc20-transfer",
+  "standard": "EIP-681 ERC-20 transfer URI",
+  "url": "https://agent-commerce-guard.vercel.app/base-pay",
+  "purpose": "Unlock the Agent Commerce Guard launch pass and tx-hash gated package download.",
+  "network": "Base mainnet",
+  "chainId": 8453,
+  "token": {
+    "symbol": "USDC",
+    "name": "USD Coin",
+    "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "decimals": 6
+  },
+  "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+  "amount": {
+    "usdc": "1.00",
+    "atomic": "1000000"
+  },
+  "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000",
+  "humanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
+  "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
+  "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}",
+  "x402": {
+    "download": "https://agent-commerce-guard.vercel.app/api/x402-download",
+    "evaluate": "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
+    "discovery": "https://agent-commerce-guard.vercel.app/.well-known/x402"
+  }
+}

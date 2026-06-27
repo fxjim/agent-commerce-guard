@@ -38,6 +38,19 @@ Pay with a browser wallet:
 https://agent-commerce-guard.vercel.app/base-pay
 ```
 
+Machine-readable Base payment request:
+
+```text
+https://agent-commerce-guard.vercel.app/payment-request.json
+https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
+```
+
+EIP-681 payment URI:
+
+```text
+ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000
+```
+
 After sending USDC, verify and download:
 
 ```text

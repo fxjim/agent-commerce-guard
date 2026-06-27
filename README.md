@@ -23,8 +23,11 @@ The launch pass is available for `1 USDC` on Base.
 - Coding-agent quickstart: https://agent-commerce-guard.vercel.app/AGENTS.md
 - Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
+- Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
+- Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 - Mirrored GitHub purchase guide: ./BUY.md
 - Mirrored GitHub purchase JSON: ./purchase.json
+- Mirrored GitHub payment request JSON: ./payment-request.json
 - AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json
 - OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
 - Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
@@ -33,7 +36,7 @@ The launch pass is available for `1 USDC` on Base.
 - Robots/sitemap discovery: https://agent-commerce-guard.vercel.app/robots.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `0d4ce179c6d7c749cd039f6410a49489fbc62d73`
+- Current paid package shasum: `9b42b32feb2874363c71d471fe51546ead6980da`
 
 ## What It Includes
 
@@ -47,6 +50,7 @@ The launch pass is available for `1 USDC` on Base.
 - Demo responses include paid purchase metadata and exact x402 next-action commands.
 - Agent/plugin manifests for coding-agent, OpenAPI, x402, and LLM discovery.
 - Copy-paste purchase guides for x402 agents and manual Base buyers.
+- Machine-readable Base USDC payment request with an EIP-681 transfer URI.
 - Homepage buyer-command section with exact x402 inspect/pay commands and copy buttons.
 - Social preview image wired into OG/Twitter/schema metadata.
 - Structured Product/SoftwareApplication metadata on the live homepage for search and crawler discovery.
@@ -65,8 +69,9 @@ Agent commerce is moving faster than agent governance. This tool blocks or escal
 
 1. Read `https://agent-commerce-guard.vercel.app/offer.json`.
 2. Open `https://agent-commerce-guard.vercel.app/base-pay` and send `1 USDC` on Base mainnet.
-3. Verify the transaction at `/api/base-payment-status?tx={tx}`.
-4. Download the package at `/api/base-download?tx={tx}`.
+3. Or read `https://agent-commerce-guard.vercel.app/payment-request.json` for the exact manual Base payment request and EIP-681 URI.
+4. Verify the transaction at `/api/base-payment-status?tx={tx}`.
+5. Download the package at `/api/base-download?tx={tx}`.
 
 Agent buyers can also call `https://agent-commerce-guard.vercel.app/api/x402-download` directly and satisfy the returned x402 payment requirement.
 
