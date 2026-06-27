@@ -23,9 +23,10 @@ The launch pass is available for `1 USDC` on Base.
 - OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
 - Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
+- Robots/sitemap discovery: https://agent-commerce-guard.vercel.app/robots.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `895bbecdd9db5e0af98313dba2bd527e39321330`
+- Current paid package shasum: `141ef1fa93bcb8dd44b69da054b7ca93bddb233d`
 
 ## What It Includes
 
@@ -38,6 +39,7 @@ The launch pass is available for `1 USDC` on Base.
 - Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
 - Agent/plugin manifests for coding-agent, OpenAPI, x402, and LLM discovery.
 - Copy-paste purchase guides for x402 agents and manual Base buyers.
+- Structured Product/SoftwareApplication metadata on the live homepage for search and crawler discovery.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.
