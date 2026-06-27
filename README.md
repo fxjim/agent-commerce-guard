@@ -10,6 +10,7 @@ The launch pass is available for `1 USDC` on Base.
 
 - Product page: https://agent-commerce-guard.vercel.app
 - Base payment page: https://agent-commerce-guard.vercel.app/base-pay
+- Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
 - Well-known offer: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
@@ -25,6 +26,7 @@ The launch pass is available for `1 USDC` on Base.
 - Local HTTP evaluator.
 - Vercel-gated download flow.
 - Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
+- x402 paid package endpoint for agent-native purchase on Base mainnet.
 
 ## Why It Exists
 
@@ -36,3 +38,5 @@ Agent commerce is moving faster than agent governance. This tool blocks or escal
 2. Open `https://agent-commerce-guard.vercel.app/base-pay` and send `1 USDC` on Base mainnet.
 3. Verify the transaction at `/api/base-payment-status?tx={tx}`.
 4. Download the package at `/api/base-download?tx={tx}`.
+
+Agent buyers can also call `https://agent-commerce-guard.vercel.app/api/x402-download` directly and satisfy the returned x402 payment requirement.
