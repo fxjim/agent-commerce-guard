@@ -19,6 +19,8 @@ The launch pass is available for `1 USDC` on Base.
 - Coding-agent quickstart: https://agent-commerce-guard.vercel.app/AGENTS.md
 - Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
+- Mirrored GitHub purchase guide: ./BUY.md
+- Mirrored GitHub purchase JSON: ./purchase.json
 - AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json
 - OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
 - Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
