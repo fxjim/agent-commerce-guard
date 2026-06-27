@@ -40,7 +40,7 @@ The launch pass is available for `1 USDC` on Base.
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `8140982f858c07c64ea60cd8059128ea98e64d23`
+- Current paid package shasum: `40a6261088fc8e266c8e32cb18a707a2aac17f3f`
 
 ## What It Includes
 
