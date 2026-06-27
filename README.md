@@ -18,7 +18,7 @@ The launch pass is available for `1 USDC` on Base.
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `19d9cfb72e1790a1a6792bdca4e19a1f1b8744f2`
+- Current paid package shasum: `c7bef086498ca302ec50ad2ceb40555d02c48feb`
 
 ## What It Includes
 
@@ -31,6 +31,7 @@ The launch pass is available for `1 USDC` on Base.
 - Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.
+- Discovery metadata for agent workflow validation, command-risk scoring, destructive-action review, and wallet-spend approval.
 - x402 Bazaar metadata tags: `agent-commerce`, `agent-safety`, `guardrails`, `approval-gates`, `codex`, `x402`.
 
 ## Why It Exists
