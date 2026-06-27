@@ -16,7 +16,7 @@ The launch pass is available for `1 USDC` on Base.
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `f0ecf5c8363e63aafba28132727435d3601f8565`
+- Current paid package shasum: `bfad383d812ca8a129e97405ea063bc52e3c4171`
 
 ## What It Includes
 
