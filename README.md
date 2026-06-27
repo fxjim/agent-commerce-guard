@@ -15,6 +15,9 @@ The launch pass is available for `1 USDC` on Base.
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
 - Well-known offer: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
 - Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
+- Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
+- Coding-agent quickstart: https://agent-commerce-guard.vercel.app/AGENTS.md
+- AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json
 - OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
 - Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
@@ -31,6 +34,7 @@ The launch pass is available for `1 USDC` on Base.
 - Local HTTP evaluator.
 - Vercel-gated download flow.
 - Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
+- Agent/plugin manifests for coding-agent, OpenAPI, x402, and LLM discovery.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.
