@@ -7,12 +7,14 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 ## Buy The Launch Pass
 
 - Live product: https://agent-commerce-guard.vercel.app
-- Base checkout: https://agent-commerce-guard.vercel.app/base-pay
+- Base checkout: https://agent-commerce-guard.vercel.app/pay
+- Checkout alias: https://agent-commerce-guard.vercel.app/checkout
 - Public Gist buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
+- Short purchase guide: https://agent-commerce-guard.vercel.app/buy
 - Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
-- Base payment request: https://agent-commerce-guard.vercel.app/payment-request.json
-- Scan-to-pay QR: https://agent-commerce-guard.vercel.app/payment-request.svg
+- Short Base payment request: https://agent-commerce-guard.vercel.app/pay.json
+- Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
 - Pages LLM summary: https://fxjim.github.io/agent-commerce-guard/llms.txt
 - Pages agents manifest: https://fxjim.github.io/agent-commerce-guard/agents.json
 - Pages well-known x402: https://fxjim.github.io/agent-commerce-guard/.well-known/x402
@@ -25,7 +27,8 @@ The launch pass costs `1 USDC` on Base mainnet and unlocks the packaged CLI, exa
 
 - Paid policy evaluator: `POST https://agent-commerce-guard.vercel.app/api/x402-evaluate`
 - Paid package download: `GET https://agent-commerce-guard.vercel.app/api/x402-download`
-- x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
+- Short x402 discovery: https://agent-commerce-guard.vercel.app/x402
+- Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
 - Inspect evaluator:
 
 ```bash
@@ -51,4 +54,4 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 - Launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - GitHub profile launch links: https://github.com/fxjim/fxjim
-- Current paid package shasum: `9be1bc9a0e07b0bb4e104218bab2330b5dee3e11`
+- Current paid package shasum: `7ead816f83790898bed4a021ee3e6e5fad629b40`

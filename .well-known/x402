@@ -2,17 +2,18 @@
   "name": "Agent Commerce Guard",
   "description": "Paid x402 package download plus an agent workflow validator and command-risk API for wallet spend, deployments, token launches, social posts, destructive actions, and credential access.",
   "url": "https://agent-commerce-guard.vercel.app",
-  "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/",
-  "agentsUrl": "https://fxjim.github.io/agent-commerce-guard/agents.json",
+  "packageShasum": "7ead816f83790898bed4a021ee3e6e5fad629b40",
+  "agentsUrl": "https://agent-commerce-guard.vercel.app/agents.json",
+  "publicGistUrl": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
   "purchaseUrl": "https://agent-commerce-guard.vercel.app/purchase.json",
-  "pagesPurchaseUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/purchase.json",
+  "shortPurchaseUrl": "https://agent-commerce-guard.vercel.app/buy",
   "paymentRequestUrl": "https://agent-commerce-guard.vercel.app/payment-request.json",
-  "pagesPaymentRequestUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/payment-request.json",
+  "shortPaymentRequestUrl": "https://agent-commerce-guard.vercel.app/pay.json",
   "paymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+  "shortPaymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/qr",
+  "shortHumanCheckoutUrl": "https://agent-commerce-guard.vercel.app/pay",
   "aiPluginUrl": "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
   "openapiUrl": "https://agent-commerce-guard.vercel.app/openapi.json",
-  "publicGistUrl": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
-  "packageShasum": "9be1bc9a0e07b0bb4e104218bab2330b5dee3e11",
   "resources": [
     {
       "type": "http",
@@ -44,9 +45,12 @@
         "x402"
       ],
       "offer": "https://agent-commerce-guard.vercel.app/offer.json",
-      "paymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
-      "paymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
-      "humanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
+      "paymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
+      "canonicalPaymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
+      "paymentRequestQr": "https://agent-commerce-guard.vercel.app/qr",
+      "canonicalPaymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+      "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
+      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
     },
     {
       "type": "http",
@@ -96,9 +100,12 @@
         "x402"
       ],
       "offer": "https://agent-commerce-guard.vercel.app/offer.json",
-      "paymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
-      "paymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
-      "humanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
+      "paymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
+      "canonicalPaymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
+      "paymentRequestQr": "https://agent-commerce-guard.vercel.app/qr",
+      "canonicalPaymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+      "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
+      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
     }
   ]
 }

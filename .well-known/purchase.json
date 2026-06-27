@@ -2,7 +2,9 @@
   "name": "Agent Commerce Guard Purchase Guide",
   "product": "Agent Commerce Guard",
   "url": "https://agent-commerce-guard.vercel.app",
+  "packageShasum": "7ead816f83790898bed4a021ee3e6e5fad629b40",
   "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/",
+  "publicGistUrl": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
   "supportIssueUrl": "https://github.com/fxjim/agent-commerce-guard/issues/1",
   "launchDiscussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
   "price": {
@@ -17,15 +19,21 @@
   "discovery": {
     "offer": "https://agent-commerce-guard.vercel.app/offer.json",
     "x402": "https://agent-commerce-guard.vercel.app/.well-known/x402",
-    "pagesX402": "https://fxjim.github.io/agent-commerce-guard/.well-known/x402",
+    "shortX402": "https://agent-commerce-guard.vercel.app/x402",
     "openapi": "https://agent-commerce-guard.vercel.app/openapi.json",
-    "agents": "https://fxjim.github.io/agent-commerce-guard/.well-known/agents.json",
+    "agents": "https://agent-commerce-guard.vercel.app/agents.json",
+    "shortPay": "https://agent-commerce-guard.vercel.app/pay",
+    "shortBuyGuide": "https://agent-commerce-guard.vercel.app/buy",
     "paymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
-    "pagesPaymentRequest": "https://fxjim.github.io/agent-commerce-guard/.well-known/payment-request.json",
+    "shortPaymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
+    "wellKnownPaymentRequest": "https://agent-commerce-guard.vercel.app/.well-known/payment-request.json",
     "paymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+    "shortPaymentRequestQr": "https://agent-commerce-guard.vercel.app/qr",
+    "wellKnownPaymentRequestQr": "https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg",
+    "githubPages": "https://fxjim.github.io/agent-commerce-guard/",
     "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
     "launchDiscussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
-    "llms": "https://fxjim.github.io/agent-commerce-guard/llms.txt"
+    "llms": "https://agent-commerce-guard.vercel.app/llms.txt"
   },
   "x402PurchaseCommands": [
     {
@@ -44,10 +52,13 @@
     "npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-download --json"
   ],
   "manualPayment": {
-    "humanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
-    "paymentRequest": "https://fxjim.github.io/agent-commerce-guard/.well-known/payment-request.json",
+    "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
+    "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
+    "paymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
+    "shortPaymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
     "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000",
     "paymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+    "shortPaymentRequestQr": "https://agent-commerce-guard.vercel.app/qr",
     "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
     "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}",
     "instructions": [

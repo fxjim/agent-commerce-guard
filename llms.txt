@@ -2,10 +2,36 @@
 
 Agent Commerce Guard is a local-first CLI, skill pack, and paid x402 API for AI agents that can spend money, sell services, post socially, deploy publicly, launch tokens, run destructive commands, or touch wallets and credentials.
 
+Primary URL: https://agent-commerce-guard.vercel.app
 GitHub Pages launch page: https://fxjim.github.io/agent-commerce-guard/
-Primary product URL: https://agent-commerce-guard.vercel.app
+Public buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
 Social preview image: https://agent-commerce-guard.vercel.app/og-image.png
-Repository and release notes: https://github.com/fxjim/agent-commerce-guard
+Offer manifest: https://agent-commerce-guard.vercel.app/offer.json
+Well-known offer manifest: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
+OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
+Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
+Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
+Well-known agents manifest: https://agent-commerce-guard.vercel.app/.well-known/agents.json
+Coding-agent quickstart: https://agent-commerce-guard.vercel.app/AGENTS.md
+Short purchase guide: https://agent-commerce-guard.vercel.app/buy
+Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
+Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
+Well-known purchase guide: https://agent-commerce-guard.vercel.app/.well-known/purchase.json
+Short x402 manifest: https://agent-commerce-guard.vercel.app/x402
+Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json
+Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
+Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
+Short Base USDC payment QR code: https://agent-commerce-guard.vercel.app/qr
+Base USDC payment QR code: https://agent-commerce-guard.vercel.app/payment-request.svg
+Well-known payment QR code: https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
+AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json
+Short Base payment page: https://agent-commerce-guard.vercel.app/pay
+Checkout alias: https://agent-commerce-guard.vercel.app/checkout
+Base payment page: https://agent-commerce-guard.vercel.app/base-pay
+Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
+Agent x402 paid evaluation: https://agent-commerce-guard.vercel.app/api/x402-evaluate
+Hosted demo endpoint: https://agent-commerce-guard.vercel.app/api/demo-evaluate
+GitHub launch repo: https://github.com/fxjim/agent-commerce-guard
 Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
@@ -13,34 +39,29 @@ Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
 The Base Launch Pass costs 1 USDC on Base mainnet.
 
-- Base checkout: https://agent-commerce-guard.vercel.app/base-pay
-- Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
-- Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
-- Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
-- Base USDC payment QR code: https://agent-commerce-guard.vercel.app/payment-request.svg
-- Verify a payment: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
-- Download after payment: https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}
+- Current paid package shasum: 7ead816f83790898bed4a021ee3e6e5fad629b40
 - Receiver: 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f
 - USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
 - Chain ID: 8453
+- Verify a payment: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
+- Download after payment: https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}
+- EIP-681 payment URI: ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000
+- QR code for the same payment URI: https://agent-commerce-guard.vercel.app/qr
+- Agent-native x402 paid download: https://agent-commerce-guard.vercel.app/api/x402-download
+- Agent-native x402 paid policy evaluation: POST https://agent-commerce-guard.vercel.app/api/x402-evaluate with JSON `{ "action": { ... } }` or `{ "actions": [ ... ] }`
 - x402 amount: 1000000 atomic USDC
-- Current paid package shasum: 9be1bc9a0e07b0bb4e104218bab2330b5dee3e11
+- x402 discovery tags: agent-commerce, agent-safety, agent-workflow, workflow-validation, command-risk, destructive-actions, wallet-spend, approval-gates, guardrails, autonomous-agents, codex, x402
+- Free demo responses include `purchase`, `purchaseGuideUrl`, and `nextActions` with exact x402 inspect/pay commands. The demo still does not echo submitted action text.
+- Purchase questions and x402 integration support: https://github.com/fxjim/agent-commerce-guard/issues/1
+- Launch discussion and product context: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
-## Agent-Native x402
+## Contents
 
-- Paid policy evaluator: POST https://agent-commerce-guard.vercel.app/api/x402-evaluate
-- Paid package download: GET https://agent-commerce-guard.vercel.app/api/x402-download
-- x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
-- OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
-- Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
-- Free demo endpoint: https://agent-commerce-guard.vercel.app/api/demo-evaluate
-
-Inspect before paying:
-
-```bash
-npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-evaluate --json
-npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-download --json
-```
+- CLI policy engine.
+- Codex, Claude, and OpenClaw-style skill pack.
+- Approval log and launch checklist templates.
+- Action manifest schema and examples.
+- Local HTTP evaluator.
 
 ## Use Case
 

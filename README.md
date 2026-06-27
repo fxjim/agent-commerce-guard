@@ -15,19 +15,24 @@ The launch pass is available for `1 USDC` on Base.
 - Product page: https://agent-commerce-guard.vercel.app
 - GitHub Pages launch page: https://fxjim.github.io/agent-commerce-guard/
 - Public Gist buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
-- Base payment page: https://agent-commerce-guard.vercel.app/base-pay
+- Short Base checkout: https://agent-commerce-guard.vercel.app/pay
+- Checkout alias: https://agent-commerce-guard.vercel.app/checkout
 - Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 - Agent x402 evaluation API: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
 - Well-known offer: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
+- Short x402 discovery: https://agent-commerce-guard.vercel.app/x402
 - Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
 - Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
 - Coding-agent quickstart: https://agent-commerce-guard.vercel.app/AGENTS.md
+- Short purchase guide: https://agent-commerce-guard.vercel.app/buy
 - Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
-- Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
+- Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json
+- Canonical Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
 - Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
-- Scan-to-pay QR: https://agent-commerce-guard.vercel.app/payment-request.svg
+- Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
+- Canonical scan-to-pay QR: https://agent-commerce-guard.vercel.app/payment-request.svg
 - Well-known scan-to-pay QR: https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
 - Mirrored GitHub purchase guide: ./BUY.md
 - Mirrored GitHub purchase JSON: ./purchase.json
@@ -49,7 +54,7 @@ The launch pass is available for `1 USDC` on Base.
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `9be1bc9a0e07b0bb4e104218bab2330b5dee3e11`
+- Current paid package shasum: `7ead816f83790898bed4a021ee3e6e5fad629b40`
 
 ## What It Includes
 
@@ -87,8 +92,8 @@ Agent commerce is moving faster than agent governance. This tool blocks or escal
 ## Agent Buyer Flow
 
 1. Read `https://agent-commerce-guard.vercel.app/offer.json`.
-2. Open `https://agent-commerce-guard.vercel.app/base-pay` and send `1 USDC` on Base mainnet.
-3. Or read `https://agent-commerce-guard.vercel.app/payment-request.json` for the exact manual Base payment request and EIP-681 URI, or scan `https://agent-commerce-guard.vercel.app/payment-request.svg`.
+2. Open `https://agent-commerce-guard.vercel.app/pay` and send `1 USDC` on Base mainnet.
+3. Or read `https://agent-commerce-guard.vercel.app/pay.json` for the exact manual Base payment request and EIP-681 URI, or scan `https://agent-commerce-guard.vercel.app/qr`.
 4. Verify the transaction at `/api/base-payment-status?tx={tx}`.
 5. Download the package at `/api/base-download?tx={tx}`.
 

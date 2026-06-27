@@ -35,12 +35,27 @@ npx awal@2.0.3 x402 pay https://agent-commerce-guard.vercel.app/api/x402-downloa
 Pay with a browser wallet:
 
 ```text
+https://agent-commerce-guard.vercel.app/pay
+https://agent-commerce-guard.vercel.app/checkout
 https://agent-commerce-guard.vercel.app/base-pay
+```
+
+GitHub Pages launch page:
+
+```text
+https://fxjim.github.io/agent-commerce-guard/
+```
+
+Public buyer brief:
+
+```text
+https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
 ```
 
 Machine-readable Base payment request:
 
 ```text
+https://agent-commerce-guard.vercel.app/pay.json
 https://agent-commerce-guard.vercel.app/payment-request.json
 https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 ```
@@ -48,6 +63,7 @@ https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 Scan-to-pay QR:
 
 ```text
+https://agent-commerce-guard.vercel.app/qr
 https://agent-commerce-guard.vercel.app/payment-request.svg
 https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
 ```
