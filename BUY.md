@@ -72,3 +72,11 @@ curl -sS https://agent-commerce-guard.vercel.app/api/demo-evaluate
 ```
 
 The demo returns sanitized decisions without echoing submitted action text.
+
+## Support
+
+Use the pinned launch/support issue for purchase questions, x402 integration notes, failed wallet flows, or agent manifest requests:
+
+```text
+https://github.com/fxjim/agent-commerce-guard/issues/1
+```
