@@ -45,6 +45,13 @@ https://agent-commerce-guard.vercel.app/payment-request.json
 https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 ```
 
+Scan-to-pay QR:
+
+```text
+https://agent-commerce-guard.vercel.app/payment-request.svg
+https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
+```
+
 EIP-681 payment URI:
 
 ```text
