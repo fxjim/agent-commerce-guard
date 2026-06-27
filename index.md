@@ -8,6 +8,7 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 
 - Live product: https://agent-commerce-guard.vercel.app
 - Base checkout: https://agent-commerce-guard.vercel.app/base-pay
+- Public Gist buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
 - Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
 - Base payment request: https://agent-commerce-guard.vercel.app/payment-request.json
@@ -46,6 +47,7 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 
 - GitHub Pages launch page: https://fxjim.github.io/agent-commerce-guard/
 - Repository and release notes: https://github.com/fxjim/agent-commerce-guard
+- Public Gist buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
 - Launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - GitHub profile launch links: https://github.com/fxjim/fxjim
