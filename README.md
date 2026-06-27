@@ -4,6 +4,8 @@ Approval gates and receipts for AI agents that can spend money, sell services, p
 
 Agent Commerce Guard is a local-first CLI and skill pack for builders adding x402, ACP, wallets, seller runtimes, paid APIs, or social integrations to autonomous agents.
 
+![Agent Commerce Guard preview](https://agent-commerce-guard.vercel.app/og-image.png)
+
 ## Launch Pass
 
 The launch pass is available for `1 USDC` on Base.
@@ -25,10 +27,11 @@ The launch pass is available for `1 USDC` on Base.
 - OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
 - Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
+- Social preview image: https://agent-commerce-guard.vercel.app/og-image.png
 - Robots/sitemap discovery: https://agent-commerce-guard.vercel.app/robots.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `d9ac094f1a1679a876b144dcbdb9f9e464e5db3a`
+- Current paid package shasum: `0d4ce179c6d7c749cd039f6410a49489fbc62d73`
 
 ## What It Includes
 
@@ -43,6 +46,7 @@ The launch pass is available for `1 USDC` on Base.
 - Agent/plugin manifests for coding-agent, OpenAPI, x402, and LLM discovery.
 - Copy-paste purchase guides for x402 agents and manual Base buyers.
 - Homepage buyer-command section with exact x402 inspect/pay commands and copy buttons.
+- Social preview image wired into OG/Twitter/schema metadata.
 - Structured Product/SoftwareApplication metadata on the live homepage for search and crawler discovery.
 - IndexNow key route and refreshed submitted URL batch for faster search discovery.
 - OpenAPI 3.1 spec for paid and demo endpoints.
