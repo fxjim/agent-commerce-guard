@@ -26,7 +26,7 @@ The launch pass is available for `1 USDC` on Base.
 - Robots/sitemap discovery: https://agent-commerce-guard.vercel.app/robots.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `eff3f960227bf6e71d017e5988f0676aa90da44a`
+- Current paid package shasum: `b8bcb625f18726674fd4df9b3299a6309971e9aa`
 
 ## What It Includes
 
@@ -39,8 +39,9 @@ The launch pass is available for `1 USDC` on Base.
 - Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
 - Agent/plugin manifests for coding-agent, OpenAPI, x402, and LLM discovery.
 - Copy-paste purchase guides for x402 agents and manual Base buyers.
+- Homepage buyer-command section with exact x402 inspect/pay commands and copy buttons.
 - Structured Product/SoftwareApplication metadata on the live homepage for search and crawler discovery.
-- IndexNow key route and submitted URL batch for faster search discovery.
+- IndexNow key route and refreshed submitted URL batch for faster search discovery.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.
