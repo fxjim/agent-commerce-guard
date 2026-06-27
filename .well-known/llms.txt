@@ -1,0 +1,15 @@
+# Agent Commerce Guard
+
+Canonical LLM-readable launch page:
+https://fxjim.github.io/agent-commerce-guard/llms.txt
+
+Paid x402 policy evaluator:
+POST https://agent-commerce-guard.vercel.app/api/x402-evaluate
+
+Paid x402 package download:
+GET https://agent-commerce-guard.vercel.app/api/x402-download
+
+Well-known x402 discovery mirror:
+https://fxjim.github.io/agent-commerce-guard/.well-known/x402
+
+The Base Launch Pass costs 1 USDC on Base mainnet. Receiver: 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f. USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913. Chain ID: 8453.

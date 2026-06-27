@@ -1,0 +1,69 @@
+{
+  "name": "Agent Commerce Guard Purchase Guide",
+  "product": "Agent Commerce Guard",
+  "url": "https://agent-commerce-guard.vercel.app",
+  "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/",
+  "supportIssueUrl": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+  "launchDiscussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
+  "price": {
+    "amount": "1.00",
+    "amountAtomic": "1000000",
+    "currency": "USDC",
+    "network": "Base mainnet",
+    "chainId": 8453,
+    "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f"
+  },
+  "discovery": {
+    "offer": "https://agent-commerce-guard.vercel.app/offer.json",
+    "x402": "https://agent-commerce-guard.vercel.app/.well-known/x402",
+    "pagesX402": "https://fxjim.github.io/agent-commerce-guard/.well-known/x402",
+    "openapi": "https://agent-commerce-guard.vercel.app/openapi.json",
+    "agents": "https://fxjim.github.io/agent-commerce-guard/.well-known/agents.json",
+    "paymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
+    "pagesPaymentRequest": "https://fxjim.github.io/agent-commerce-guard/.well-known/payment-request.json",
+    "paymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+    "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+    "launchDiscussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
+    "llms": "https://fxjim.github.io/agent-commerce-guard/llms.txt"
+  },
+  "x402PurchaseCommands": [
+    {
+      "id": "paid-policy-evaluation",
+      "description": "Pay 1 USDC and evaluate an action manifest.",
+      "command": "npx awal@2.0.3 x402 pay https://agent-commerce-guard.vercel.app/api/x402-evaluate -X POST --max-amount 1000000 -d '{\"action\":{\"id\":\"launch-payment\",\"actor\":\"codex\",\"action\":\"Send 1 USDC on Base to unlock a paid package\",\"amountUsd\":1,\"approved\":false}}' --json"
+    },
+    {
+      "id": "paid-package-download",
+      "description": "Pay 1 USDC and download the paid package tarball.",
+      "command": "npx awal@2.0.3 x402 pay https://agent-commerce-guard.vercel.app/api/x402-download --max-amount 1000000"
+    }
+  ],
+  "inspectCommands": [
+    "npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-evaluate --json",
+    "npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-download --json"
+  ],
+  "manualPayment": {
+    "humanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
+    "paymentRequest": "https://fxjim.github.io/agent-commerce-guard/.well-known/payment-request.json",
+    "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000",
+    "paymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+    "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
+    "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}",
+    "instructions": [
+      "Send exactly 1 USDC on Base mainnet to the receiver address.",
+      "Paste the transaction hash into the Base checkout page or call the verifier URL.",
+      "Download through the tx-hash gated package URL after verification."
+    ]
+  },
+  "freeProbe": {
+    "method": "POST",
+    "url": "https://agent-commerce-guard.vercel.app/api/demo-evaluate",
+    "description": "Run a free sanitized demo evaluation before paying."
+  },
+  "support": {
+    "url": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+    "discussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
+    "description": "Pinned launch/support issue for purchase questions, x402 integration notes, failed wallet flows, or agent manifest requests."
+  }
+}
