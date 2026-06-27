@@ -4,7 +4,7 @@
   "image": "https://agent-commerce-guard.vercel.app/og-image.png",
   "description": "x402-paid agent workflow validator and command-risk scorer for wallet spend, deployments, token launches, social posts, destructive actions, and credential access.",
   "version": "0.1.0",
-  "packageShasum": "7ead816f83790898bed4a021ee3e6e5fad629b40",
+  "packageShasum": "20fee05124a1d2c5511df4a81a56ed19cff36ade",
   "githubPages": "https://fxjim.github.io/agent-commerce-guard/",
   "publicGist": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
   "support": "https://github.com/fxjim/agent-commerce-guard/issues/1",

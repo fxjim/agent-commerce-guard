@@ -2,7 +2,7 @@
   "name": "Agent Commerce Guard",
   "description": "Paid x402 package download plus an agent workflow validator and command-risk API for wallet spend, deployments, token launches, social posts, destructive actions, and credential access.",
   "url": "https://agent-commerce-guard.vercel.app",
-  "packageShasum": "7ead816f83790898bed4a021ee3e6e5fad629b40",
+  "packageShasum": "20fee05124a1d2c5511df4a81a56ed19cff36ade",
   "agentsUrl": "https://agent-commerce-guard.vercel.app/agents.json",
   "publicGistUrl": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
   "purchaseUrl": "https://agent-commerce-guard.vercel.app/purchase.json",
