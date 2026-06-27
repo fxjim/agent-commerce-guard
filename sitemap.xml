@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/BUY.md</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/purchase.json</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/payment-request.json</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/payment-request.svg</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/llms.txt</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/agents.json</loc>
+  </url>
+</urlset>

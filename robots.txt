@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fxjim.github.io/agent-commerce-guard/sitemap.xml

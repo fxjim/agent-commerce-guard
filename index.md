@@ -12,6 +12,9 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
 - Base payment request: https://agent-commerce-guard.vercel.app/payment-request.json
 - Scan-to-pay QR: https://agent-commerce-guard.vercel.app/payment-request.svg
+- Pages LLM summary: https://fxjim.github.io/agent-commerce-guard/llms.txt
+- Pages agents manifest: https://fxjim.github.io/agent-commerce-guard/agents.json
+- Pages sitemap: https://fxjim.github.io/agent-commerce-guard/sitemap.xml
 
 The launch pass costs `1 USDC` on Base mainnet and unlocks the packaged CLI, examples, templates, local evaluator, and installable guardrail skill.
 
@@ -44,4 +47,4 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 - Launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - GitHub profile launch links: https://github.com/fxjim/fxjim
-- Current paid package shasum: `c5649a469eed67b04807e9d2bd5dcc6313df2c2b`
+- Current paid package shasum: `9be1bc9a0e07b0bb4e104218bab2330b5dee3e11`

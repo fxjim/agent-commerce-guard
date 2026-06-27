@@ -36,13 +36,16 @@ The launch pass is available for `1 USDC` on Base.
 - OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
 - Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
+- GitHub Pages LLM summary: https://fxjim.github.io/agent-commerce-guard/llms.txt
+- GitHub Pages agents manifest: https://fxjim.github.io/agent-commerce-guard/agents.json
+- GitHub Pages sitemap: https://fxjim.github.io/agent-commerce-guard/sitemap.xml
 - Social preview image: https://agent-commerce-guard.vercel.app/og-image.png
 - Robots/sitemap discovery: https://agent-commerce-guard.vercel.app/robots.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `c5649a469eed67b04807e9d2bd5dcc6313df2c2b`
+- Current paid package shasum: `9be1bc9a0e07b0bb4e104218bab2330b5dee3e11`
 
 ## What It Includes
 
@@ -65,6 +68,7 @@ The launch pass is available for `1 USDC` on Base.
 - Pinned GitHub launch/support issue for buyer questions and x402 integration notes.
 - Public GitHub launch discussion for product context and buyer discovery.
 - GitHub Pages launch page for search and buyer discovery.
+- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `robots.txt`, and `sitemap.xml`.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.

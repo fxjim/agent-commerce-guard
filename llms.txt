@@ -1,0 +1,47 @@
+# Agent Commerce Guard
+
+Agent Commerce Guard is a local-first CLI, skill pack, and paid x402 API for AI agents that can spend money, sell services, post socially, deploy publicly, launch tokens, run destructive commands, or touch wallets and credentials.
+
+GitHub Pages launch page: https://fxjim.github.io/agent-commerce-guard/
+Primary product URL: https://agent-commerce-guard.vercel.app
+Social preview image: https://agent-commerce-guard.vercel.app/og-image.png
+Repository and release notes: https://github.com/fxjim/agent-commerce-guard
+Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
+Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
+
+## Purchase
+
+The Base Launch Pass costs 1 USDC on Base mainnet.
+
+- Base checkout: https://agent-commerce-guard.vercel.app/base-pay
+- Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
+- Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
+- Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
+- Base USDC payment QR code: https://agent-commerce-guard.vercel.app/payment-request.svg
+- Verify a payment: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
+- Download after payment: https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}
+- Receiver: 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f
+- USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
+- Chain ID: 8453
+- x402 amount: 1000000 atomic USDC
+- Current paid package shasum: 9be1bc9a0e07b0bb4e104218bab2330b5dee3e11
+
+## Agent-Native x402
+
+- Paid policy evaluator: POST https://agent-commerce-guard.vercel.app/api/x402-evaluate
+- Paid package download: GET https://agent-commerce-guard.vercel.app/api/x402-download
+- x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
+- OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
+- Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
+- Free demo endpoint: https://agent-commerce-guard.vercel.app/api/demo-evaluate
+
+Inspect before paying:
+
+```bash
+npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-evaluate --json
+npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-download --json
+```
+
+## Use Case
+
+Use this before agents cross financial, production, social, token, command-risk, credential, or wallet boundaries. The paid evaluation endpoint works as an agent workflow validator and command-risk scorer for action manifests.
