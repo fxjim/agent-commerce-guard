@@ -80,3 +80,9 @@ Use the pinned launch/support issue for purchase questions, x402 integration not
 ```text
 https://github.com/fxjim/agent-commerce-guard/issues/1
 ```
+
+Launch discussion and product context:
+
+```text
+https://github.com/fxjim/agent-commerce-guard/discussions/2
+```

@@ -3,6 +3,7 @@
   "product": "Agent Commerce Guard",
   "url": "https://agent-commerce-guard.vercel.app",
   "supportIssueUrl": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+  "launchDiscussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
   "price": {
     "amount": "1.00",
     "amountAtomic": "1000000",
@@ -22,6 +23,7 @@
     "paymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
     "wellKnownPaymentRequestQr": "https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg",
     "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+    "launchDiscussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
     "llms": "https://agent-commerce-guard.vercel.app/llms.txt"
   },
   "x402PurchaseCommands": [
@@ -60,6 +62,7 @@
   },
   "support": {
     "url": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+    "discussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
     "description": "Pinned launch/support issue for purchase questions, x402 integration notes, failed wallet flows, or agent manifest requests."
   }
 }

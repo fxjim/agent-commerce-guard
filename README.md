@@ -39,8 +39,9 @@ The launch pass is available for `1 USDC` on Base.
 - Robots/sitemap discovery: https://agent-commerce-guard.vercel.app/robots.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
+- Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `40a6261088fc8e266c8e32cb18a707a2aac17f3f`
+- Current paid package shasum: `c5649a469eed67b04807e9d2bd5dcc6313df2c2b`
 
 ## What It Includes
 
@@ -61,6 +62,7 @@ The launch pass is available for `1 USDC` on Base.
 - Structured Product/SoftwareApplication metadata on the live homepage for search and crawler discovery.
 - IndexNow key route and refreshed submitted URL batch for faster search discovery.
 - Pinned GitHub launch/support issue for buyer questions and x402 integration notes.
+- Public GitHub launch discussion for product context and buyer discovery.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.
@@ -86,3 +88,5 @@ Agent workflows can call `POST https://agent-commerce-guard.vercel.app/api/x402-
 The x402 endpoints return Base-mainnet `exact` payment requirements for `1000000` atomic USDC and include route-level Bazaar metadata for agent discovery.
 
 Purchase questions, wallet-flow issues, and x402 integration notes can go in the pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1.
+
+Launch context and buyer discovery thread: https://github.com/fxjim/agent-commerce-guard/discussions/2.
