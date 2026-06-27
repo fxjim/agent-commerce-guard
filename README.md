@@ -6,6 +6,8 @@ Agent Commerce Guard is a local-first CLI and skill pack for builders adding x40
 
 ![Agent Commerce Guard preview](https://agent-commerce-guard.vercel.app/og-image.png)
 
+Use the GitHub Sponsor button or the Base payment page to buy the `1 USDC` launch pass.
+
 ## Launch Pass
 
 The launch pass is available for `1 USDC` on Base.
