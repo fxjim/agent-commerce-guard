@@ -11,12 +11,14 @@ The launch pass is available for `1 USDC` on Base.
 - Product page: https://agent-commerce-guard.vercel.app
 - Base payment page: https://agent-commerce-guard.vercel.app/base-pay
 - Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
+- Agent x402 evaluation API: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
 - Well-known offer: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
+- Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `0dd4bd5434956ac51491f6b6d3fd30dceb1b5d3d`
+- Current paid package shasum: `19d9cfb72e1790a1a6792bdca4e19a1f1b8744f2`
 
 ## What It Includes
 
@@ -28,6 +30,7 @@ The launch pass is available for `1 USDC` on Base.
 - Vercel-gated download flow.
 - Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
+- x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.
 - x402 Bazaar metadata tags: `agent-commerce`, `agent-safety`, `guardrails`, `approval-gates`, `codex`, `x402`.
 
 ## Why It Exists
@@ -43,4 +46,6 @@ Agent commerce is moving faster than agent governance. This tool blocks or escal
 
 Agent buyers can also call `https://agent-commerce-guard.vercel.app/api/x402-download` directly and satisfy the returned x402 payment requirement.
 
-The x402 endpoint returns a Base-mainnet `exact` payment requirement for `1000000` atomic USDC and includes route-level Bazaar metadata for agent discovery.
+Agent workflows can call `POST https://agent-commerce-guard.vercel.app/api/x402-evaluate` and satisfy the returned x402 payment requirement to receive a sanitized policy decision.
+
+The x402 endpoints return Base-mainnet `exact` payment requirements for `1000000` atomic USDC and include route-level Bazaar metadata for agent discovery.
