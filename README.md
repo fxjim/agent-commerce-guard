@@ -11,6 +11,7 @@ The launch pass is available for `1 USDC` on Base.
 - Product page: https://agent-commerce-guard.vercel.app
 - Base payment page: https://agent-commerce-guard.vercel.app/base-pay
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
+- Well-known offer: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
 
