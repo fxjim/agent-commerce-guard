@@ -13,6 +13,7 @@ The launch pass is available for `1 USDC` on Base.
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
 - Well-known offer: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
+- Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
 
 ## What It Includes
@@ -23,6 +24,7 @@ The launch pass is available for `1 USDC` on Base.
 - Action manifest examples.
 - Local HTTP evaluator.
 - Vercel-gated download flow.
+- Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
 
 ## Why It Exists
 
