@@ -39,6 +39,7 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 
 ## Public Links
 
+- GitHub Pages launch page: https://fxjim.github.io/agent-commerce-guard/
 - Repository and release notes: https://github.com/fxjim/agent-commerce-guard
 - Launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2

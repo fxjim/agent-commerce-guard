@@ -13,6 +13,7 @@ Use the GitHub Sponsor button or the Base payment page to buy the `1 USDC` launc
 The launch pass is available for `1 USDC` on Base.
 
 - Product page: https://agent-commerce-guard.vercel.app
+- GitHub Pages launch page: https://fxjim.github.io/agent-commerce-guard/
 - Base payment page: https://agent-commerce-guard.vercel.app/base-pay
 - Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 - Agent x402 evaluation API: https://agent-commerce-guard.vercel.app/api/x402-evaluate
@@ -63,6 +64,7 @@ The launch pass is available for `1 USDC` on Base.
 - IndexNow key route and refreshed submitted URL batch for faster search discovery.
 - Pinned GitHub launch/support issue for buyer questions and x402 integration notes.
 - Public GitHub launch discussion for product context and buyer discovery.
+- GitHub Pages launch page for search and buyer discovery.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.
