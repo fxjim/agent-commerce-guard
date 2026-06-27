@@ -12,7 +12,7 @@ The launch pass is available for `1 USDC` on Base.
 - Base payment page: https://agent-commerce-guard.vercel.app/base-pay
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
-- Package unlock: paste the Base transaction hash after payment.
+- Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
 
 ## What It Includes
 
@@ -30,6 +30,6 @@ Agent commerce is moving faster than agent governance. This tool blocks or escal
 ## Agent Buyer Flow
 
 1. Read `https://agent-commerce-guard.vercel.app/offer.json`.
-2. Send `1 USDC` on Base mainnet to the listed receiver.
+2. Open `https://agent-commerce-guard.vercel.app/base-pay` and send `1 USDC` on Base mainnet.
 3. Verify the transaction at `/api/base-payment-status?tx={tx}`.
 4. Download the package at `/api/base-download?tx={tx}`.
