@@ -199,10 +199,13 @@
   ],
   "githubPagesOffer": "https://fxjim.github.io/agent-commerce-guard/offer.json",
   "githubPagesWellKnownOffer": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json",
+  "githubPagesWellKnownOfferAlias": "https://fxjim.github.io/agent-commerce-guard/.well-known/offer.json",
   "offerMirrors": [
     "https://agent-commerce-guard.vercel.app/offer.json",
     "https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json",
+    "https://agent-commerce-guard.vercel.app/.well-known/offer.json",
     "https://fxjim.github.io/agent-commerce-guard/offer.json",
-    "https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json"
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json",
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/offer.json"
   ]
 }

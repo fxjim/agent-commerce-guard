@@ -21,8 +21,10 @@ The launch pass is available for `1 USDC` on Base.
 - Agent x402 evaluation API: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
 - Well-known offer: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
+- Well-known offer alias: https://agent-commerce-guard.vercel.app/.well-known/offer.json
 - GitHub Pages offer mirror: https://fxjim.github.io/agent-commerce-guard/offer.json
 - GitHub Pages well-known offer mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json
+- GitHub Pages well-known offer alias: https://fxjim.github.io/agent-commerce-guard/.well-known/offer.json
 - Short x402 discovery: https://agent-commerce-guard.vercel.app/x402
 - Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
 - Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
@@ -90,7 +92,7 @@ The launch pass is available for `1 USDC` on Base.
 - Public GitHub launch discussion for product context and buyer discovery.
 - GitHub Pages launch page for search and buyer discovery.
 - Public GitHub Gist buyer brief with exact Base/x402 purchase commands.
-- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `offer.json`, `.well-known/agent-commerce-guard.json`, `openapi.json`, `.well-known/openapi.json`, `.well-known/ai-plugin.json`, `package-metadata.json`, `.well-known/package-metadata.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/purchase.json`, `robots.txt`, and `sitemap.xml`.
+- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `offer.json`, `.well-known/agent-commerce-guard.json`, `.well-known/offer.json`, `openapi.json`, `.well-known/openapi.json`, `.well-known/ai-plugin.json`, `package-metadata.json`, `.well-known/package-metadata.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/purchase.json`, `robots.txt`, and `sitemap.xml`.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.

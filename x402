@@ -336,5 +336,32 @@
     }
   ],
   "githubPagesPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
-  "githubPagesWellKnownPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json"
+  "githubPagesWellKnownPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
+  "githubPagesOpenapiUrl": "https://fxjim.github.io/agent-commerce-guard/openapi.json",
+  "githubPagesWellKnownOpenapiUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json",
+  "openapiMirrors": [
+    "https://agent-commerce-guard.vercel.app/openapi.json",
+    "https://agent-commerce-guard.vercel.app/.well-known/openapi.json",
+    "https://fxjim.github.io/agent-commerce-guard/openapi.json",
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json"
+  ],
+  "githubPagesAiPluginUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json",
+  "aiPluginMirrors": [
+    "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json"
+  ],
+  "offerUrl": "https://agent-commerce-guard.vercel.app/offer.json",
+  "wellKnownOfferUrl": "https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json",
+  "wellKnownOfferAliasUrl": "https://agent-commerce-guard.vercel.app/.well-known/offer.json",
+  "githubPagesOfferUrl": "https://fxjim.github.io/agent-commerce-guard/offer.json",
+  "githubPagesWellKnownOfferUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json",
+  "githubPagesWellKnownOfferAliasUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/offer.json",
+  "offerMirrors": [
+    "https://agent-commerce-guard.vercel.app/offer.json",
+    "https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json",
+    "https://agent-commerce-guard.vercel.app/.well-known/offer.json",
+    "https://fxjim.github.io/agent-commerce-guard/offer.json",
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json",
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/offer.json"
+  ]
 }
