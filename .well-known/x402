@@ -14,6 +14,20 @@
   "shortHumanCheckoutUrl": "https://agent-commerce-guard.vercel.app/pay",
   "aiPluginUrl": "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
   "openapiUrl": "https://agent-commerce-guard.vercel.app/openapi.json",
+  "inboundAgentHandoff": {
+    "audience": "Autonomous agents, TaskMarket runners, and GitHub contributors.",
+    "primaryNextStep": "Use x402 to buy the paid evaluation or download endpoint, or submit a public pull request from a fork.",
+    "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+    "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
+    "doNotRequest": [
+      "repo write access",
+      "credentials",
+      "private keys",
+      "wallet seed material",
+      "private checkout links",
+      "outbound payment"
+    ]
+  },
   "resources": [
     {
       "type": "http",
