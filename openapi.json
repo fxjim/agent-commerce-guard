@@ -429,6 +429,30 @@
             "type": "string",
             "format": "uri"
           },
+          "humanCheckout": {
+            "type": "string",
+            "format": "uri"
+          },
+          "checkoutAlias": {
+            "type": "string",
+            "format": "uri"
+          },
+          "shortPaymentRequest": {
+            "type": "string",
+            "format": "uri"
+          },
+          "wellKnownShortPaymentRequest": {
+            "type": "string",
+            "format": "uri"
+          },
+          "qrCodeUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "paymentUri": {
+            "type": "string",
+            "description": "EIP-681 ERC-20 transfer URI for exact 1 USDC on Base."
+          },
           "verifyPageUrlTemplate": {
             "type": "string",
             "format": "uri-template"
@@ -563,6 +587,35 @@
               },
               "price": {
                 "$ref": "#/components/schemas/PurchaseInfo"
+              }
+            }
+          },
+          "manualPayment": {
+            "type": "object",
+            "properties": {
+              "humanCheckout": {
+                "type": "string",
+                "format": "uri"
+              },
+              "checkoutAlias": {
+                "type": "string",
+                "format": "uri"
+              },
+              "shortPaymentRequest": {
+                "type": "string",
+                "format": "uri"
+              },
+              "wellKnownShortPaymentRequest": {
+                "type": "string",
+                "format": "uri"
+              },
+              "qrCodeUrl": {
+                "type": "string",
+                "format": "uri"
+              },
+              "paymentUri": {
+                "type": "string",
+                "description": "EIP-681 ERC-20 transfer URI for exact 1 USDC on Base."
               }
             }
           },

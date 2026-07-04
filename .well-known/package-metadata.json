@@ -8,8 +8,8 @@
   "artifact": {
     "type": "npm-tarball",
     "filename": "agent-commerce-guard-0.1.0.tgz",
-    "bytes": 121321,
-    "shasum": "52f1ea125c320373e8074f1756b3a2325cfac85d",
+    "bytes": 121694,
+    "shasum": "0255a20648b9e94c654dedb7cd25078ab170018c",
     "shasumAlgorithm": "sha1",
     "verifyCommand": "shasum agent-commerce-guard-0.1.0.tgz"
   },
@@ -105,5 +105,13 @@
     "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
     "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
     "githubPagesWellKnownUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
+  },
+  "manualPayment": {
+    "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
+    "checkoutAlias": "https://agent-commerce-guard.vercel.app/checkout",
+    "shortPaymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
+    "wellKnownShortPaymentRequest": "https://agent-commerce-guard.vercel.app/.well-known/pay.json",
+    "qrCodeUrl": "https://agent-commerce-guard.vercel.app/qr",
+    "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000"
   }
 }
