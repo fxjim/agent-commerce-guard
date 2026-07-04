@@ -29,6 +29,7 @@ The launch pass costs `1 USDC` on Base mainnet and unlocks the packaged CLI, exa
 - Paid package download: `GET https://agent-commerce-guard.vercel.app/api/x402-download`
 - Short x402 discovery: https://agent-commerce-guard.vercel.app/x402
 - Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
+- Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
 - Inspect evaluator:
 
 ```bash
@@ -54,4 +55,4 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 - Launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - GitHub profile launch links: https://github.com/fxjim/fxjim
-- Current paid package shasum: `9a7b416dec024c709b8c330594247500456a1462`
+- Current paid package shasum: `d76efd2af8e9b4538d349d8d8246df58d445b042`

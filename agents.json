@@ -22,6 +22,8 @@
   "x402Json": "https://agent-commerce-guard.vercel.app/x402.json",
   "shortX402": "https://agent-commerce-guard.vercel.app/x402",
   "wellKnownX402Json": "https://agent-commerce-guard.vercel.app/.well-known/x402.json",
+  "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+  "wellKnownPackageMetadataUrl": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json",
   "aiPlugin": "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
   "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
   "launchDiscussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
@@ -85,6 +87,7 @@
       "url": "https://agent-commerce-guard.vercel.app/api/x402-download",
       "discoverable": true,
       "routeTemplate": "/api/x402-download",
+      "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
       "tags": [
         "agent-commerce",
         "agent-safety",

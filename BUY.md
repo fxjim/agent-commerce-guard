@@ -9,6 +9,13 @@ npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-eva
 npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-download --json
 ```
 
+Current package verification metadata:
+
+```text
+https://agent-commerce-guard.vercel.app/package-metadata.json
+https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json
+```
+
 ## Pay For A Policy Evaluation
 
 ```bash

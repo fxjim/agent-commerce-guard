@@ -23,6 +23,8 @@ The launch pass is available for `1 USDC` on Base.
 - Well-known offer: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
 - Short x402 discovery: https://agent-commerce-guard.vercel.app/x402
 - Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
+- Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
+- Well-known package metadata: https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json
 - Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
 - Coding-agent quickstart: https://agent-commerce-guard.vercel.app/AGENTS.md
 - Short purchase guide: https://agent-commerce-guard.vercel.app/buy
@@ -54,7 +56,7 @@ The launch pass is available for `1 USDC` on Base.
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `9a7b416dec024c709b8c330594247500456a1462`
+- Current paid package shasum: `d76efd2af8e9b4538d349d8d8246df58d445b042`
 
 ## What It Includes
 

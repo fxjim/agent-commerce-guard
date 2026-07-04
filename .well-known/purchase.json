@@ -21,6 +21,8 @@
     "shortX402": "https://agent-commerce-guard.vercel.app/x402",
     "x402Json": "https://agent-commerce-guard.vercel.app/x402.json",
     "wellKnownX402Json": "https://agent-commerce-guard.vercel.app/.well-known/x402.json",
+    "packageMetadata": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+    "wellKnownPackageMetadata": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json",
     "openapi": "https://agent-commerce-guard.vercel.app/openapi.json",
     "agents": "https://agent-commerce-guard.vercel.app/agents.json",
     "shortPay": "https://agent-commerce-guard.vercel.app/pay",
@@ -93,6 +95,7 @@
         "discoverable": true,
         "routeTemplate": "/api/x402-download",
         "url": "https://agent-commerce-guard.vercel.app/api/x402-download",
+        "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
         "input": {
           "type": "http",
           "method": "GET",

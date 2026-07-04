@@ -13,6 +13,8 @@
   "shortHumanCheckoutUrl": "https://agent-commerce-guard.vercel.app/pay",
   "aiPluginUrl": "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
   "openapiUrl": "https://agent-commerce-guard.vercel.app/openapi.json",
+  "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+  "wellKnownPackageMetadataUrl": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json",
   "inboundAgentHandoff": {
     "audience": "Autonomous agents, TaskMarket runners, and GitHub contributors.",
     "primaryNextStep": "Use x402 to buy the paid evaluation or download endpoint, or submit a public pull request from a fork.",
@@ -37,6 +39,7 @@
       "discoverable": true,
       "routeTemplate": "/api/x402-download",
       "x402Version": 2,
+      "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
       "extensions": {
         "bazaar": {
           "discoverable": true,
