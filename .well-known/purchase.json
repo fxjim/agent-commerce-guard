@@ -19,6 +19,8 @@
     "offer": "https://agent-commerce-guard.vercel.app/offer.json",
     "x402": "https://agent-commerce-guard.vercel.app/.well-known/x402",
     "shortX402": "https://agent-commerce-guard.vercel.app/x402",
+    "x402Json": "https://agent-commerce-guard.vercel.app/x402.json",
+    "wellKnownX402Json": "https://agent-commerce-guard.vercel.app/.well-known/x402.json",
     "openapi": "https://agent-commerce-guard.vercel.app/openapi.json",
     "agents": "https://agent-commerce-guard.vercel.app/agents.json",
     "shortPay": "https://agent-commerce-guard.vercel.app/pay",

@@ -1,0 +1,271 @@
+{
+  "name": "Agent Commerce Guard",
+  "description": "Paid x402 package download plus an agent workflow validator and command-risk API for wallet spend, deployments, token launches, social posts, destructive actions, and credential access.",
+  "url": "https://agent-commerce-guard.vercel.app",
+  "agentsUrl": "https://agent-commerce-guard.vercel.app/agents.json",
+  "publicGistUrl": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
+  "purchaseUrl": "https://agent-commerce-guard.vercel.app/purchase.json",
+  "shortPurchaseUrl": "https://agent-commerce-guard.vercel.app/buy",
+  "paymentRequestUrl": "https://agent-commerce-guard.vercel.app/payment-request.json",
+  "shortPaymentRequestUrl": "https://agent-commerce-guard.vercel.app/pay.json",
+  "paymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+  "shortPaymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/qr",
+  "shortHumanCheckoutUrl": "https://agent-commerce-guard.vercel.app/pay",
+  "aiPluginUrl": "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
+  "openapiUrl": "https://agent-commerce-guard.vercel.app/openapi.json",
+  "inboundAgentHandoff": {
+    "audience": "Autonomous agents, TaskMarket runners, and GitHub contributors.",
+    "primaryNextStep": "Use x402 to buy the paid evaluation or download endpoint, or submit a public pull request from a fork.",
+    "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+    "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
+    "doNotRequest": [
+      "repo write access",
+      "credentials",
+      "private keys",
+      "wallet seed material",
+      "private checkout links",
+      "outbound payment"
+    ]
+  },
+  "resources": [
+    {
+      "type": "http",
+      "method": "GET",
+      "url": "https://agent-commerce-guard.vercel.app/api/x402-download",
+      "description": "Agent Commerce Guard paid package download.",
+      "mimeType": "application/gzip",
+      "discoverable": true,
+      "routeTemplate": "/api/x402-download",
+      "x402Version": 2,
+      "extensions": {
+        "bazaar": {
+          "discoverable": true,
+          "description": "Paid Agent Commerce Guard package download for autonomous-agent approval gates, policy rules, and launch-safety templates.",
+          "routeTemplate": "/api/x402-download",
+          "tags": [
+            "agent-commerce",
+            "agent-safety",
+            "guardrails",
+            "approval-gates",
+            "codex",
+            "x402"
+          ],
+          "info": {
+            "input": {
+              "type": "http",
+              "method": "GET",
+              "queryParams": {}
+            },
+            "output": {
+              "type": "binary",
+              "example": {
+                "package": "agent-commerce-guard-0.1.0.tgz",
+                "contents": [
+                  "acg CLI",
+                  "agent-commerce policy rules",
+                  "approval-log and launch-checklist templates",
+                  "Codex/Claude/OpenClaw guardrail skill"
+                ]
+              }
+            }
+          },
+          "schema": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "type": "object",
+            "required": ["input"],
+            "properties": {
+              "input": {
+                "type": "object",
+                "required": ["type", "method"],
+                "properties": {
+                  "type": { "const": "http", "type": "string" },
+                  "method": { "enum": ["GET"], "type": "string" },
+                  "queryParams": { "type": "object", "additionalProperties": false }
+                }
+              },
+              "output": {
+                "type": "object",
+                "required": ["type"],
+                "properties": {
+                  "type": { "type": "string" },
+                  "example": { "type": "object" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "amount": "1000000",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "payTo": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+          "maxTimeoutSeconds": 120,
+          "extra": {
+            "name": "USD Coin",
+            "version": "2"
+          }
+        }
+      ],
+      "tags": [
+        "agent-commerce",
+        "agent-safety",
+        "guardrails",
+        "approval-gates",
+        "codex",
+        "x402"
+      ],
+      "offer": "https://agent-commerce-guard.vercel.app/offer.json",
+      "paymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
+      "canonicalPaymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
+      "paymentRequestQr": "https://agent-commerce-guard.vercel.app/qr",
+      "canonicalPaymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+      "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
+      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
+    },
+    {
+      "type": "http",
+      "method": "POST",
+      "url": "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
+      "description": "Agent workflow validator and command-risk scorer for autonomous agents before wallet spend, x402 payments, deployments, token launches, social posts, destructive actions, or credential access.",
+      "mimeType": "application/json",
+      "discoverable": true,
+      "routeTemplate": "/api/x402-evaluate",
+      "x402Version": 2,
+      "extensions": {
+        "bazaar": {
+          "discoverable": true,
+          "description": "Agent workflow validator and command-risk scorer for autonomous agents before wallet spend, x402 payments, deployments, token launches, social posts, or credential access.",
+          "routeTemplate": "/api/x402-evaluate",
+          "tags": [
+            "agent-workflow",
+            "workflow-validation",
+            "autonomous-agents",
+            "agent-safety",
+            "command-risk",
+            "destructive-actions",
+            "wallet-spend",
+            "x402"
+          ],
+          "info": {
+            "description": "Score an autonomous-agent action manifest for financial, deployment, social, token-launch, destructive-action, and credential risk before execution.",
+            "input": {
+              "type": "http",
+              "method": "POST",
+              "bodyType": "json",
+              "body": {
+                "action": {
+                  "id": "launch-payment",
+                  "actor": "codex",
+                  "action": "Send 1 USDC on Base to unlock a paid package",
+                  "amountUsd": 1,
+                  "approved": false
+                }
+              }
+            },
+            "output": {
+              "type": "json",
+              "example": {
+                "paid": true,
+                "summary": { "allow": 0, "review": 0, "deny": 1 },
+                "results": [
+                  {
+                    "id": "launch-payment",
+                    "decision": "deny",
+                    "severity": "high",
+                    "findings": [{ "id": "financial_action", "severity": "high" }],
+                    "requiredEvidence": ["User/operator approval timestamp"]
+                  }
+                ]
+              }
+            }
+          },
+          "schema": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "type": "object",
+            "required": ["input"],
+            "properties": {
+              "input": {
+                "type": "object",
+                "required": ["type", "method", "bodyType", "body"],
+                "properties": {
+                  "type": { "const": "http", "type": "string" },
+                  "method": { "enum": ["POST"], "type": "string" },
+                  "bodyType": { "enum": ["json"], "type": "string" },
+                  "body": {
+                    "type": "object",
+                    "properties": {
+                      "action": { "type": "object" },
+                      "actions": {
+                        "type": "array",
+                        "items": { "type": "object" },
+                        "maxItems": 10
+                      }
+                    }
+                  }
+                }
+              },
+              "output": {
+                "type": "object",
+                "required": ["type"],
+                "properties": {
+                  "type": { "type": "string" },
+                  "example": { "type": "object" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "input": {
+        "bodyType": "json",
+        "example": {
+          "action": {
+            "id": "launch-payment",
+            "actor": "codex",
+            "action": "Send 1 USDC on Base to unlock a paid package",
+            "amountUsd": 1,
+            "approved": false
+          }
+        }
+      },
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "amount": "1000000",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "payTo": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+          "maxTimeoutSeconds": 120,
+          "extra": {
+            "name": "USD Coin",
+            "version": "2"
+          }
+        }
+      ],
+      "tags": [
+        "agent-commerce",
+        "agent-safety",
+        "agent-workflow",
+        "workflow-validation",
+        "command-risk",
+        "destructive-actions",
+        "wallet-spend",
+        "guardrails",
+        "approval-gates",
+        "autonomous-agents",
+        "codex",
+        "x402"
+      ],
+      "offer": "https://agent-commerce-guard.vercel.app/offer.json",
+      "paymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
+      "canonicalPaymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
+      "paymentRequestQr": "https://agent-commerce-guard.vercel.app/qr",
+      "canonicalPaymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+      "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
+      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
+    }
+  ]
+}
