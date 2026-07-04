@@ -2,7 +2,6 @@
   "name": "Agent Commerce Guard",
   "description": "Paid x402 package download plus an agent workflow validator and command-risk API for wallet spend, deployments, token launches, social posts, destructive actions, and credential access.",
   "url": "https://agent-commerce-guard.vercel.app",
-  "packageShasum": "20fee05124a1d2c5511df4a81a56ed19cff36ade",
   "agentsUrl": "https://agent-commerce-guard.vercel.app/agents.json",
   "publicGistUrl": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
   "purchaseUrl": "https://agent-commerce-guard.vercel.app/purchase.json",
@@ -35,7 +34,24 @@
       "url": "https://agent-commerce-guard.vercel.app/api/x402-download",
       "description": "Agent Commerce Guard paid package download.",
       "mimeType": "application/gzip",
+      "discoverable": true,
+      "routeTemplate": "/api/x402-download",
       "x402Version": 2,
+      "extensions": {
+        "bazaar": {
+          "discoverable": true,
+          "description": "Paid Agent Commerce Guard package download for autonomous-agent approval gates, policy rules, and launch-safety templates.",
+          "routeTemplate": "/api/x402-download",
+          "tags": [
+            "agent-commerce",
+            "agent-safety",
+            "guardrails",
+            "approval-gates",
+            "codex",
+            "x402"
+          ]
+        }
+      },
       "accepts": [
         {
           "scheme": "exact",
@@ -72,7 +88,26 @@
       "url": "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
       "description": "Agent workflow validator and command-risk scorer for autonomous agents before wallet spend, x402 payments, deployments, token launches, social posts, destructive actions, or credential access.",
       "mimeType": "application/json",
+      "discoverable": true,
+      "routeTemplate": "/api/x402-evaluate",
       "x402Version": 2,
+      "extensions": {
+        "bazaar": {
+          "discoverable": true,
+          "description": "Agent workflow validator and command-risk scorer for autonomous agents before wallet spend, x402 payments, deployments, token launches, social posts, or credential access.",
+          "routeTemplate": "/api/x402-evaluate",
+          "tags": [
+            "agent-workflow",
+            "workflow-validation",
+            "autonomous-agents",
+            "agent-safety",
+            "command-risk",
+            "destructive-actions",
+            "wallet-spend",
+            "x402"
+          ]
+        }
+      },
       "input": {
         "bodyType": "json",
         "example": {

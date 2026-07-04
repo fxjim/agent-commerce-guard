@@ -2,7 +2,6 @@
   "name": "Agent Commerce Guard Purchase Guide",
   "product": "Agent Commerce Guard",
   "url": "https://agent-commerce-guard.vercel.app",
-  "packageShasum": "20fee05124a1d2c5511df4a81a56ed19cff36ade",
   "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/",
   "publicGistUrl": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
   "supportIssueUrl": "https://github.com/fxjim/agent-commerce-guard/issues/1",
@@ -33,7 +32,44 @@
     "githubPages": "https://fxjim.github.io/agent-commerce-guard/",
     "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
     "launchDiscussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
-    "llms": "https://agent-commerce-guard.vercel.app/llms.txt"
+    "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
+    "bazaarDiscoverable": true
+  },
+  "bazaar": {
+    "discoverable": true,
+    "x402Manifest": "https://agent-commerce-guard.vercel.app/x402",
+    "resources": [
+      {
+        "id": "paid-policy-evaluation",
+        "method": "POST",
+        "routeTemplate": "/api/x402-evaluate",
+        "url": "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
+        "tags": [
+          "agent-workflow",
+          "workflow-validation",
+          "autonomous-agents",
+          "agent-safety",
+          "command-risk",
+          "destructive-actions",
+          "wallet-spend",
+          "x402"
+        ]
+      },
+      {
+        "id": "paid-package-download",
+        "method": "GET",
+        "routeTemplate": "/api/x402-download",
+        "url": "https://agent-commerce-guard.vercel.app/api/x402-download",
+        "tags": [
+          "agent-commerce",
+          "agent-safety",
+          "guardrails",
+          "approval-gates",
+          "codex",
+          "x402"
+        ]
+      }
+    ]
   },
   "x402PurchaseCommands": [
     {
