@@ -38,6 +38,7 @@
     "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
     "launchDiscussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
     "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
+    "wellKnownLlms": "https://agent-commerce-guard.vercel.app/.well-known/llms.txt",
     "bazaarDiscoverable": true,
     "githubPagesPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
     "githubPagesWellKnownPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",

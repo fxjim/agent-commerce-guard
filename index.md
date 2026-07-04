@@ -19,7 +19,10 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
 - Short Base payment request: https://agent-commerce-guard.vercel.app/pay.json
 - Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
+- Vercel LLM summary: https://agent-commerce-guard.vercel.app/llms.txt
+- Vercel well-known LLM summary: https://agent-commerce-guard.vercel.app/.well-known/llms.txt
 - Pages LLM summary: https://fxjim.github.io/agent-commerce-guard/llms.txt
+- Pages well-known LLM summary: https://fxjim.github.io/agent-commerce-guard/.well-known/llms.txt
 - Pages agents manifest: https://fxjim.github.io/agent-commerce-guard/agents.json
 - Pages AI plugin mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json
 - Pages OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json
@@ -69,4 +72,4 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 - Launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - GitHub profile launch links: https://github.com/fxjim/fxjim
-- Current paid package shasum: `48c8a0887048026047d7dd609070689f5b887acc`
+- Current paid package shasum: `417c8e17f67142a18e9af9593fd821e210885c08`

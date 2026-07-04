@@ -16,6 +16,13 @@ https://agent-commerce-guard.vercel.app/package-metadata.json
 https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json
 ```
 
+LLM-readable discovery:
+
+```text
+https://agent-commerce-guard.vercel.app/llms.txt
+https://agent-commerce-guard.vercel.app/.well-known/llms.txt
+```
+
 ## Pay For A Policy Evaluation
 
 ```bash

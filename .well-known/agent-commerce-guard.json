@@ -7,6 +7,8 @@
   "docsUrl": "https://github.com/fxjim/agent-commerce-guard",
   "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/",
   "publicGistUrl": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
+  "llmsUrl": "https://agent-commerce-guard.vercel.app/llms.txt",
+  "wellKnownLlmsUrl": "https://agent-commerce-guard.vercel.app/.well-known/llms.txt",
   "supportIssueUrl": "https://github.com/fxjim/agent-commerce-guard/issues/1",
   "launchDiscussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
   "shortPayUrl": "https://agent-commerce-guard.vercel.app/pay",

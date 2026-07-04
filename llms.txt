@@ -9,6 +9,7 @@ Social preview image: https://agent-commerce-guard.vercel.app/og-image.png
 Offer manifest: https://agent-commerce-guard.vercel.app/offer.json
 Well-known offer manifest: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
 Well-known offer alias: https://agent-commerce-guard.vercel.app/.well-known/offer.json
+Well-known LLM summary: https://agent-commerce-guard.vercel.app/.well-known/llms.txt
 GitHub Pages offer mirror: https://fxjim.github.io/agent-commerce-guard/offer.json
 GitHub Pages well-known offer mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json
 GitHub Pages well-known offer alias: https://fxjim.github.io/agent-commerce-guard/.well-known/offer.json

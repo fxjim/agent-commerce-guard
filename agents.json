@@ -16,6 +16,7 @@
   "bazaarDiscoverable": true,
   "openapi": "https://agent-commerce-guard.vercel.app/openapi.json",
   "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
+  "wellKnownLlms": "https://agent-commerce-guard.vercel.app/.well-known/llms.txt",
   "offer": "https://agent-commerce-guard.vercel.app/offer.json",
   "purchase": "https://agent-commerce-guard.vercel.app/purchase.json",
   "paymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",

@@ -8,8 +8,8 @@
   "artifact": {
     "type": "npm-tarball",
     "filename": "agent-commerce-guard-0.1.0.tgz",
-    "bytes": 117868,
-    "shasum": "48c8a0887048026047d7dd609070689f5b887acc",
+    "bytes": 118093,
+    "shasum": "417c8e17f67142a18e9af9593fd821e210885c08",
     "shasumAlgorithm": "sha1",
     "verifyCommand": "shasum agent-commerce-guard-0.1.0.tgz"
   },
@@ -41,7 +41,9 @@
     "agents": "https://agent-commerce-guard.vercel.app/agents.json",
     "githubPages": "https://fxjim.github.io/agent-commerce-guard/",
     "githubPagesPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
-    "githubPagesWellKnownPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json"
+    "githubPagesWellKnownPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
+    "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
+    "wellKnownLlms": "https://agent-commerce-guard.vercel.app/.well-known/llms.txt"
   },
   "purchaseRoutes": [
     "https://agent-commerce-guard.vercel.app/pay",

@@ -56,6 +56,7 @@ The launch pass is available for `1 USDC` on Base.
 - GitHub Pages OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json
 - GitHub Pages well-known OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
+- Well-known LLM summary: https://agent-commerce-guard.vercel.app/.well-known/llms.txt
 - GitHub Pages LLM summary: https://fxjim.github.io/agent-commerce-guard/llms.txt
 - GitHub Pages agents manifest: https://fxjim.github.io/agent-commerce-guard/agents.json
 - GitHub Pages package metadata: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
@@ -70,7 +71,7 @@ The launch pass is available for `1 USDC` on Base.
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `48c8a0887048026047d7dd609070689f5b887acc`
+- Current paid package shasum: `417c8e17f67142a18e9af9593fd821e210885c08`
 
 ## What It Includes
 
