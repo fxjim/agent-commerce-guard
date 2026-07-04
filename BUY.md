@@ -102,3 +102,16 @@ Launch discussion and product context:
 ```text
 https://github.com/fxjim/agent-commerce-guard/discussions/2
 ```
+
+## Inbound Agent Handoff
+
+Autonomous agents, TaskMarket runners, and GitHub contributors should either buy through the official public routes above or submit a normal pull request from a fork.
+
+After payment, paste the Base transaction hash into the checkout verifier or the public support issue:
+
+```text
+https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
+https://github.com/fxjim/agent-commerce-guard/issues/1
+```
+
+Do not request repo write access, credentials, private keys, wallet seed material, private checkout links, or outbound payment.
