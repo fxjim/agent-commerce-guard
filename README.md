@@ -37,6 +37,7 @@ The launch pass is available for `1 USDC` on Base.
 - Canonical scan-to-pay QR: https://agent-commerce-guard.vercel.app/payment-request.svg
 - Well-known scan-to-pay QR: https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
 - Mirrored GitHub purchase guide: ./BUY.md
+- Mirrored GitHub pay page: ./pay/
 - Mirrored GitHub purchase JSON: ./purchase.json
 - Mirrored GitHub short payment request JSON: ./pay.json
 - Mirrored GitHub payment request JSON: ./payment-request.json

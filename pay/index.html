@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pay for Agent Commerce Guard</title>
+    <meta
+      name="description"
+      content="Official Agent Commerce Guard 1 USDC Base checkout, payment request, and package verification links."
+    >
+    <link rel="canonical" href="https://agent-commerce-guard.vercel.app/pay">
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f7f8fb;
+        --fg: #17202a;
+        --muted: #53606f;
+        --border: #d8dee8;
+        --accent: #1b6ef3;
+        --panel: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111418;
+          --fg: #eef3f8;
+          --muted: #a7b1bd;
+          --border: #2a323d;
+          --accent: #7aa7ff;
+          --panel: #171c22;
+        }
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font: 16px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+      }
+
+      main {
+        width: min(760px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        line-height: 1.02;
+      }
+
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+      }
+
+      .panel {
+        margin-top: 28px;
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      dl {
+        display: grid;
+        grid-template-columns: minmax(120px, 180px) 1fr;
+        gap: 10px 16px;
+        margin: 0;
+      }
+
+      dt {
+        color: var(--muted);
+      }
+
+      dd {
+        margin: 0;
+        overflow-wrap: anywhere;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 42px;
+        padding: 0 16px;
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 650;
+      }
+
+      .button.primary {
+        color: white;
+        background: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Pay for Agent Commerce Guard</h1>
+      <p>
+        This GitHub Pages mirror points to the official live checkout and machine-readable Base
+        USDC payment request.
+      </p>
+
+      <section class="panel" aria-label="Payment details">
+        <dl>
+          <dt>Price</dt>
+          <dd>1 USDC on Base</dd>
+          <dt>Receiver</dt>
+          <dd>0xc356556Bc6025aA3536df188BD72A5F4E0fE214f</dd>
+          <dt>Payment JSON</dt>
+          <dd><a href="../pay.json">https://fxjim.github.io/agent-commerce-guard/pay.json</a></dd>
+          <dt>Verify package</dt>
+          <dd>
+            <a href="../package-metadata.json">
+              https://fxjim.github.io/agent-commerce-guard/package-metadata.json
+            </a>
+          </dd>
+        </dl>
+
+        <div class="actions">
+          <a class="button primary" href="https://agent-commerce-guard.vercel.app/pay">Open Live Checkout</a>
+          <a class="button" href="../pay.json">View Payment JSON</a>
+          <a class="button" href="../package-metadata.json">Verify Artifact</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
