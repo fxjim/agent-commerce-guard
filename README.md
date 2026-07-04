@@ -32,6 +32,10 @@ The launch pass is available for `1 USDC` on Base.
 - Well-known package metadata: https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json
 - Service status: https://agent-commerce-guard.vercel.app/status.json
 - Well-known service status: https://agent-commerce-guard.vercel.app/.well-known/status.json
+- License terms: https://agent-commerce-guard.vercel.app/license
+- Well-known license terms: https://agent-commerce-guard.vercel.app/.well-known/license.md
+- GitHub Pages license mirror: https://fxjim.github.io/agent-commerce-guard/license/
+- GitHub Pages well-known license mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/license.md
 - Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
 - Singular agent manifest alias: https://agent-commerce-guard.vercel.app/agent.json
 - Well-known singular agent manifest alias: https://agent-commerce-guard.vercel.app/.well-known/agent.json
@@ -55,6 +59,8 @@ The launch pass is available for `1 USDC` on Base.
 - Mirrored GitHub payment QR SVG: ./payment-request.svg
 - Mirrored GitHub service status JSON: ./status.json
 - Mirrored GitHub well-known service status JSON: ./.well-known/status.json
+- Mirrored GitHub license page: ./license/
+- Mirrored GitHub well-known license terms: ./.well-known/license.md
 - AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json
 - GitHub Pages AI plugin mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json
 - OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
@@ -81,7 +87,7 @@ The launch pass is available for `1 USDC` on Base.
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `8d5b313e3c18fd0b3d9d68d96009b662b6e2f923`
+- Current paid package shasum: `76ae820aa126e9f7a8243a7b721cabe91467da57`
 
 ## What It Includes
 

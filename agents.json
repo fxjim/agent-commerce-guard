@@ -221,5 +221,14 @@
   "statusUrl": "https://agent-commerce-guard.vercel.app/status.json",
   "wellKnownStatusUrl": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
   "githubPagesStatusUrl": "https://fxjim.github.io/agent-commerce-guard/status.json",
-  "githubPagesWellKnownStatusUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json"
+  "githubPagesWellKnownStatusUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json",
+  "license": {
+    "name": "Agent Commerce Guard Commercial Evaluation License",
+    "type": "commercial-evaluation",
+    "url": "https://agent-commerce-guard.vercel.app/LICENSE.md",
+    "cleanUrl": "https://agent-commerce-guard.vercel.app/license",
+    "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
+    "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
+    "githubPagesWellKnownUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
+  }
 }

@@ -76,7 +76,12 @@
     "status": "https://agent-commerce-guard.vercel.app/status.json",
     "wellKnownStatus": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
     "githubPagesStatus": "https://fxjim.github.io/agent-commerce-guard/status.json",
-    "githubPagesWellKnownStatus": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json"
+    "githubPagesWellKnownStatus": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json",
+    "license": "https://agent-commerce-guard.vercel.app/LICENSE.md",
+    "licenseClean": "https://agent-commerce-guard.vercel.app/license",
+    "wellKnownLicense": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
+    "githubPagesLicense": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
+    "githubPagesWellKnownLicense": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
   },
   "bazaar": {
     "discoverable": true,
@@ -229,5 +234,14 @@
     "url": "https://github.com/fxjim/agent-commerce-guard/issues/1",
     "discussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
     "description": "Pinned launch/support issue for purchase questions, x402 integration notes, failed wallet flows, or agent manifest requests."
+  },
+  "license": {
+    "name": "Agent Commerce Guard Commercial Evaluation License",
+    "type": "commercial-evaluation",
+    "url": "https://agent-commerce-guard.vercel.app/LICENSE.md",
+    "cleanUrl": "https://agent-commerce-guard.vercel.app/license",
+    "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
+    "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
+    "githubPagesWellKnownUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
   }
 }

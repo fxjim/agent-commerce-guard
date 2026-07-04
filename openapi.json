@@ -6,9 +6,10 @@
     "summary": "x402-paid agent workflow validator and command-risk scorer.",
     "description": "Agent Commerce Guard provides x402-paid policy evaluation and package download endpoints for autonomous agents that need approval gates before wallet spend, deployments, social posts, token launches, destructive commands, or credential access.",
     "license": {
-      "name": "MIT",
-      "identifier": "MIT"
-    }
+      "name": "Agent Commerce Guard Commercial Evaluation License",
+      "url": "https://agent-commerce-guard.vercel.app/LICENSE.md"
+    },
+    "termsOfService": "https://agent-commerce-guard.vercel.app/license"
   },
   "servers": [
     {
@@ -41,7 +42,9 @@
     "/api/x402-evaluate": {
       "post": {
         "operationId": "paidPolicyEvaluation",
-        "tags": ["x402"],
+        "tags": [
+          "x402"
+        ],
         "summary": "Run a paid policy evaluation.",
         "description": "Returns a sanitized policy decision for one action or a batch of up to 10 actions after a 1 USDC x402 payment on Base mainnet.",
         "x-x402": {
@@ -120,7 +123,9 @@
     "/api/x402-download": {
       "get": {
         "operationId": "paidPackageDownload",
-        "tags": ["x402"],
+        "tags": [
+          "x402"
+        ],
         "summary": "Download the paid package after x402 payment.",
         "description": "Streams the Agent Commerce Guard tarball after a 1 USDC x402 payment on Base mainnet.",
         "x-x402": {
@@ -154,9 +159,11 @@
     "/api/package-metadata": {
       "get": {
         "operationId": "packageMetadata",
-        "tags": ["artifact"],
+        "tags": [
+          "artifact"
+        ],
         "summary": "Inspect current paid package metadata before purchase.",
-        "description": "Returns the current Agent Commerce Guard paid tarball filename, byte size, SHA-1 shasum, verify command, paid x402 download URL, and Base payment metadata without requiring payment.",
+        "description": "Returns the current Agent Commerce Guard paid tarball filename, byte size, SHA-1 shasum, verify command, paid x402 download URL, and Base payment metadata without requiring payment. It also links to the current commercial evaluation license terms.",
         "responses": {
           "200": {
             "description": "Current paid package artifact metadata.",
@@ -177,9 +184,11 @@
     "/api/status": {
       "get": {
         "operationId": "serviceStatus",
-        "tags": ["status"],
+        "tags": [
+          "status"
+        ],
         "summary": "Inspect current service status before purchase.",
-        "description": "Returns the live service status, current paid package metadata, exact Base USDC payment details, paid x402 endpoint routes, and discovery URLs without requiring payment.",
+        "description": "Returns the live service status, current paid package metadata, exact Base USDC payment details, paid x402 endpoint routes, and discovery URLs without requiring payment. It also links to the current commercial evaluation license terms.",
         "responses": {
           "200": {
             "description": "Current service status and payment preflight metadata.",
@@ -200,7 +209,9 @@
     "/api/demo-evaluate": {
       "get": {
         "operationId": "demoPolicyEvaluation",
-        "tags": ["demo"],
+        "tags": [
+          "demo"
+        ],
         "summary": "Run the free sample policy evaluation.",
         "responses": {
           "200": {
@@ -217,7 +228,9 @@
       },
       "post": {
         "operationId": "demoPolicyEvaluationForInput",
-        "tags": ["demo"],
+        "tags": [
+          "demo"
+        ],
         "summary": "Run a free sanitized policy evaluation without payment.",
         "requestBody": {
           "required": true,
@@ -246,7 +259,9 @@
     "/api/base-payment-status": {
       "get": {
         "operationId": "basePaymentStatus",
-        "tags": ["base-checkout"],
+        "tags": [
+          "base-checkout"
+        ],
         "summary": "Verify a Base USDC payment transaction hash.",
         "parameters": [
           {
@@ -290,10 +305,14 @@
         },
         "anyOf": [
           {
-            "required": ["action"]
+            "required": [
+              "action"
+            ]
           },
           {
-            "required": ["actions"]
+            "required": [
+              "actions"
+            ]
           }
         ]
       },
@@ -327,7 +346,11 @@
                 },
                 "decision": {
                   "type": "string",
-                  "enum": ["allow", "review", "deny"]
+                  "enum": [
+                    "allow",
+                    "review",
+                    "deny"
+                  ]
                 },
                 "severity": {
                   "type": "string"
@@ -472,7 +495,13 @@
           },
           "artifact": {
             "type": "object",
-            "required": ["filename", "bytes", "shasum", "shasumAlgorithm", "verifyCommand"],
+            "required": [
+              "filename",
+              "bytes",
+              "shasum",
+              "shasumAlgorithm",
+              "verifyCommand"
+            ],
             "properties": {
               "type": {
                 "type": "string",
@@ -551,6 +580,9 @@
               "type": "string",
               "format": "uri"
             }
+          },
+          "license": {
+            "$ref": "#/components/schemas/LicenseInfo"
           }
         }
       },
@@ -571,7 +603,9 @@
           },
           "status": {
             "type": "string",
-            "enum": ["live"]
+            "enum": [
+              "live"
+            ]
           },
           "canonicalUrl": {
             "type": "string",
@@ -604,6 +638,42 @@
               "type": "string",
               "format": "uri"
             }
+          },
+          "license": {
+            "$ref": "#/components/schemas/LicenseInfo"
+          }
+        }
+      },
+      "LicenseInfo": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "url"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Agent Commerce Guard Commercial Evaluation License"
+          },
+          "type": {
+            "type": "string",
+            "example": "commercial-evaluation"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/LICENSE.md"
+          },
+          "cleanUrl": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/license"
+          },
+          "wellKnownUrl": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/.well-known/license.md"
           }
         }
       }
