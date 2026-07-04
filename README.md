@@ -30,6 +30,8 @@ The launch pass is available for `1 USDC` on Base.
 - Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
 - Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
 - Well-known package metadata: https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json
+- Service status: https://agent-commerce-guard.vercel.app/status.json
+- Well-known service status: https://agent-commerce-guard.vercel.app/.well-known/status.json
 - Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
 - Singular agent manifest alias: https://agent-commerce-guard.vercel.app/agent.json
 - Well-known singular agent manifest alias: https://agent-commerce-guard.vercel.app/.well-known/agent.json
@@ -51,6 +53,8 @@ The launch pass is available for `1 USDC` on Base.
 - Mirrored GitHub payment request JSON: ./payment-request.json
 - Mirrored GitHub well-known short payment request JSON: ./.well-known/pay.json
 - Mirrored GitHub payment QR SVG: ./payment-request.svg
+- Mirrored GitHub service status JSON: ./status.json
+- Mirrored GitHub well-known service status JSON: ./.well-known/status.json
 - AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json
 - GitHub Pages AI plugin mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json
 - OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
@@ -64,6 +68,8 @@ The launch pass is available for `1 USDC` on Base.
 - GitHub Pages singular agent manifest: https://fxjim.github.io/agent-commerce-guard/agent.json
 - GitHub Pages package metadata: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
 - GitHub Pages well-known package metadata: https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json
+- GitHub Pages service status: https://fxjim.github.io/agent-commerce-guard/status.json
+- GitHub Pages well-known service status: https://fxjim.github.io/agent-commerce-guard/.well-known/status.json
 - GitHub Pages well-known x402: https://fxjim.github.io/agent-commerce-guard/.well-known/x402
 - GitHub Pages well-known agents manifest: https://fxjim.github.io/agent-commerce-guard/.well-known/agents.json
 - GitHub Pages well-known singular agent manifest: https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json
@@ -75,7 +81,7 @@ The launch pass is available for `1 USDC` on Base.
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `4d3276081cc3765851d3eccd3fada0501f52761e`
+- Current paid package shasum: `8d5b313e3c18fd0b3d9d68d96009b662b6e2f923`
 
 ## What It Includes
 
@@ -99,7 +105,7 @@ The launch pass is available for `1 USDC` on Base.
 - Public GitHub launch discussion for product context and buyer discovery.
 - GitHub Pages launch page for search and buyer discovery.
 - Public GitHub Gist buyer brief with exact Base/x402 purchase commands.
-- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `agent.json`, `offer.json`, `.well-known/agent-commerce-guard.json`, `.well-known/offer.json`, `openapi.json`, `.well-known/openapi.json`, `.well-known/ai-plugin.json`, `package-metadata.json`, `.well-known/package-metadata.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/agent.json`, `.well-known/purchase.json`, `pay/`, `robots.txt`, and `sitemap.xml`.
+- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `agent.json`, `offer.json`, `.well-known/agent-commerce-guard.json`, `.well-known/offer.json`, `openapi.json`, `.well-known/openapi.json`, `.well-known/ai-plugin.json`, `package-metadata.json`, `.well-known/package-metadata.json`, `status.json`, `.well-known/status.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/agent.json`, `.well-known/purchase.json`, `pay/`, `robots.txt`, and `sitemap.xml`.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.

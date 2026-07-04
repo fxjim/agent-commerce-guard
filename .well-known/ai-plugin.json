@@ -3,13 +3,13 @@
   "name_for_human": "Agent Commerce Guard",
   "name_for_model": "agent_commerce_guard",
   "description_for_human": "x402-paid approval gates and command-risk scoring for AI agents before wallet spend, deployments, token launches, destructive actions, social posts, or credential access.",
-  "description_for_model": "Use Agent Commerce Guard to evaluate autonomous-agent action manifests before financial, deployment, social, token, destructive-command, wallet, or credential-risk actions. The paid policy endpoint is POST https://agent-commerce-guard.vercel.app/api/x402-evaluate and costs 1 USDC on Base mainnet through x402. Free discovery is available at /openapi.json, /.well-known/x402, /offer.json, /package-metadata.json, /llms.txt, and /.well-known/llms.txt. This GitHub Pages mirror exposes the same OpenAPI schema at https://fxjim.github.io/agent-commerce-guard/openapi.json while paid API calls still use the Vercel server declared in the OpenAPI servers list.",
+  "description_for_model": "Use Agent Commerce Guard to evaluate autonomous-agent action manifests before financial, deployment, social, token, destructive-command, wallet, or credential-risk actions. The paid policy endpoint is POST https://agent-commerce-guard.vercel.app/api/x402-evaluate and costs 1 USDC on Base mainnet through x402. Free discovery is available at /openapi.json, /.well-known/x402, /offer.json, /.well-known/offer.json, /package-metadata.json, /status.json, /.well-known/status.json, /llms.txt, and /.well-known/llms.txt.",
   "auth": {
     "type": "none"
   },
   "api": {
     "type": "openapi",
-    "url": "https://fxjim.github.io/agent-commerce-guard/openapi.json",
+    "url": "https://agent-commerce-guard.vercel.app/openapi.json",
     "is_user_authenticated": false
   },
   "logo_url": "https://agent-commerce-guard.vercel.app/icon.svg",

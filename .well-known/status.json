@@ -1,10 +1,25 @@
 {
-  "name": "Agent Commerce Guard Package Metadata",
+  "name": "Agent Commerce Guard Service Status",
   "product": "Agent Commerce Guard",
   "version": "0.1.0",
-  "canonicalUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
-  "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
-  "wellKnownGithubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
+  "status": "live",
+  "canonicalUrl": "https://agent-commerce-guard.vercel.app/status.json",
+  "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
+  "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/status.json",
+  "wellKnownGithubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json",
+  "serviceUrl": "https://agent-commerce-guard.vercel.app",
+  "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+  "payment": {
+    "amount": "1.00",
+    "amountAtomic": "1000000",
+    "currency": "USDC",
+    "network": "Base mainnet",
+    "chainId": 8453,
+    "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+    "verifyPageUrlTemplate": "https://agent-commerce-guard.vercel.app/verify?tx={tx}",
+    "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}"
+  },
   "artifact": {
     "type": "npm-tarball",
     "filename": "agent-commerce-guard-0.1.0.tgz",
@@ -13,25 +28,32 @@
     "shasumAlgorithm": "sha1",
     "verifyCommand": "shasum agent-commerce-guard-0.1.0.tgz"
   },
-  "paidDownload": {
-    "method": "GET",
-    "url": "https://agent-commerce-guard.vercel.app/api/x402-download",
-    "protocol": "x402",
-    "routeTemplate": "/api/x402-download",
-    "price": {
-      "amount": "1.00",
+  "paidEndpoints": [
+    {
+      "id": "x402-policy-evaluation",
+      "method": "POST",
+      "url": "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
+      "protocol": "x402",
+      "routeTemplate": "/api/x402-evaluate",
       "amountAtomic": "1000000",
       "currency": "USDC",
       "network": "Base mainnet",
-      "chainId": 8453,
-      "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f"
+    },
+    {
+      "id": "x402-agent-download",
+      "method": "GET",
+      "url": "https://agent-commerce-guard.vercel.app/api/x402-download",
+      "protocol": "x402",
+      "routeTemplate": "/api/x402-download",
+      "amountAtomic": "1000000",
+      "currency": "USDC",
+      "network": "Base mainnet",
+      "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+      "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+      "githubPagesPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json"
     }
-  },
-  "manualUnlock": {
-    "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
-    "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}"
-  },
+  ],
   "discovery": {
     "x402": "https://agent-commerce-guard.vercel.app/x402",
     "x402Json": "https://agent-commerce-guard.vercel.app/x402.json",
@@ -86,9 +108,5 @@
       "private checkout links",
       "outbound payment"
     ]
-  },
-  "statusUrl": "https://agent-commerce-guard.vercel.app/status.json",
-  "wellKnownStatusUrl": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
-  "githubPagesStatusUrl": "https://fxjim.github.io/agent-commerce-guard/status.json",
-  "githubPagesWellKnownStatusUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json"
+  }
 }

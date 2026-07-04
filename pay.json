@@ -35,7 +35,11 @@
     "wellKnownMetadataUrl": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json",
     "githubPagesMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
     "githubPagesWellKnownMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
-    "verifyBeforePayment": true
+    "verifyBeforePayment": true,
+    "statusUrl": "https://agent-commerce-guard.vercel.app/status.json",
+    "wellKnownStatusUrl": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
+    "githubPagesStatusUrl": "https://fxjim.github.io/agent-commerce-guard/status.json",
+    "githubPagesWellKnownStatusUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json"
   },
   "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
   "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}",
@@ -44,5 +48,9 @@
     "evaluate": "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
     "discovery": "https://agent-commerce-guard.vercel.app/x402",
     "canonicalDiscovery": "https://agent-commerce-guard.vercel.app/.well-known/x402"
-  }
+  },
+  "serviceStatus": "https://agent-commerce-guard.vercel.app/status.json",
+  "wellKnownServiceStatus": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
+  "githubPagesServiceStatus": "https://fxjim.github.io/agent-commerce-guard/status.json",
+  "githubPagesWellKnownServiceStatus": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json"
 }

@@ -8,8 +8,8 @@
   "artifact": {
     "type": "npm-tarball",
     "filename": "agent-commerce-guard-0.1.0.tgz",
-    "bytes": 118403,
-    "shasum": "4d3276081cc3765851d3eccd3fada0501f52761e",
+    "bytes": 119987,
+    "shasum": "8d5b313e3c18fd0b3d9d68d96009b662b6e2f923",
     "shasumAlgorithm": "sha1",
     "verifyCommand": "shasum agent-commerce-guard-0.1.0.tgz"
   },
@@ -47,7 +47,11 @@
     "agentJson": "https://agent-commerce-guard.vercel.app/agent.json",
     "wellKnownAgentJson": "https://agent-commerce-guard.vercel.app/.well-known/agent.json",
     "githubPagesAgentJson": "https://fxjim.github.io/agent-commerce-guard/agent.json",
-    "githubPagesWellKnownAgentJson": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json"
+    "githubPagesWellKnownAgentJson": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json",
+    "status": "https://agent-commerce-guard.vercel.app/status.json",
+    "wellKnownStatus": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
+    "githubPagesStatus": "https://fxjim.github.io/agent-commerce-guard/status.json",
+    "githubPagesWellKnownStatus": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json"
   },
   "purchaseRoutes": [
     "https://agent-commerce-guard.vercel.app/pay",
@@ -82,5 +86,9 @@
       "private checkout links",
       "outbound payment"
     ]
-  }
+  },
+  "statusUrl": "https://agent-commerce-guard.vercel.app/status.json",
+  "wellKnownStatusUrl": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
+  "githubPagesStatusUrl": "https://fxjim.github.io/agent-commerce-guard/status.json",
+  "githubPagesWellKnownStatusUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json"
 }

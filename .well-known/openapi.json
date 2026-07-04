@@ -31,6 +31,10 @@
     {
       "name": "artifact",
       "description": "Free paid-package artifact metadata and verification hints."
+    },
+    {
+      "name": "status",
+      "description": "Free service status and exact payment preflight metadata."
     }
   ],
   "paths": {
@@ -160,6 +164,29 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PackageMetadata"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed."
+          }
+        }
+      }
+    },
+    "/api/status": {
+      "get": {
+        "operationId": "serviceStatus",
+        "tags": ["status"],
+        "summary": "Inspect current service status before purchase.",
+        "description": "Returns the live service status, current paid package metadata, exact Base USDC payment details, paid x402 endpoint routes, and discovery URLs without requiring payment.",
+        "responses": {
+          "200": {
+            "description": "Current service status and payment preflight metadata.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceStatus"
                 }
               }
             }
@@ -521,6 +548,59 @@
           "purchaseRoutes": {
             "type": "array",
             "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      },
+      "ServiceStatus": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Agent Commerce Guard Service Status"
+          },
+          "product": {
+            "type": "string",
+            "example": "Agent Commerce Guard"
+          },
+          "version": {
+            "type": "string",
+            "example": "0.1.0"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["live"]
+          },
+          "canonicalUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "wellKnownUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "receiver": {
+            "type": "string",
+            "example": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f"
+          },
+          "payment": {
+            "$ref": "#/components/schemas/PurchaseInfo"
+          },
+          "artifact": {
+            "$ref": "#/components/schemas/PackageMetadata/properties/artifact"
+          },
+          "paidEndpoints": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "discovery": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string",
               "format": "uri"
             }

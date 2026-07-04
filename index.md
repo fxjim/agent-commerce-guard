@@ -31,6 +31,9 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 - Pages well-known OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json
 - Pages package metadata: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
 - Pages well-known package metadata: https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json
+- Vercel service status: https://agent-commerce-guard.vercel.app/status.json
+- Pages service status: https://fxjim.github.io/agent-commerce-guard/status.json
+- Pages well-known service status: https://fxjim.github.io/agent-commerce-guard/.well-known/status.json
 - Pages well-known x402: https://fxjim.github.io/agent-commerce-guard/.well-known/x402
 - Pages well-known purchase guide: https://fxjim.github.io/agent-commerce-guard/.well-known/purchase.json
 - Pages sitemap: https://fxjim.github.io/agent-commerce-guard/sitemap.xml
@@ -49,6 +52,8 @@ The launch pass costs `1 USDC` on Base mainnet and unlocks the packaged CLI, exa
 - OpenAPI spec mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json
 - Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
 - Pages package metadata mirror: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
+- Service status: https://agent-commerce-guard.vercel.app/status.json
+- Pages service status mirror: https://fxjim.github.io/agent-commerce-guard/status.json
 - Inspect evaluator:
 
 ```bash
@@ -74,4 +79,4 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 - Launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - GitHub profile launch links: https://github.com/fxjim/fxjim
-- Current paid package shasum: `4d3276081cc3765851d3eccd3fada0501f52761e`
+- Current paid package shasum: `8d5b313e3c18fd0b3d9d68d96009b662b6e2f923`

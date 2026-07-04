@@ -362,5 +362,15 @@
   "agentJsonUrl": "https://agent-commerce-guard.vercel.app/agent.json",
   "wellKnownAgentJsonUrl": "https://agent-commerce-guard.vercel.app/.well-known/agent.json",
   "githubPagesAgentJsonUrl": "https://fxjim.github.io/agent-commerce-guard/agent.json",
-  "githubPagesWellKnownAgentJsonUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json"
+  "githubPagesWellKnownAgentJsonUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json",
+  "statusUrl": "https://agent-commerce-guard.vercel.app/status.json",
+  "wellKnownStatusUrl": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
+  "githubPagesStatusUrl": "https://fxjim.github.io/agent-commerce-guard/status.json",
+  "githubPagesWellKnownStatusUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json",
+  "statusMirrors": [
+    "https://agent-commerce-guard.vercel.app/status.json",
+    "https://agent-commerce-guard.vercel.app/.well-known/status.json",
+    "https://fxjim.github.io/agent-commerce-guard/status.json",
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json"
+  ]
 }

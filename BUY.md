@@ -16,7 +16,14 @@ https://agent-commerce-guard.vercel.app/package-metadata.json
 https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json
 ```
 
-LLM-readable discovery:
+Current service status and exact payment preflight:
+
+```text
+https://agent-commerce-guard.vercel.app/status.json
+https://agent-commerce-guard.vercel.app/.well-known/status.json
+```
+
+LLM-readable product summary:
 
 ```text
 https://agent-commerce-guard.vercel.app/llms.txt
@@ -29,8 +36,6 @@ Agent-readable manifests:
 https://agent-commerce-guard.vercel.app/agents.json
 https://agent-commerce-guard.vercel.app/agent.json
 https://agent-commerce-guard.vercel.app/.well-known/agent.json
-https://fxjim.github.io/agent-commerce-guard/agent.json
-https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json
 ```
 
 ## Pay For A Policy Evaluation
