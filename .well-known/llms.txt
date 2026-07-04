@@ -8,6 +8,8 @@ Public buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0
 Social preview image: https://agent-commerce-guard.vercel.app/og-image.png
 Offer manifest: https://agent-commerce-guard.vercel.app/offer.json
 Well-known offer manifest: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
+GitHub Pages offer mirror: https://fxjim.github.io/agent-commerce-guard/offer.json
+GitHub Pages well-known offer mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json
 OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
 Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
 GitHub Pages OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json

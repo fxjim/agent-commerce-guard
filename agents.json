@@ -196,5 +196,13 @@
   "aiPluginMirrors": [
     "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
     "https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json"
+  ],
+  "githubPagesOffer": "https://fxjim.github.io/agent-commerce-guard/offer.json",
+  "githubPagesWellKnownOffer": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json",
+  "offerMirrors": [
+    "https://agent-commerce-guard.vercel.app/offer.json",
+    "https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json",
+    "https://fxjim.github.io/agent-commerce-guard/offer.json",
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json"
   ]
 }

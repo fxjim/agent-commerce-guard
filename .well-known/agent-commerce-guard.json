@@ -1,0 +1,292 @@
+{
+  "name": "Agent Commerce Guard",
+  "version": "0.1.0",
+  "description": "Local-first approval gates, policy checks, and receipts for AI agents that can spend money, sell services, post socially, deploy publicly, launch tokens, run destructive commands, or touch wallets and credentials.",
+  "url": "https://agent-commerce-guard.vercel.app",
+  "imageUrl": "https://agent-commerce-guard.vercel.app/og-image.png",
+  "docsUrl": "https://github.com/fxjim/agent-commerce-guard",
+  "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/",
+  "publicGistUrl": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
+  "supportIssueUrl": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+  "launchDiscussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
+  "shortPayUrl": "https://agent-commerce-guard.vercel.app/pay",
+  "shortCheckoutUrl": "https://agent-commerce-guard.vercel.app/checkout",
+  "shortBuyGuideUrl": "https://agent-commerce-guard.vercel.app/buy",
+  "shortX402Url": "https://agent-commerce-guard.vercel.app/x402",
+  "x402JsonUrl": "https://agent-commerce-guard.vercel.app/x402.json",
+  "wellKnownX402JsonUrl": "https://agent-commerce-guard.vercel.app/.well-known/x402.json",
+  "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+  "wellKnownPackageMetadataUrl": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json",
+  "agentsUrl": "https://agent-commerce-guard.vercel.app/agents.json",
+  "agentsMarkdownUrl": "https://agent-commerce-guard.vercel.app/AGENTS.md",
+  "purchaseUrl": "https://agent-commerce-guard.vercel.app/purchase.json",
+  "buyGuideUrl": "https://agent-commerce-guard.vercel.app/BUY.md",
+  "paymentRequestUrl": "https://agent-commerce-guard.vercel.app/payment-request.json",
+  "wellKnownPaymentRequestUrl": "https://agent-commerce-guard.vercel.app/.well-known/payment-request.json",
+  "paymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+  "wellKnownPaymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg",
+  "aiPluginUrl": "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
+  "openapiUrl": "https://agent-commerce-guard.vercel.app/openapi.json",
+  "wellKnownOpenapiUrl": "https://agent-commerce-guard.vercel.app/.well-known/openapi.json",
+  "demoUrl": "https://agent-commerce-guard.vercel.app/api/demo-evaluate",
+  "audience": [
+    "Codex users",
+    "Claude Code users",
+    "OpenClaw users",
+    "agent commerce builders",
+    "x402 and Base wallet builders"
+  ],
+  "deliverable": {
+    "type": "npm tarball",
+    "filename": "agent-commerce-guard-0.1.0.tgz",
+    "metadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+    "wellKnownMetadataUrl": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json",
+    "contents": [
+      "CLI policy engine",
+      "agent skill pack",
+      "approval log template",
+      "launch checklist",
+      "action manifest schema and examples",
+      "local HTTP evaluator"
+    ]
+  },
+  "offers": [
+    {
+      "id": "base-launch-pass",
+      "name": "Base Launch Pass",
+      "price": "1.00",
+      "currency": "USDC",
+      "network": "Base mainnet",
+      "chainId": 8453,
+      "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+      "paymentUrl": "https://agent-commerce-guard.vercel.app/pay",
+      "canonicalPaymentUrl": "https://agent-commerce-guard.vercel.app/base-pay",
+      "paymentRequestUrl": "https://agent-commerce-guard.vercel.app/payment-request.json",
+      "shortPaymentRequestUrl": "https://agent-commerce-guard.vercel.app/pay.json",
+      "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000",
+      "paymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/payment-request.svg",
+      "shortPaymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/qr",
+      "x402Url": "https://agent-commerce-guard.vercel.app/api/x402-download",
+      "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+      "supportIssueUrl": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+      "launchDiscussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
+      "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
+      "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}"
+    },
+    {
+      "id": "x402-agent-download",
+      "name": "x402 Agent Download",
+      "price": "1.00",
+      "currency": "USDC",
+      "network": "Base mainnet",
+      "chainId": 8453,
+      "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+      "url": "https://agent-commerce-guard.vercel.app/api/x402-download",
+      "protocol": "x402",
+      "scheme": "exact",
+      "amountAtomic": "1000000",
+      "facilitator": "https://facilitator.xpay.sh",
+      "discoverable": true,
+      "routeTemplate": "/api/x402-download",
+      "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+      "extensions": {
+        "bazaar": {
+          "discoverable": true,
+          "description": "Paid Agent Commerce Guard package download for autonomous-agent approval gates, policy rules, and launch-safety templates.",
+          "routeTemplate": "/api/x402-download",
+          "info": {
+            "input": {
+              "type": "http",
+              "method": "GET",
+              "queryParams": {}
+            },
+            "output": {
+              "type": "binary",
+              "example": {
+                "package": "agent-commerce-guard-0.1.0.tgz",
+                "contents": [
+                  "acg CLI",
+                  "agent-commerce policy rules",
+                  "approval-log and launch-checklist templates",
+                  "Codex/Claude/OpenClaw guardrail skill"
+                ]
+              }
+            }
+          },
+          "schema": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "type": "object",
+            "required": ["input"],
+            "properties": {
+              "input": {
+                "type": "object",
+                "required": ["type", "method"],
+                "properties": {
+                  "type": { "const": "http", "type": "string" },
+                  "method": { "enum": ["GET"], "type": "string" },
+                  "queryParams": { "type": "object", "additionalProperties": false }
+                }
+              },
+              "output": {
+                "type": "object",
+                "required": ["type"],
+                "properties": {
+                  "type": { "type": "string" },
+                  "example": { "type": "object" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "discoveryTags": [
+        "agent-commerce",
+        "agent-safety",
+        "guardrails",
+        "approval-gates",
+        "codex",
+        "x402"
+      ]
+    },
+    {
+      "id": "x402-policy-evaluation",
+      "name": "x402 Policy Evaluation",
+      "price": "1.00",
+      "currency": "USDC",
+      "network": "Base mainnet",
+      "chainId": 8453,
+      "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+      "url": "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
+      "protocol": "x402",
+      "method": "POST",
+      "scheme": "exact",
+      "amountAtomic": "1000000",
+      "facilitator": "https://facilitator.xpay.sh",
+      "discoverable": true,
+      "routeTemplate": "/api/x402-evaluate",
+      "extensions": {
+        "bazaar": {
+          "discoverable": true,
+          "description": "Agent workflow validator and command-risk scorer for autonomous agents before wallet spend, x402 payments, deployments, token launches, social posts, or credential access.",
+          "routeTemplate": "/api/x402-evaluate",
+          "info": {
+            "description": "Score an autonomous-agent action manifest for financial, deployment, social, token-launch, destructive-action, and credential risk before execution.",
+            "input": {
+              "type": "http",
+              "method": "POST",
+              "bodyType": "json",
+              "body": {
+                "action": {
+                  "id": "launch-payment",
+                  "actor": "codex",
+                  "action": "Send 1 USDC on Base to unlock a paid package",
+                  "amountUsd": 1,
+                  "approved": false
+                }
+              }
+            },
+            "output": {
+              "type": "json",
+              "example": {
+                "paid": true,
+                "summary": { "allow": 0, "review": 0, "deny": 1 },
+                "results": [
+                  {
+                    "id": "launch-payment",
+                    "decision": "deny",
+                    "severity": "high",
+                    "findings": [{ "id": "financial_action", "severity": "high" }],
+                    "requiredEvidence": ["User/operator approval timestamp"]
+                  }
+                ]
+              }
+            }
+          },
+          "schema": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "type": "object",
+            "required": ["input"],
+            "properties": {
+              "input": {
+                "type": "object",
+                "required": ["type", "method", "bodyType", "body"],
+                "properties": {
+                  "type": { "const": "http", "type": "string" },
+                  "method": { "enum": ["POST"], "type": "string" },
+                  "bodyType": { "enum": ["json"], "type": "string" },
+                  "body": {
+                    "type": "object",
+                    "properties": {
+                      "action": { "type": "object" },
+                      "actions": {
+                        "type": "array",
+                        "items": { "type": "object" },
+                        "maxItems": 10
+                      }
+                    }
+                  }
+                }
+              },
+              "output": {
+                "type": "object",
+                "required": ["type"],
+                "properties": {
+                  "type": { "type": "string" },
+                  "example": { "type": "object" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "input": "{ action: {...} } or { actions: [...] }",
+      "output": "sanitized JSON policy decision",
+      "discoveryTags": [
+        "agent-commerce",
+        "agent-safety",
+        "agent-workflow",
+        "workflow-validation",
+        "command-risk",
+        "destructive-actions",
+        "wallet-spend",
+        "guardrails",
+        "approval-gates",
+        "autonomous-agents",
+        "codex",
+        "x402"
+      ]
+    }
+  ],
+  "safety": {
+    "privateKeysInRepo": false,
+    "requiresTxHashForDownload": true,
+    "nonRefundableDigitalDownload": true
+  },
+  "inboundAgentHandoff": {
+    "audience": "Autonomous agents, TaskMarket runners, and GitHub contributors.",
+    "primaryNextStep": "Buy through an official public route or submit a forked pull request.",
+    "officialPurchaseRoutes": [
+      "https://agent-commerce-guard.vercel.app/pay",
+      "https://agent-commerce-guard.vercel.app/buy",
+      "https://agent-commerce-guard.vercel.app/pay.json",
+      "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
+      "https://agent-commerce-guard.vercel.app/api/x402-download"
+    ],
+    "publicDeliveryRoutes": [
+      "https://github.com/fxjim/agent-commerce-guard/issues/1",
+      "https://github.com/fxjim/agent-commerce-guard/discussions/2",
+      "https://github.com/fxjim/agent-commerce-guard/pulls"
+    ],
+    "doNotRequest": [
+      "repo write access",
+      "credentials",
+      "private keys",
+      "wallet seed material",
+      "private checkout links",
+      "outbound payment"
+    ]
+  }
+}
