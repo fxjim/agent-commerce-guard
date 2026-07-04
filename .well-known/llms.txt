@@ -39,7 +39,7 @@ Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
 The Base Launch Pass costs 1 USDC on Base mainnet.
 
-- Current paid package shasum: 20fee05124a1d2c5511df4a81a56ed19cff36ade
+- Current paid package shasum: 9a7b416dec024c709b8c330594247500456a1462
 
 - Receiver: 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f
 - USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913

@@ -54,7 +54,7 @@ The launch pass is available for `1 USDC` on Base.
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `20fee05124a1d2c5511df4a81a56ed19cff36ade`
+- Current paid package shasum: `9a7b416dec024c709b8c330594247500456a1462`
 
 ## What It Includes
 
