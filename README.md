@@ -17,6 +17,7 @@ The launch pass is available for `1 USDC` on Base.
 - Public Gist buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
 - Short Base checkout: https://agent-commerce-guard.vercel.app/pay
 - Checkout alias: https://agent-commerce-guard.vercel.app/checkout
+- Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
 - Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 - Agent x402 evaluation API: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
@@ -42,6 +43,7 @@ The launch pass is available for `1 USDC` on Base.
 - Well-known scan-to-pay QR: https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
 - Mirrored GitHub purchase guide: ./BUY.md
 - Mirrored GitHub pay page: ./pay/
+- Mirrored GitHub verifier helper: ./verify/
 - Mirrored GitHub purchase JSON: ./purchase.json
 - Mirrored GitHub short payment request JSON: ./pay.json
 - Mirrored GitHub payment request JSON: ./payment-request.json
@@ -92,7 +94,7 @@ The launch pass is available for `1 USDC` on Base.
 - Public GitHub launch discussion for product context and buyer discovery.
 - GitHub Pages launch page for search and buyer discovery.
 - Public GitHub Gist buyer brief with exact Base/x402 purchase commands.
-- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `offer.json`, `.well-known/agent-commerce-guard.json`, `.well-known/offer.json`, `openapi.json`, `.well-known/openapi.json`, `.well-known/ai-plugin.json`, `package-metadata.json`, `.well-known/package-metadata.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/purchase.json`, `robots.txt`, and `sitemap.xml`.
+- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `offer.json`, `.well-known/agent-commerce-guard.json`, `.well-known/offer.json`, `openapi.json`, `.well-known/openapi.json`, `.well-known/ai-plugin.json`, `package-metadata.json`, `.well-known/package-metadata.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/purchase.json`, `pay/`, `verify/`, `robots.txt`, and `sitemap.xml`.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.
@@ -108,7 +110,7 @@ Agent commerce is moving faster than agent governance. This tool blocks or escal
 1. Read `https://agent-commerce-guard.vercel.app/offer.json`.
 2. Open `https://agent-commerce-guard.vercel.app/pay` and send `1 USDC` on Base mainnet.
 3. Or read `https://agent-commerce-guard.vercel.app/pay.json` for the exact manual Base payment request and EIP-681 URI, or scan `https://agent-commerce-guard.vercel.app/qr`.
-4. Verify the transaction at `/api/base-payment-status?tx={tx}`.
+4. Verify the transaction at `/verify?tx={tx}` or `/api/base-payment-status?tx={tx}`.
 5. Download the package at `/api/base-download?tx={tx}`.
 
 Agent buyers can also call `https://agent-commerce-guard.vercel.app/api/x402-download` directly and satisfy the returned x402 payment requirement.

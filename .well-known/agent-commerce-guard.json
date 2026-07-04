@@ -11,6 +11,7 @@
   "launchDiscussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
   "shortPayUrl": "https://agent-commerce-guard.vercel.app/pay",
   "shortCheckoutUrl": "https://agent-commerce-guard.vercel.app/checkout",
+  "shortVerifyUrl": "https://agent-commerce-guard.vercel.app/verify",
   "shortBuyGuideUrl": "https://agent-commerce-guard.vercel.app/buy",
   "shortX402Url": "https://agent-commerce-guard.vercel.app/x402",
   "x402JsonUrl": "https://agent-commerce-guard.vercel.app/x402.json",
@@ -62,6 +63,7 @@
       "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
       "paymentUrl": "https://agent-commerce-guard.vercel.app/pay",
       "canonicalPaymentUrl": "https://agent-commerce-guard.vercel.app/base-pay",
+      "verifyPageUrlTemplate": "https://agent-commerce-guard.vercel.app/verify?tx={tx}",
       "paymentRequestUrl": "https://agent-commerce-guard.vercel.app/payment-request.json",
       "shortPaymentRequestUrl": "https://agent-commerce-guard.vercel.app/pay.json",
       "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000",
@@ -270,6 +272,7 @@
     "primaryNextStep": "Buy through an official public route or submit a forked pull request.",
     "officialPurchaseRoutes": [
       "https://agent-commerce-guard.vercel.app/pay",
+      "https://agent-commerce-guard.vercel.app/verify",
       "https://agent-commerce-guard.vercel.app/buy",
       "https://agent-commerce-guard.vercel.app/pay.json",
       "https://agent-commerce-guard.vercel.app/api/x402-evaluate",

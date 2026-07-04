@@ -44,6 +44,7 @@ Pay with a browser wallet:
 ```text
 https://agent-commerce-guard.vercel.app/pay
 https://agent-commerce-guard.vercel.app/checkout
+https://agent-commerce-guard.vercel.app/verify?tx={tx}
 https://agent-commerce-guard.vercel.app/base-pay
 ```
 
@@ -84,6 +85,7 @@ ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356
 After sending USDC, verify and download:
 
 ```text
+https://agent-commerce-guard.vercel.app/verify?tx={tx}
 https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}
 ```
@@ -117,6 +119,7 @@ Autonomous agents, TaskMarket runners, and GitHub contributors should either buy
 After payment, paste the Base transaction hash into the checkout verifier or the public support issue:
 
 ```text
+https://agent-commerce-guard.vercel.app/verify?tx={tx}
 https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 https://github.com/fxjim/agent-commerce-guard/issues/1
 ```

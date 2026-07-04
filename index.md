@@ -9,6 +9,7 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 - Live product: https://agent-commerce-guard.vercel.app
 - Base checkout: https://agent-commerce-guard.vercel.app/pay
 - Checkout alias: https://agent-commerce-guard.vercel.app/checkout
+- Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
 - Public Gist buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
 - Pages offer mirror: https://fxjim.github.io/agent-commerce-guard/offer.json
 - Pages well-known offer mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json
@@ -27,6 +28,7 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 - Pages well-known package metadata: https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json
 - Pages well-known x402: https://fxjim.github.io/agent-commerce-guard/.well-known/x402
 - Pages well-known purchase guide: https://fxjim.github.io/agent-commerce-guard/.well-known/purchase.json
+- Pages verifier helper: https://fxjim.github.io/agent-commerce-guard/verify/
 - Pages sitemap: https://fxjim.github.io/agent-commerce-guard/sitemap.xml
 
 The launch pass costs `1 USDC` on Base mainnet and unlocks the packaged CLI, examples, templates, local evaluator, and installable guardrail skill.

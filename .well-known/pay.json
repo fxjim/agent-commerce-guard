@@ -26,6 +26,7 @@
   "wellKnownQrCodeUrl": "https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg",
   "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
   "checkoutAlias": "https://agent-commerce-guard.vercel.app/checkout",
+  "verifyPageUrlTemplate": "https://agent-commerce-guard.vercel.app/verify?tx={tx}",
   "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
   "shortPaymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
   "artifactVerification": {

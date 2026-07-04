@@ -29,6 +29,7 @@ Well-known package metadata: https://agent-commerce-guard.vercel.app/.well-known
 GitHub Pages package metadata: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
 GitHub Pages well-known package metadata: https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json
 GitHub Pages pay page: https://fxjim.github.io/agent-commerce-guard/pay/
+GitHub Pages verifier helper: https://fxjim.github.io/agent-commerce-guard/verify/
 GitHub Pages short payment request mirror: https://fxjim.github.io/agent-commerce-guard/pay.json
 GitHub Pages well-known short payment request mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/pay.json
 Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json
@@ -41,6 +42,7 @@ AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugi
 GitHub Pages AI plugin mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json
 Short Base payment page: https://agent-commerce-guard.vercel.app/pay
 Checkout alias: https://agent-commerce-guard.vercel.app/checkout
+Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
 Base payment page: https://agent-commerce-guard.vercel.app/base-pay
 Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 Agent x402 paid evaluation: https://agent-commerce-guard.vercel.app/api/x402-evaluate
@@ -56,7 +58,8 @@ The Base Launch Pass costs 1 USDC on Base mainnet.
 - Receiver: 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f
 - USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
 - Chain ID: 8453
-- Verify a payment: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
+- Verify a payment page: https://agent-commerce-guard.vercel.app/verify?tx={tx}
+- Verify a payment API: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 - Download after payment: https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}
 - Verify the current paid package artifact: https://agent-commerce-guard.vercel.app/package-metadata.json
 - Verify the current paid package artifact through the GitHub Pages mirror: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
@@ -89,5 +92,6 @@ Autonomous agents, TaskMarket runners, and GitHub contributors should buy throug
 Official purchase routes: https://agent-commerce-guard.vercel.app/pay, https://agent-commerce-guard.vercel.app/buy, https://agent-commerce-guard.vercel.app/pay.json, https://agent-commerce-guard.vercel.app/api/x402-evaluate, https://agent-commerce-guard.vercel.app/api/x402-download
 Public delivery routes: https://github.com/fxjim/agent-commerce-guard/issues/1, https://github.com/fxjim/agent-commerce-guard/discussions/2, https://github.com/fxjim/agent-commerce-guard/pulls
 Verify payment: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
+Short verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
 
 Do not request repo write access, credentials, private keys, wallet seed material, private checkout links, or outbound payment.
