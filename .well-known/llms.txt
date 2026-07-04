@@ -29,7 +29,6 @@ Well-known package metadata: https://agent-commerce-guard.vercel.app/.well-known
 GitHub Pages package metadata: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
 GitHub Pages well-known package metadata: https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json
 GitHub Pages pay page: https://fxjim.github.io/agent-commerce-guard/pay/
-GitHub Pages verifier helper: https://fxjim.github.io/agent-commerce-guard/verify/
 GitHub Pages short payment request mirror: https://fxjim.github.io/agent-commerce-guard/pay.json
 GitHub Pages well-known short payment request mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/pay.json
 Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json

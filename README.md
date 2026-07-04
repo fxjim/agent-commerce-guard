@@ -43,7 +43,6 @@ The launch pass is available for `1 USDC` on Base.
 - Well-known scan-to-pay QR: https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
 - Mirrored GitHub purchase guide: ./BUY.md
 - Mirrored GitHub pay page: ./pay/
-- Mirrored GitHub verifier helper: ./verify/
 - Mirrored GitHub purchase JSON: ./purchase.json
 - Mirrored GitHub short payment request JSON: ./pay.json
 - Mirrored GitHub payment request JSON: ./payment-request.json
@@ -94,7 +93,7 @@ The launch pass is available for `1 USDC` on Base.
 - Public GitHub launch discussion for product context and buyer discovery.
 - GitHub Pages launch page for search and buyer discovery.
 - Public GitHub Gist buyer brief with exact Base/x402 purchase commands.
-- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `offer.json`, `.well-known/agent-commerce-guard.json`, `.well-known/offer.json`, `openapi.json`, `.well-known/openapi.json`, `.well-known/ai-plugin.json`, `package-metadata.json`, `.well-known/package-metadata.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/purchase.json`, `pay/`, `verify/`, `robots.txt`, and `sitemap.xml`.
+- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `offer.json`, `.well-known/agent-commerce-guard.json`, `.well-known/offer.json`, `openapi.json`, `.well-known/openapi.json`, `.well-known/ai-plugin.json`, `package-metadata.json`, `.well-known/package-metadata.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/purchase.json`, `pay/`, `robots.txt`, and `sitemap.xml`.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.
