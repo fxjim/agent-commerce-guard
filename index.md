@@ -82,4 +82,4 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 - Launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - GitHub profile launch links: https://github.com/fxjim/fxjim
-- Current paid package shasum: `76ae820aa126e9f7a8243a7b721cabe91467da57`
+- Current paid package shasum: `52f1ea125c320373e8074f1756b3a2325cfac85d`

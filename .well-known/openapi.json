@@ -429,6 +429,18 @@
             "type": "string",
             "format": "uri"
           },
+          "verifyPageUrlTemplate": {
+            "type": "string",
+            "format": "uri-template"
+          },
+          "verifyUrlTemplate": {
+            "type": "string",
+            "format": "uri-template"
+          },
+          "downloadUrlTemplate": {
+            "type": "string",
+            "format": "uri-template"
+          },
           "baseCheckoutUrl": {
             "type": "string",
             "format": "uri"
@@ -557,6 +569,10 @@
           "manualUnlock": {
             "type": "object",
             "properties": {
+              "verifyPageUrlTemplate": {
+                "type": "string",
+                "format": "uri-template"
+              },
               "verifyUrlTemplate": {
                 "type": "string",
                 "format": "uri-template"
