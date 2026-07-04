@@ -36,6 +36,7 @@ The launch pass is available for `1 USDC` on Base.
 - Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
 - Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json
+- Well-known short payment request: https://agent-commerce-guard.vercel.app/.well-known/pay.json
 - Canonical Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
 - Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 - Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
@@ -69,7 +70,7 @@ The launch pass is available for `1 USDC` on Base.
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `8709925719ef6c2c29a913598d181b124f7b7bc0`
+- Current paid package shasum: `48c8a0887048026047d7dd609070689f5b887acc`
 
 ## What It Includes
 

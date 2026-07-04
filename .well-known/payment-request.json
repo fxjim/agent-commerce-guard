@@ -29,6 +29,7 @@
   "verifyPageUrlTemplate": "https://agent-commerce-guard.vercel.app/verify?tx={tx}",
   "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
   "shortPaymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
+  "wellKnownShortPaymentRequest": "https://agent-commerce-guard.vercel.app/.well-known/pay.json",
   "artifactVerification": {
     "metadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
     "wellKnownMetadataUrl": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json",

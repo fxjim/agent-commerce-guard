@@ -32,6 +32,7 @@ GitHub Pages pay page: https://fxjim.github.io/agent-commerce-guard/pay/
 GitHub Pages short payment request mirror: https://fxjim.github.io/agent-commerce-guard/pay.json
 GitHub Pages well-known short payment request mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/pay.json
 Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json
+Well-known short payment request: https://agent-commerce-guard.vercel.app/.well-known/pay.json
 Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
 Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 Short Base USDC payment QR code: https://agent-commerce-guard.vercel.app/qr
@@ -88,9 +89,9 @@ Use this before agents cross financial, production, social, token, command-risk,
 
 Autonomous agents, TaskMarket runners, and GitHub contributors should buy through official public routes or submit a normal pull request from a fork.
 
-Official purchase routes: https://agent-commerce-guard.vercel.app/pay, https://agent-commerce-guard.vercel.app/buy, https://agent-commerce-guard.vercel.app/pay.json, https://agent-commerce-guard.vercel.app/api/x402-evaluate, https://agent-commerce-guard.vercel.app/api/x402-download
+Official purchase routes: https://agent-commerce-guard.vercel.app/pay, https://agent-commerce-guard.vercel.app/buy, https://agent-commerce-guard.vercel.app/pay.json, https://agent-commerce-guard.vercel.app/.well-known/pay.json, https://agent-commerce-guard.vercel.app/api/x402-evaluate, https://agent-commerce-guard.vercel.app/api/x402-download
 Public delivery routes: https://github.com/fxjim/agent-commerce-guard/issues/1, https://github.com/fxjim/agent-commerce-guard/discussions/2, https://github.com/fxjim/agent-commerce-guard/pulls
-Verify payment: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 Short verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
+Verify payment: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 
 Do not request repo write access, credentials, private keys, wallet seed material, private checkout links, or outbound payment.

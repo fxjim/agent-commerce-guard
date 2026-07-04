@@ -8,8 +8,8 @@
   "artifact": {
     "type": "npm-tarball",
     "filename": "agent-commerce-guard-0.1.0.tgz",
-    "bytes": 117206,
-    "shasum": "8709925719ef6c2c29a913598d181b124f7b7bc0",
+    "bytes": 117868,
+    "shasum": "48c8a0887048026047d7dd609070689f5b887acc",
     "shasumAlgorithm": "sha1",
     "verifyCommand": "shasum agent-commerce-guard-0.1.0.tgz"
   },
@@ -47,6 +47,7 @@
     "https://agent-commerce-guard.vercel.app/pay",
     "https://agent-commerce-guard.vercel.app/buy",
     "https://agent-commerce-guard.vercel.app/pay.json",
+    "https://agent-commerce-guard.vercel.app/.well-known/pay.json",
     "https://agent-commerce-guard.vercel.app/qr",
     "https://agent-commerce-guard.vercel.app/api/x402-download"
   ],
@@ -57,6 +58,7 @@
       "https://agent-commerce-guard.vercel.app/pay",
       "https://agent-commerce-guard.vercel.app/buy",
       "https://agent-commerce-guard.vercel.app/pay.json",
+      "https://agent-commerce-guard.vercel.app/.well-known/pay.json",
       "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
       "https://agent-commerce-guard.vercel.app/api/x402-download"
     ],

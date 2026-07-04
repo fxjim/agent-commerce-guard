@@ -44,7 +44,6 @@ Pay with a browser wallet:
 ```text
 https://agent-commerce-guard.vercel.app/pay
 https://agent-commerce-guard.vercel.app/checkout
-https://agent-commerce-guard.vercel.app/verify?tx={tx}
 https://agent-commerce-guard.vercel.app/base-pay
 ```
 
@@ -64,6 +63,7 @@ Machine-readable Base payment request:
 
 ```text
 https://agent-commerce-guard.vercel.app/pay.json
+https://agent-commerce-guard.vercel.app/.well-known/pay.json
 https://agent-commerce-guard.vercel.app/payment-request.json
 https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 ```

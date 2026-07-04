@@ -8,6 +8,7 @@
   "shortPurchaseUrl": "https://agent-commerce-guard.vercel.app/buy",
   "paymentRequestUrl": "https://agent-commerce-guard.vercel.app/payment-request.json",
   "shortPaymentRequestUrl": "https://agent-commerce-guard.vercel.app/pay.json",
+  "wellKnownShortPaymentRequestUrl": "https://agent-commerce-guard.vercel.app/.well-known/pay.json",
   "paymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/payment-request.svg",
   "shortPaymentRequestQrUrl": "https://agent-commerce-guard.vercel.app/qr",
   "shortHumanCheckoutUrl": "https://agent-commerce-guard.vercel.app/pay",
