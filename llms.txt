@@ -20,6 +20,8 @@ Well-known purchase guide: https://agent-commerce-guard.vercel.app/.well-known/p
 Short x402 manifest: https://agent-commerce-guard.vercel.app/x402
 Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
 Well-known package metadata: https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json
+GitHub Pages package metadata: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
+GitHub Pages well-known package metadata: https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json
 Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json
 Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
 Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
@@ -47,6 +49,7 @@ The Base Launch Pass costs 1 USDC on Base mainnet.
 - Verify a payment: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 - Download after payment: https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}
 - Verify the current paid package artifact: https://agent-commerce-guard.vercel.app/package-metadata.json
+- Verify the current paid package artifact through the GitHub Pages mirror: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
 - EIP-681 payment URI: ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000
 - QR code for the same payment URI: https://agent-commerce-guard.vercel.app/qr
 - Agent-native x402 paid download: https://agent-commerce-guard.vercel.app/api/x402-download

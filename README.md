@@ -46,6 +46,8 @@ The launch pass is available for `1 USDC` on Base.
 - LLM-readable summary: https://agent-commerce-guard.vercel.app/llms.txt
 - GitHub Pages LLM summary: https://fxjim.github.io/agent-commerce-guard/llms.txt
 - GitHub Pages agents manifest: https://fxjim.github.io/agent-commerce-guard/agents.json
+- GitHub Pages package metadata: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
+- GitHub Pages well-known package metadata: https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json
 - GitHub Pages well-known x402: https://fxjim.github.io/agent-commerce-guard/.well-known/x402
 - GitHub Pages well-known agents manifest: https://fxjim.github.io/agent-commerce-guard/.well-known/agents.json
 - GitHub Pages well-known purchase guide: https://fxjim.github.io/agent-commerce-guard/.well-known/purchase.json
@@ -80,7 +82,7 @@ The launch pass is available for `1 USDC` on Base.
 - Public GitHub launch discussion for product context and buyer discovery.
 - GitHub Pages launch page for search and buyer discovery.
 - Public GitHub Gist buyer brief with exact Base/x402 purchase commands.
-- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/purchase.json`, `robots.txt`, and `sitemap.xml`.
+- GitHub Pages agent-readable mirrors for `llms.txt`, `agents.json`, `package-metadata.json`, `.well-known/package-metadata.json`, `.well-known/x402`, `.well-known/agents.json`, `.well-known/purchase.json`, `robots.txt`, and `sitemap.xml`.
 - OpenAPI 3.1 spec for paid and demo endpoints.
 - x402 paid package endpoint for agent-native purchase on Base mainnet.
 - x402 paid evaluation endpoint for agent-native policy decisions over POSTed action manifests.

@@ -37,7 +37,9 @@
     "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
     "launchDiscussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
     "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
-    "bazaarDiscoverable": true
+    "bazaarDiscoverable": true,
+    "githubPagesPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
+    "githubPagesWellKnownPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json"
   },
   "bazaar": {
     "discoverable": true,
@@ -67,13 +69,19 @@
           "type": "json",
           "example": {
             "paid": true,
-            "summary": { "allow": 0, "review": 0, "deny": 1 },
+            "summary": {
+              "allow": 0,
+              "review": 0,
+              "deny": 1
+            },
             "results": [
               {
                 "id": "launch-payment",
                 "decision": "deny",
                 "severity": "high",
-                "requiredEvidence": ["User/operator approval timestamp"]
+                "requiredEvidence": [
+                  "User/operator approval timestamp"
+                ]
               }
             ]
           }
@@ -120,7 +128,8 @@
           "approval-gates",
           "codex",
           "x402"
-        ]
+        ],
+        "githubPagesPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json"
       }
     ]
   },

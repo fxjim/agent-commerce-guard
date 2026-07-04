@@ -75,23 +75,45 @@
           "schema": {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
             "type": "object",
-            "required": ["input"],
+            "required": [
+              "input"
+            ],
             "properties": {
               "input": {
                 "type": "object",
-                "required": ["type", "method"],
+                "required": [
+                  "type",
+                  "method"
+                ],
                 "properties": {
-                  "type": { "const": "http", "type": "string" },
-                  "method": { "enum": ["GET"], "type": "string" },
-                  "queryParams": { "type": "object", "additionalProperties": false }
+                  "type": {
+                    "const": "http",
+                    "type": "string"
+                  },
+                  "method": {
+                    "enum": [
+                      "GET"
+                    ],
+                    "type": "string"
+                  },
+                  "queryParams": {
+                    "type": "object",
+                    "additionalProperties": false
+                  }
                 }
               },
               "output": {
                 "type": "object",
-                "required": ["type"],
+                "required": [
+                  "type"
+                ],
                 "properties": {
-                  "type": { "type": "string" },
-                  "example": { "type": "object" }
+                  "type": {
+                    "type": "string"
+                  },
+                  "example": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -126,7 +148,8 @@
       "paymentRequestQr": "https://agent-commerce-guard.vercel.app/qr",
       "canonicalPaymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
       "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
-      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
+      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
+      "githubPagesPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json"
     },
     {
       "type": "http",
@@ -172,14 +195,25 @@
               "type": "json",
               "example": {
                 "paid": true,
-                "summary": { "allow": 0, "review": 0, "deny": 1 },
+                "summary": {
+                  "allow": 0,
+                  "review": 0,
+                  "deny": 1
+                },
                 "results": [
                   {
                     "id": "launch-payment",
                     "decision": "deny",
                     "severity": "high",
-                    "findings": [{ "id": "financial_action", "severity": "high" }],
-                    "requiredEvidence": ["User/operator approval timestamp"]
+                    "findings": [
+                      {
+                        "id": "financial_action",
+                        "severity": "high"
+                      }
+                    ],
+                    "requiredEvidence": [
+                      "User/operator approval timestamp"
+                    ]
                   }
                 ]
               }
@@ -188,22 +222,46 @@
           "schema": {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
             "type": "object",
-            "required": ["input"],
+            "required": [
+              "input"
+            ],
             "properties": {
               "input": {
                 "type": "object",
-                "required": ["type", "method", "bodyType", "body"],
+                "required": [
+                  "type",
+                  "method",
+                  "bodyType",
+                  "body"
+                ],
                 "properties": {
-                  "type": { "const": "http", "type": "string" },
-                  "method": { "enum": ["POST"], "type": "string" },
-                  "bodyType": { "enum": ["json"], "type": "string" },
+                  "type": {
+                    "const": "http",
+                    "type": "string"
+                  },
+                  "method": {
+                    "enum": [
+                      "POST"
+                    ],
+                    "type": "string"
+                  },
+                  "bodyType": {
+                    "enum": [
+                      "json"
+                    ],
+                    "type": "string"
+                  },
                   "body": {
                     "type": "object",
                     "properties": {
-                      "action": { "type": "object" },
+                      "action": {
+                        "type": "object"
+                      },
                       "actions": {
                         "type": "array",
-                        "items": { "type": "object" },
+                        "items": {
+                          "type": "object"
+                        },
                         "maxItems": 10
                       }
                     }
@@ -212,10 +270,16 @@
               },
               "output": {
                 "type": "object",
-                "required": ["type"],
+                "required": [
+                  "type"
+                ],
                 "properties": {
-                  "type": { "type": "string" },
-                  "example": { "type": "object" }
+                  "type": {
+                    "type": "string"
+                  },
+                  "example": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -270,5 +334,7 @@
       "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
       "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
     }
-  ]
+  ],
+  "githubPagesPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
+  "githubPagesWellKnownPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json"
 }

@@ -8,7 +8,11 @@
   "publicGist": "https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb",
   "support": "https://github.com/fxjim/agent-commerce-guard/issues/1",
   "discussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
-  "protocols": ["x402", "openapi", "llms.txt"],
+  "protocols": [
+    "x402",
+    "openapi",
+    "llms.txt"
+  ],
   "bazaarDiscoverable": true,
   "openapi": "https://agent-commerce-guard.vercel.app/openapi.json",
   "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
@@ -62,13 +66,19 @@
         "type": "json",
         "example": {
           "paid": true,
-          "summary": { "allow": 0, "review": 0, "deny": 1 },
+          "summary": {
+            "allow": 0,
+            "review": 0,
+            "deny": 1
+          },
           "results": [
             {
               "id": "launch-payment",
               "decision": "deny",
               "severity": "high",
-              "requiredEvidence": ["User/operator approval timestamp"]
+              "requiredEvidence": [
+                "User/operator approval timestamp"
+              ]
             }
           ]
         }
@@ -119,7 +129,8 @@
         "network": "Base mainnet",
         "chainId": 8453
       },
-      "description": "Download the Agent Commerce Guard CLI, templates, local evaluator, and skill pack after x402 payment."
+      "description": "Download the Agent Commerce Guard CLI, templates, local evaluator, and skill pack after x402 payment.",
+      "githubPagesPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json"
     },
     {
       "id": "free-demo-evaluation",
@@ -170,5 +181,7 @@
         "Do not request repo write access, credentials, private keys, wallet seed material, or private checkout links."
       ]
     }
-  }
+  },
+  "githubPagesPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
+  "githubPagesWellKnownPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json"
 }

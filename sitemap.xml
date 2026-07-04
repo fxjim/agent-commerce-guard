@@ -22,7 +22,13 @@
     <loc>https://fxjim.github.io/agent-commerce-guard/agents.json</loc>
   </url>
   <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/package-metadata.json</loc>
+  </url>
+  <url>
     <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/x402</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json</loc>
   </url>
   <url>
     <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/agents.json</loc>
