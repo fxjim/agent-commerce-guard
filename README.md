@@ -38,7 +38,9 @@ The launch pass is available for `1 USDC` on Base.
 - Well-known scan-to-pay QR: https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
 - Mirrored GitHub purchase guide: ./BUY.md
 - Mirrored GitHub purchase JSON: ./purchase.json
+- Mirrored GitHub short payment request JSON: ./pay.json
 - Mirrored GitHub payment request JSON: ./payment-request.json
+- Mirrored GitHub well-known short payment request JSON: ./.well-known/pay.json
 - Mirrored GitHub payment QR SVG: ./payment-request.svg
 - AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json
 - OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
