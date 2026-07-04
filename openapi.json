@@ -1,0 +1,536 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Agent Commerce Guard API",
+    "version": "0.1.0",
+    "summary": "x402-paid agent workflow validator and command-risk scorer.",
+    "description": "Agent Commerce Guard provides x402-paid policy evaluation and package download endpoints for autonomous agents that need approval gates before wallet spend, deployments, social posts, token launches, destructive commands, or credential access.",
+    "license": {
+      "name": "MIT",
+      "identifier": "MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://agent-commerce-guard.vercel.app"
+    }
+  ],
+  "tags": [
+    {
+      "name": "x402",
+      "description": "Paid x402 endpoints on Base mainnet."
+    },
+    {
+      "name": "demo",
+      "description": "Free sanitized policy evaluation demo."
+    },
+    {
+      "name": "base-checkout",
+      "description": "Browser-wallet and tx-hash verification flow."
+    },
+    {
+      "name": "artifact",
+      "description": "Free paid-package artifact metadata and verification hints."
+    }
+  ],
+  "paths": {
+    "/api/x402-evaluate": {
+      "post": {
+        "operationId": "paidPolicyEvaluation",
+        "tags": ["x402"],
+        "summary": "Run a paid policy evaluation.",
+        "description": "Returns a sanitized policy decision for one action or a batch of up to 10 actions after a 1 USDC x402 payment on Base mainnet.",
+        "x-x402": {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "amount": "1000000",
+          "currency": "USDC",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "payTo": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+          "facilitator": "https://facilitator.xpay.sh",
+          "discovery": "https://agent-commerce-guard.vercel.app/.well-known/x402"
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActionEvaluationRequest"
+              },
+              "examples": {
+                "walletSpend": {
+                  "summary": "Wallet spend review",
+                  "value": {
+                    "action": {
+                      "id": "launch-payment",
+                      "actor": "codex",
+                      "action": "Send 1 USDC on Base to unlock a paid package",
+                      "amountUsd": 1,
+                      "approved": false
+                    }
+                  }
+                },
+                "commandRisk": {
+                  "summary": "Command-risk review",
+                  "value": {
+                    "action": {
+                      "id": "cleanup-command",
+                      "actor": "codex",
+                      "command": "rm -rf /tmp/build",
+                      "intent": "cleanup generated files",
+                      "approved": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Paid policy evaluation result.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaidEvaluationResponse"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Payment required. The response includes x402 payment requirements in the PAYMENT-REQUIRED header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentRequired"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed."
+          }
+        }
+      }
+    },
+    "/api/x402-download": {
+      "get": {
+        "operationId": "paidPackageDownload",
+        "tags": ["x402"],
+        "summary": "Download the paid package after x402 payment.",
+        "description": "Streams the Agent Commerce Guard tarball after a 1 USDC x402 payment on Base mainnet.",
+        "x-x402": {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "amount": "1000000",
+          "currency": "USDC",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "payTo": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f",
+          "facilitator": "https://facilitator.xpay.sh",
+          "discovery": "https://agent-commerce-guard.vercel.app/.well-known/x402"
+        },
+        "responses": {
+          "200": {
+            "description": "Paid package tarball.",
+            "content": {
+              "application/gzip": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Payment required. The response includes x402 payment requirements in the PAYMENT-REQUIRED header."
+          }
+        }
+      }
+    },
+    "/api/package-metadata": {
+      "get": {
+        "operationId": "packageMetadata",
+        "tags": ["artifact"],
+        "summary": "Inspect current paid package metadata before purchase.",
+        "description": "Returns the current Agent Commerce Guard paid tarball filename, byte size, SHA-1 shasum, verify command, paid x402 download URL, and Base payment metadata without requiring payment.",
+        "responses": {
+          "200": {
+            "description": "Current paid package artifact metadata.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PackageMetadata"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed."
+          }
+        }
+      }
+    },
+    "/api/demo-evaluate": {
+      "get": {
+        "operationId": "demoPolicyEvaluation",
+        "tags": ["demo"],
+        "summary": "Run the free sample policy evaluation.",
+        "responses": {
+          "200": {
+            "description": "Sanitized demo evaluation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaidEvaluationResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "demoPolicyEvaluationForInput",
+        "tags": ["demo"],
+        "summary": "Run a free sanitized policy evaluation without payment.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActionEvaluationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sanitized demo evaluation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaidEvaluationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/base-payment-status": {
+      "get": {
+        "operationId": "basePaymentStatus",
+        "tags": ["base-checkout"],
+        "summary": "Verify a Base USDC payment transaction hash.",
+        "parameters": [
+          {
+            "name": "tx",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^0x[a-fA-F0-9]{64}$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Payment verified."
+          },
+          "402": {
+            "description": "Payment not found or not qualifying."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActionEvaluationRequest": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "actions": {
+            "type": "array",
+            "maxItems": 10,
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          }
+        },
+        "anyOf": [
+          {
+            "required": ["action"]
+          },
+          {
+            "required": ["actions"]
+          }
+        ]
+      },
+      "PaidEvaluationResponse": {
+        "type": "object",
+        "properties": {
+          "paid": {
+            "type": "boolean"
+          },
+          "summary": {
+            "type": "object",
+            "properties": {
+              "allow": {
+                "type": "integer"
+              },
+              "review": {
+                "type": "integer"
+              },
+              "deny": {
+                "type": "integer"
+              }
+            }
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": ["allow", "review", "deny"]
+                },
+                "severity": {
+                  "type": "string"
+                },
+                "findings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                },
+                "requiredEvidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "packageUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "purchaseUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "purchaseGuideUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "purchase": {
+            "$ref": "#/components/schemas/PurchaseInfo"
+          },
+          "nextActions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NextAction"
+            }
+          },
+          "offerUrl": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "PurchaseInfo": {
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "string",
+            "example": "1 USDC"
+          },
+          "amountAtomic": {
+            "type": "string",
+            "example": "1000000"
+          },
+          "network": {
+            "type": "string",
+            "example": "Base mainnet"
+          },
+          "chainId": {
+            "type": "integer",
+            "example": 8453
+          },
+          "receiver": {
+            "type": "string",
+            "example": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f"
+          },
+          "purchaseGuideUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "purchaseJsonUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "baseCheckoutUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "x402EvaluateUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "x402DownloadUrl": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "NextAction": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "command": {
+            "type": "string"
+          }
+        }
+      },
+      "PaymentRequired": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "const": "payment_required"
+          },
+          "price": {
+            "type": "string",
+            "example": "$1.00"
+          },
+          "network": {
+            "type": "string",
+            "example": "Base mainnet"
+          },
+          "receiver": {
+            "type": "string",
+            "example": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f"
+          }
+        }
+      },
+      "PackageMetadata": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Agent Commerce Guard Package Metadata"
+          },
+          "product": {
+            "type": "string",
+            "example": "Agent Commerce Guard"
+          },
+          "version": {
+            "type": "string",
+            "example": "0.1.0"
+          },
+          "artifact": {
+            "type": "object",
+            "required": ["filename", "bytes", "shasum", "shasumAlgorithm", "verifyCommand"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "example": "npm-tarball"
+              },
+              "filename": {
+                "type": "string",
+                "example": "agent-commerce-guard-0.1.0.tgz"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "shasum": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "shasumAlgorithm": {
+                "type": "string",
+                "const": "sha1"
+              },
+              "verifyCommand": {
+                "type": "string",
+                "example": "shasum agent-commerce-guard-0.1.0.tgz"
+              }
+            }
+          },
+          "paidDownload": {
+            "type": "object",
+            "properties": {
+              "method": {
+                "type": "string",
+                "const": "GET"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "example": "https://agent-commerce-guard.vercel.app/api/x402-download"
+              },
+              "protocol": {
+                "type": "string",
+                "const": "x402"
+              },
+              "routeTemplate": {
+                "type": "string",
+                "example": "/api/x402-download"
+              },
+              "price": {
+                "$ref": "#/components/schemas/PurchaseInfo"
+              }
+            }
+          },
+          "manualUnlock": {
+            "type": "object",
+            "properties": {
+              "verifyUrlTemplate": {
+                "type": "string",
+                "format": "uri-template"
+              },
+              "downloadUrlTemplate": {
+                "type": "string",
+                "format": "uri-template"
+              }
+            }
+          },
+          "discovery": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "purchaseRoutes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Public launch repository and release",
+    "url": "https://github.com/fxjim/agent-commerce-guard"
+  }
+}

@@ -10,6 +10,8 @@ Offer manifest: https://agent-commerce-guard.vercel.app/offer.json
 Well-known offer manifest: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
 OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
 Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
+GitHub Pages OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json
+GitHub Pages well-known OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json
 Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
 Well-known agents manifest: https://agent-commerce-guard.vercel.app/.well-known/agents.json
 Coding-agent quickstart: https://agent-commerce-guard.vercel.app/AGENTS.md

@@ -336,5 +336,13 @@
     }
   ],
   "githubPagesPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
-  "githubPagesWellKnownPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json"
+  "githubPagesWellKnownPackageMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
+  "githubPagesOpenapiUrl": "https://fxjim.github.io/agent-commerce-guard/openapi.json",
+  "githubPagesWellKnownOpenapiUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json",
+  "openapiMirrors": [
+    "https://agent-commerce-guard.vercel.app/openapi.json",
+    "https://agent-commerce-guard.vercel.app/.well-known/openapi.json",
+    "https://fxjim.github.io/agent-commerce-guard/openapi.json",
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json"
+  ]
 }

@@ -39,7 +39,15 @@
     "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
     "bazaarDiscoverable": true,
     "githubPagesPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
-    "githubPagesWellKnownPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json"
+    "githubPagesWellKnownPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
+    "githubPagesOpenapi": "https://fxjim.github.io/agent-commerce-guard/openapi.json",
+    "githubPagesWellKnownOpenapi": "https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json",
+    "openapiMirrors": [
+      "https://agent-commerce-guard.vercel.app/openapi.json",
+      "https://agent-commerce-guard.vercel.app/.well-known/openapi.json",
+      "https://fxjim.github.io/agent-commerce-guard/openapi.json",
+      "https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json"
+    ]
   },
   "bazaar": {
     "discoverable": true,
