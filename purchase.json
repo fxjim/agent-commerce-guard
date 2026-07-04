@@ -67,6 +67,21 @@
       "Download through the tx-hash gated package URL after verification."
     ]
   },
+  "inboundAgentHandoff": {
+    "audience": "Autonomous agents, TaskMarket runners, and GitHub contributors.",
+    "purchaseFirst": [
+      "Use the x402 paid evaluation or x402 paid download endpoint.",
+      "Use the human checkout, EIP-681 payment URI, payment request JSON, or QR route.",
+      "After payment, verify with the public tx-hash verifier and share the tx hash in the support issue if help is needed."
+    ],
+    "contributionPath": [
+      "Open code or documentation work as a pull request from a fork.",
+      "Keep proposals and delivery artifacts on the public support issue, discussion, or PR.",
+      "Do not ask for repo write access, credentials, private keys, wallet seed material, or outbound payment."
+    ],
+    "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
+    "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}"
+  },
   "freeProbe": {
     "method": "POST",
     "url": "https://agent-commerce-guard.vercel.app/api/demo-evaluate",
