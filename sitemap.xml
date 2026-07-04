@@ -43,6 +43,9 @@
     <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/agents.json</loc>
   </url>
   <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json</loc>
+  </url>
+  <url>
     <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json</loc>
   </url>
   <url>

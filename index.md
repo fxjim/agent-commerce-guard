@@ -17,6 +17,7 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 - Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
 - Pages LLM summary: https://fxjim.github.io/agent-commerce-guard/llms.txt
 - Pages agents manifest: https://fxjim.github.io/agent-commerce-guard/agents.json
+- Pages AI plugin mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json
 - Pages OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json
 - Pages well-known OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json
 - Pages package metadata: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
@@ -33,6 +34,7 @@ The launch pass costs `1 USDC` on Base mainnet and unlocks the packaged CLI, exa
 - Paid package download: `GET https://agent-commerce-guard.vercel.app/api/x402-download`
 - Short x402 discovery: https://agent-commerce-guard.vercel.app/x402
 - Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
+- AI plugin mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json
 - OpenAPI spec mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json
 - Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
 - Pages package metadata mirror: https://fxjim.github.io/agent-commerce-guard/package-metadata.json

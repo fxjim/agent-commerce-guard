@@ -34,6 +34,7 @@ Short Base USDC payment QR code: https://agent-commerce-guard.vercel.app/qr
 Base USDC payment QR code: https://agent-commerce-guard.vercel.app/payment-request.svg
 Well-known payment QR code: https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
 AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json
+GitHub Pages AI plugin mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json
 Short Base payment page: https://agent-commerce-guard.vercel.app/pay
 Checkout alias: https://agent-commerce-guard.vercel.app/checkout
 Base payment page: https://agent-commerce-guard.vercel.app/base-pay

@@ -344,5 +344,10 @@
     "https://agent-commerce-guard.vercel.app/.well-known/openapi.json",
     "https://fxjim.github.io/agent-commerce-guard/openapi.json",
     "https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json"
+  ],
+  "githubPagesAiPluginUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json",
+  "aiPluginMirrors": [
+    "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
+    "https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json"
   ]
 }
