@@ -23,6 +23,16 @@ https://agent-commerce-guard.vercel.app/llms.txt
 https://agent-commerce-guard.vercel.app/.well-known/llms.txt
 ```
 
+Agent-readable manifests:
+
+```text
+https://agent-commerce-guard.vercel.app/agents.json
+https://agent-commerce-guard.vercel.app/agent.json
+https://agent-commerce-guard.vercel.app/.well-known/agent.json
+https://fxjim.github.io/agent-commerce-guard/agent.json
+https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json
+```
+
 ## Pay For A Policy Evaluation
 
 ```bash

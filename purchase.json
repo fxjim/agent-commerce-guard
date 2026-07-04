@@ -68,7 +68,11 @@
       "https://fxjim.github.io/agent-commerce-guard/offer.json",
       "https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json",
       "https://fxjim.github.io/agent-commerce-guard/.well-known/offer.json"
-    ]
+    ],
+    "agentJson": "https://agent-commerce-guard.vercel.app/agent.json",
+    "wellKnownAgentJson": "https://agent-commerce-guard.vercel.app/.well-known/agent.json",
+    "githubPagesAgentJson": "https://fxjim.github.io/agent-commerce-guard/agent.json",
+    "githubPagesWellKnownAgentJson": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json"
   },
   "bazaar": {
     "discoverable": true,

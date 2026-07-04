@@ -18,7 +18,11 @@ Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/ope
 GitHub Pages OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json
 GitHub Pages well-known OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json
 Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
+Singular agent manifest alias: https://agent-commerce-guard.vercel.app/agent.json
+Well-known singular agent manifest alias: https://agent-commerce-guard.vercel.app/.well-known/agent.json
 Well-known agents manifest: https://agent-commerce-guard.vercel.app/.well-known/agents.json
+GitHub Pages singular agent manifest: https://fxjim.github.io/agent-commerce-guard/agent.json
+GitHub Pages well-known singular agent manifest: https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json
 Coding-agent quickstart: https://agent-commerce-guard.vercel.app/AGENTS.md
 Short purchase guide: https://agent-commerce-guard.vercel.app/buy
 Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md

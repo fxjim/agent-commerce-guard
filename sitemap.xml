@@ -28,6 +28,9 @@
     <loc>https://fxjim.github.io/agent-commerce-guard/agents.json</loc>
   </url>
   <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/agent.json</loc>
+  </url>
+  <url>
     <loc>https://fxjim.github.io/agent-commerce-guard/offer.json</loc>
   </url>
   <url>
@@ -50,6 +53,9 @@
   </url>
   <url>
     <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/agents.json</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json</loc>
   </url>
   <url>
     <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json</loc>
