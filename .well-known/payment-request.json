@@ -28,6 +28,13 @@
   "checkoutAlias": "https://agent-commerce-guard.vercel.app/checkout",
   "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
   "shortPaymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
+  "artifactVerification": {
+    "metadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+    "wellKnownMetadataUrl": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json",
+    "githubPagesMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
+    "githubPagesWellKnownMetadataUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
+    "verifyBeforePayment": true
+  },
   "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
   "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}",
   "x402": {
