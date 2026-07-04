@@ -49,7 +49,50 @@
             "approval-gates",
             "codex",
             "x402"
-          ]
+          ],
+          "info": {
+            "input": {
+              "type": "http",
+              "method": "GET",
+              "queryParams": {}
+            },
+            "output": {
+              "type": "binary",
+              "example": {
+                "package": "agent-commerce-guard-0.1.0.tgz",
+                "contents": [
+                  "acg CLI",
+                  "agent-commerce policy rules",
+                  "approval-log and launch-checklist templates",
+                  "Codex/Claude/OpenClaw guardrail skill"
+                ]
+              }
+            }
+          },
+          "schema": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "type": "object",
+            "required": ["input"],
+            "properties": {
+              "input": {
+                "type": "object",
+                "required": ["type", "method"],
+                "properties": {
+                  "type": { "const": "http", "type": "string" },
+                  "method": { "enum": ["GET"], "type": "string" },
+                  "queryParams": { "type": "object", "additionalProperties": false }
+                }
+              },
+              "output": {
+                "type": "object",
+                "required": ["type"],
+                "properties": {
+                  "type": { "type": "string" },
+                  "example": { "type": "object" }
+                }
+              }
+            }
+          }
         }
       },
       "accepts": [
@@ -105,7 +148,75 @@
             "destructive-actions",
             "wallet-spend",
             "x402"
-          ]
+          ],
+          "info": {
+            "description": "Score an autonomous-agent action manifest for financial, deployment, social, token-launch, destructive-action, and credential risk before execution.",
+            "input": {
+              "type": "http",
+              "method": "POST",
+              "bodyType": "json",
+              "body": {
+                "action": {
+                  "id": "launch-payment",
+                  "actor": "codex",
+                  "action": "Send 1 USDC on Base to unlock a paid package",
+                  "amountUsd": 1,
+                  "approved": false
+                }
+              }
+            },
+            "output": {
+              "type": "json",
+              "example": {
+                "paid": true,
+                "summary": { "allow": 0, "review": 0, "deny": 1 },
+                "results": [
+                  {
+                    "id": "launch-payment",
+                    "decision": "deny",
+                    "severity": "high",
+                    "findings": [{ "id": "financial_action", "severity": "high" }],
+                    "requiredEvidence": ["User/operator approval timestamp"]
+                  }
+                ]
+              }
+            }
+          },
+          "schema": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "type": "object",
+            "required": ["input"],
+            "properties": {
+              "input": {
+                "type": "object",
+                "required": ["type", "method", "bodyType", "body"],
+                "properties": {
+                  "type": { "const": "http", "type": "string" },
+                  "method": { "enum": ["POST"], "type": "string" },
+                  "bodyType": { "enum": ["json"], "type": "string" },
+                  "body": {
+                    "type": "object",
+                    "properties": {
+                      "action": { "type": "object" },
+                      "actions": {
+                        "type": "array",
+                        "items": { "type": "object" },
+                        "maxItems": 10
+                      }
+                    }
+                  }
+                }
+              },
+              "output": {
+                "type": "object",
+                "required": ["type"],
+                "properties": {
+                  "type": { "type": "string" },
+                  "example": { "type": "object" }
+                }
+              }
+            }
+          }
         }
       },
       "input": {

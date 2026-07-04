@@ -42,8 +42,38 @@
       {
         "id": "paid-policy-evaluation",
         "method": "POST",
+        "discoverable": true,
         "routeTemplate": "/api/x402-evaluate",
         "url": "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
+        "input": {
+          "type": "http",
+          "method": "POST",
+          "bodyType": "json",
+          "example": {
+            "action": {
+              "id": "launch-payment",
+              "actor": "codex",
+              "action": "Send 1 USDC on Base to unlock a paid package",
+              "amountUsd": 1,
+              "approved": false
+            }
+          }
+        },
+        "output": {
+          "type": "json",
+          "example": {
+            "paid": true,
+            "summary": { "allow": 0, "review": 0, "deny": 1 },
+            "results": [
+              {
+                "id": "launch-payment",
+                "decision": "deny",
+                "severity": "high",
+                "requiredEvidence": ["User/operator approval timestamp"]
+              }
+            ]
+          }
+        },
         "tags": [
           "agent-workflow",
           "workflow-validation",
@@ -58,8 +88,26 @@
       {
         "id": "paid-package-download",
         "method": "GET",
+        "discoverable": true,
         "routeTemplate": "/api/x402-download",
         "url": "https://agent-commerce-guard.vercel.app/api/x402-download",
+        "input": {
+          "type": "http",
+          "method": "GET",
+          "queryParams": {}
+        },
+        "output": {
+          "type": "binary",
+          "example": {
+            "package": "agent-commerce-guard-0.1.0.tgz",
+            "contents": [
+              "acg CLI",
+              "agent-commerce policy rules",
+              "approval-log and launch-checklist templates",
+              "Codex/Claude/OpenClaw guardrail skill"
+            ]
+          }
+        },
         "tags": [
           "agent-commerce",
           "agent-safety",
