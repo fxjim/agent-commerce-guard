@@ -151,7 +151,14 @@
             }
           },
           "402": {
-            "description": "Payment required. The response includes x402 payment requirements in the PAYMENT-REQUIRED header."
+            "description": "Payment required. The response includes x402 payment requirements in the PAYMENT-REQUIRED header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentRequired"
+                }
+              }
+            }
           }
         }
       }
@@ -511,6 +518,78 @@
           "receiver": {
             "type": "string",
             "example": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f"
+          },
+          "paymentUri": {
+            "type": "string",
+            "description": "EIP-681 Base USDC payment URI for manual wallet payment.",
+            "example": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000"
+          },
+          "wellKnownPaymentRequest": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/.well-known/pay.json"
+          },
+          "verifyPageUrlTemplate": {
+            "type": "string",
+            "example": "https://agent-commerce-guard.vercel.app/verify?tx={tx}"
+          },
+          "verifyUrlTemplate": {
+            "type": "string",
+            "example": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}"
+          },
+          "downloadUrlTemplate": {
+            "type": "string",
+            "example": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}"
+          },
+          "packageMetadata": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/package-metadata.json"
+          },
+          "wellKnownPackageMetadata": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json"
+          },
+          "artifactVerification": {
+            "type": "object",
+            "description": "Current paid package verification metadata returned before payment.",
+            "properties": {
+              "filename": {
+                "type": "string",
+                "example": "agent-commerce-guard-0.1.0.tgz"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "shasum": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "shasumAlgorithm": {
+                "type": "string",
+                "const": "sha1"
+              },
+              "verifyCommand": {
+                "type": "string",
+                "example": "shasum agent-commerce-guard-0.1.0.tgz"
+              },
+              "metadataUrl": {
+                "type": "string",
+                "format": "uri",
+                "example": "https://agent-commerce-guard.vercel.app/package-metadata.json"
+              },
+              "wellKnownMetadataUrl": {
+                "type": "string",
+                "format": "uri",
+                "example": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json"
+              },
+              "verifyBeforePayment": {
+                "type": "boolean",
+                "const": true
+              }
+            }
           }
         }
       },
