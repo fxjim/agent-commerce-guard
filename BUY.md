@@ -108,6 +108,7 @@ After sending USDC, verify and download:
 
 ```text
 https://agent-commerce-guard.vercel.app/verify?tx={tx}
+https://agent-commerce-guard.vercel.app/success?tx={tx}
 https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}
 ```

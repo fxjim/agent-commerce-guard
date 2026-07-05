@@ -5,8 +5,8 @@
   "artifact": {
     "type": "npm-tarball",
     "filename": "agent-commerce-guard-0.1.0.tgz",
-    "bytes": 122125,
-    "shasum": "507712eae4c1df63d17a9d844cec53feb1891c05",
+    "bytes": 122432,
+    "shasum": "bbe8a3b9b0511e492a3cfc5c74e4b560983628d4",
     "shasumAlgorithm": "sha1",
     "verifyCommand": "shasum agent-commerce-guard-0.1.0.tgz"
   },
