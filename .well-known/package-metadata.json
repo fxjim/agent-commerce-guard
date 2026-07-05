@@ -2,16 +2,22 @@
   "name": "Agent Commerce Guard Package Metadata",
   "product": "Agent Commerce Guard",
   "version": "0.1.0",
-  "canonicalUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
-  "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
-  "wellKnownGithubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
   "artifact": {
     "type": "npm-tarball",
     "filename": "agent-commerce-guard-0.1.0.tgz",
-    "bytes": 121694,
-    "shasum": "0255a20648b9e94c654dedb7cd25078ab170018c",
+    "bytes": 121718,
+    "shasum": "77fd8b9aa6a6891f1bff525a79a09baab1a5febf",
     "shasumAlgorithm": "sha1",
     "verifyCommand": "shasum agent-commerce-guard-0.1.0.tgz"
+  },
+  "license": {
+    "name": "Agent Commerce Guard Commercial Evaluation License",
+    "type": "commercial-evaluation",
+    "url": "https://agent-commerce-guard.vercel.app/LICENSE.md",
+    "cleanUrl": "https://agent-commerce-guard.vercel.app/license",
+    "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
+    "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
+    "githubPagesWellKnownUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
   },
   "paidDownload": {
     "method": "GET",
@@ -28,6 +34,14 @@
       "receiver": "0xc356556Bc6025aA3536df188BD72A5F4E0fE214f"
     }
   },
+  "manualPayment": {
+    "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
+    "checkoutAlias": "https://agent-commerce-guard.vercel.app/checkout",
+    "shortPaymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
+    "wellKnownShortPaymentRequest": "https://agent-commerce-guard.vercel.app/.well-known/pay.json",
+    "qrCodeUrl": "https://agent-commerce-guard.vercel.app/qr",
+    "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000"
+  },
   "manualUnlock": {
     "verifyPageUrlTemplate": "https://agent-commerce-guard.vercel.app/verify?tx={tx}",
     "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
@@ -40,22 +54,22 @@
     "offer": "https://agent-commerce-guard.vercel.app/offer.json",
     "purchase": "https://agent-commerce-guard.vercel.app/purchase.json",
     "agents": "https://agent-commerce-guard.vercel.app/agents.json",
-    "githubPages": "https://fxjim.github.io/agent-commerce-guard/",
-    "githubPagesPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
-    "githubPagesWellKnownPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
-    "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
-    "wellKnownLlms": "https://agent-commerce-guard.vercel.app/.well-known/llms.txt",
     "agentJson": "https://agent-commerce-guard.vercel.app/agent.json",
     "wellKnownAgentJson": "https://agent-commerce-guard.vercel.app/.well-known/agent.json",
-    "githubPagesAgentJson": "https://fxjim.github.io/agent-commerce-guard/agent.json",
-    "githubPagesWellKnownAgentJson": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json",
+    "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
+    "wellKnownLlms": "https://agent-commerce-guard.vercel.app/.well-known/llms.txt",
     "status": "https://agent-commerce-guard.vercel.app/status.json",
     "wellKnownStatus": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
-    "githubPagesStatus": "https://fxjim.github.io/agent-commerce-guard/status.json",
-    "githubPagesWellKnownStatus": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json",
     "license": "https://agent-commerce-guard.vercel.app/LICENSE.md",
     "licenseClean": "https://agent-commerce-guard.vercel.app/license",
     "wellKnownLicense": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
+    "githubPages": "https://fxjim.github.io/agent-commerce-guard/",
+    "githubPagesPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
+    "githubPagesWellKnownPackageMetadata": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
+    "githubPagesStatus": "https://fxjim.github.io/agent-commerce-guard/status.json",
+    "githubPagesWellKnownStatus": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json",
+    "githubPagesAgentJson": "https://fxjim.github.io/agent-commerce-guard/agent.json",
+    "githubPagesWellKnownAgentJson": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json",
     "githubPagesLicense": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
     "githubPagesWellKnownLicense": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
   },
@@ -74,7 +88,6 @@
       "https://agent-commerce-guard.vercel.app/pay",
       "https://agent-commerce-guard.vercel.app/buy",
       "https://agent-commerce-guard.vercel.app/pay.json",
-      "https://agent-commerce-guard.vercel.app/.well-known/pay.json",
       "https://agent-commerce-guard.vercel.app/api/x402-evaluate",
       "https://agent-commerce-guard.vercel.app/api/x402-download"
     ],
@@ -93,25 +106,11 @@
       "outbound payment"
     ]
   },
+  "canonicalUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
+  "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",
+  "wellKnownGithubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json",
   "statusUrl": "https://agent-commerce-guard.vercel.app/status.json",
   "wellKnownStatusUrl": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
   "githubPagesStatusUrl": "https://fxjim.github.io/agent-commerce-guard/status.json",
-  "githubPagesWellKnownStatusUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json",
-  "license": {
-    "name": "Agent Commerce Guard Commercial Evaluation License",
-    "type": "commercial-evaluation",
-    "url": "https://agent-commerce-guard.vercel.app/LICENSE.md",
-    "cleanUrl": "https://agent-commerce-guard.vercel.app/license",
-    "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
-    "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
-    "githubPagesWellKnownUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
-  },
-  "manualPayment": {
-    "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
-    "checkoutAlias": "https://agent-commerce-guard.vercel.app/checkout",
-    "shortPaymentRequest": "https://agent-commerce-guard.vercel.app/pay.json",
-    "wellKnownShortPaymentRequest": "https://agent-commerce-guard.vercel.app/.well-known/pay.json",
-    "qrCodeUrl": "https://agent-commerce-guard.vercel.app/qr",
-    "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000"
-  }
+  "githubPagesWellKnownStatusUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json"
 }
