@@ -61,5 +61,6 @@
     "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
     "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
     "githubPagesWellKnownUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
-  }
+  },
+  "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
 }

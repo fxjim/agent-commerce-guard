@@ -18,6 +18,7 @@ The launch pass is available for `1 USDC` on Base.
 - Short Base checkout: https://agent-commerce-guard.vercel.app/pay
 - Checkout alias: https://agent-commerce-guard.vercel.app/checkout
 - Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
+- Success unlock page: https://agent-commerce-guard.vercel.app/success?tx={tx}
 - Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 - Agent x402 evaluation API: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
@@ -87,7 +88,7 @@ The launch pass is available for `1 USDC` on Base.
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
-- Current paid package shasum: `bbe8a3b9b0511e492a3cfc5c74e4b560983628d4`
+- Current paid package shasum: `c67fb09bd83da591c58ae5fae002a6a59557fc97`
 
 ## What It Includes
 
@@ -102,6 +103,7 @@ The launch pass is available for `1 USDC` on Base.
 - Agent/plugin manifests for coding-agent, OpenAPI, x402, and LLM discovery.
 - Copy-paste purchase guides for x402 agents and manual Base buyers.
 - Machine-readable Base USDC payment request with an EIP-681 transfer URI.
+- Machine-readable payment metadata advertises both `/verify?tx={tx}` and `/success?tx={tx}` as post-payment unlock pages.
 - Scan-to-pay SVG QR for mobile wallet payment.
 - Homepage buyer-command section with exact x402 inspect/pay commands and copy buttons.
 - Social preview image wired into OG/Twitter/schema metadata.

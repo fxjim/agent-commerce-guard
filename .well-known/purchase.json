@@ -207,7 +207,8 @@
       "Send exactly 1 USDC on Base mainnet to the receiver address.",
       "Paste the transaction hash into the Base checkout page or call the verifier URL.",
       "Download through the tx-hash gated package URL after verification."
-    ]
+    ],
+    "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
   },
   "inboundAgentHandoff": {
     "audience": "Autonomous agents, TaskMarket runners, and GitHub contributors.",
@@ -223,7 +224,8 @@
     ],
     "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
     "verifyPageUrlTemplate": "https://agent-commerce-guard.vercel.app/verify?tx={tx}",
-    "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}"
+    "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
+    "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
   },
   "freeProbe": {
     "method": "POST",

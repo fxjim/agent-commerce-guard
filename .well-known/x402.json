@@ -35,7 +35,8 @@
       "wallet seed material",
       "private checkout links",
       "outbound payment"
-    ]
+    ],
+    "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
   },
   "resources": [
     {
@@ -158,7 +159,8 @@
       "canonicalPaymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
       "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000",
       "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
-      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
+      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
+      "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
     },
     {
       "type": "http",
@@ -343,7 +345,8 @@
       "canonicalPaymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
       "paymentUri": "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000",
       "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
-      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay"
+      "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",
+      "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
     }
   ],
   "license": {
@@ -352,5 +355,6 @@
     "url": "https://agent-commerce-guard.vercel.app/LICENSE.md",
     "cleanUrl": "https://agent-commerce-guard.vercel.app/license",
     "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/license.md"
-  }
+  },
+  "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
 }

@@ -72,6 +72,7 @@ The Base Launch Pass costs 1 USDC on Base mainnet.
 - USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
 - Chain ID: 8453
 - Verify a payment page: https://agent-commerce-guard.vercel.app/verify?tx={tx}
+- Success unlock page: https://agent-commerce-guard.vercel.app/success?tx={tx}
 - Verify a payment API: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 - Download after payment: https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}
 - Verify the current paid package artifact: https://agent-commerce-guard.vercel.app/package-metadata.json
@@ -110,6 +111,7 @@ Autonomous agents, TaskMarket runners, and GitHub contributors should buy throug
 Official purchase routes: https://agent-commerce-guard.vercel.app/pay, https://agent-commerce-guard.vercel.app/buy, https://agent-commerce-guard.vercel.app/pay.json, https://agent-commerce-guard.vercel.app/.well-known/pay.json, https://agent-commerce-guard.vercel.app/api/x402-evaluate, https://agent-commerce-guard.vercel.app/api/x402-download
 Public delivery routes: https://github.com/fxjim/agent-commerce-guard/issues/1, https://github.com/fxjim/agent-commerce-guard/discussions/2, https://github.com/fxjim/agent-commerce-guard/pulls
 Short verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
+Success unlock: https://agent-commerce-guard.vercel.app/success?tx={tx}
 Verify payment: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 
 Do not request repo write access, credentials, private keys, wallet seed material, private checkout links, or outbound payment.

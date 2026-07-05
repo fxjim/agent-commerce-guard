@@ -87,7 +87,8 @@
       "supportIssueUrl": "https://github.com/fxjim/agent-commerce-guard/issues/1",
       "launchDiscussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
       "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
-      "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}"
+      "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}",
+      "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
     },
     {
       "id": "x402-agent-download",
@@ -390,5 +391,7 @@
     "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
     "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
     "githubPagesWellKnownUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
-  }
+  },
+  "shortSuccessUrl": "https://agent-commerce-guard.vercel.app/success",
+  "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
 }

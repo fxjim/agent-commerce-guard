@@ -10,6 +10,7 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 - Base checkout: https://agent-commerce-guard.vercel.app/pay
 - Checkout alias: https://agent-commerce-guard.vercel.app/checkout
 - Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
+- Success unlock page: https://agent-commerce-guard.vercel.app/success?tx={tx}
 - Public Gist buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
 - Pages offer mirror: https://fxjim.github.io/agent-commerce-guard/offer.json
 - Pages well-known offer mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json
@@ -57,6 +58,7 @@ The launch pass costs `1 USDC` on Base mainnet and unlocks the packaged CLI, exa
 - Pages package metadata mirror: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
 - Service status: https://agent-commerce-guard.vercel.app/status.json
 - Pages service status mirror: https://fxjim.github.io/agent-commerce-guard/status.json
+- Success unlock page: https://agent-commerce-guard.vercel.app/success?tx={tx}
 - Inspect evaluator:
 
 ```bash
@@ -82,4 +84,4 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 - Launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - GitHub profile launch links: https://github.com/fxjim/fxjim
-- Current paid package shasum: `bbe8a3b9b0511e492a3cfc5c74e4b560983628d4`
+- Current paid package shasum: `c67fb09bd83da591c58ae5fae002a6a59557fc97`

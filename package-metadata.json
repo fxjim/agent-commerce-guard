@@ -5,8 +5,8 @@
   "artifact": {
     "type": "npm-tarball",
     "filename": "agent-commerce-guard-0.1.0.tgz",
-    "bytes": 122432,
-    "shasum": "bbe8a3b9b0511e492a3cfc5c74e4b560983628d4",
+    "bytes": 122737,
+    "shasum": "c67fb09bd83da591c58ae5fae002a6a59557fc97",
     "shasumAlgorithm": "sha1",
     "verifyCommand": "shasum agent-commerce-guard-0.1.0.tgz"
   },
@@ -45,7 +45,8 @@
   "manualUnlock": {
     "verifyPageUrlTemplate": "https://agent-commerce-guard.vercel.app/verify?tx={tx}",
     "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
-    "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}"
+    "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}",
+    "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
   },
   "discovery": {
     "x402": "https://agent-commerce-guard.vercel.app/x402",
@@ -104,7 +105,8 @@
       "wallet seed material",
       "private checkout links",
       "outbound payment"
-    ]
+    ],
+    "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
   },
   "canonicalUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
   "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/package-metadata.json",

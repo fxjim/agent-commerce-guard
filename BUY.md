@@ -143,6 +143,7 @@ After payment, paste the Base transaction hash into the checkout verifier or the
 
 ```text
 https://agent-commerce-guard.vercel.app/verify?tx={tx}
+https://agent-commerce-guard.vercel.app/success?tx={tx}
 https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 https://github.com/fxjim/agent-commerce-guard/issues/1
 ```
