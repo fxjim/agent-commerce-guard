@@ -77,6 +77,18 @@
           "facilitator": "https://facilitator.xpay.sh",
           "discovery": "https://agent-commerce-guard.vercel.app/.well-known/x402"
         },
+        "parameters": [
+          {
+            "name": "PAYMENT-SIGNATURE",
+            "in": "header",
+            "required": false,
+            "description": "Base64-encoded x402 v2 PaymentPayload supplied when retrying the request after receiving a 402 challenge.",
+            "schema": {
+              "type": "string",
+              "contentEncoding": "base64"
+            }
+          }
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -116,6 +128,15 @@
         "responses": {
           "200": {
             "description": "Paid policy evaluation result.",
+            "headers": {
+              "PAYMENT-RESPONSE": {
+                "description": "Base64-encoded x402 v2 SettlementResponse describing the payment result.",
+                "schema": {
+                  "type": "string",
+                  "contentEncoding": "base64"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -126,6 +147,15 @@
           },
           "402": {
             "description": "Payment required. The response includes x402 payment requirements in the PAYMENT-REQUIRED header.",
+            "headers": {
+              "PAYMENT-REQUIRED": {
+                "description": "Base64-encoded x402 v2 PaymentRequired challenge.",
+                "schema": {
+                  "type": "string",
+                  "contentEncoding": "base64"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -171,9 +201,30 @@
           "facilitator": "https://facilitator.xpay.sh",
           "discovery": "https://agent-commerce-guard.vercel.app/.well-known/x402"
         },
+        "parameters": [
+          {
+            "name": "PAYMENT-SIGNATURE",
+            "in": "header",
+            "required": false,
+            "description": "Base64-encoded x402 v2 PaymentPayload supplied when retrying the request after receiving a 402 challenge.",
+            "schema": {
+              "type": "string",
+              "contentEncoding": "base64"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Paid package tarball.",
+            "headers": {
+              "PAYMENT-RESPONSE": {
+                "description": "Base64-encoded x402 v2 SettlementResponse describing the payment result.",
+                "schema": {
+                  "type": "string",
+                  "contentEncoding": "base64"
+                }
+              }
+            },
             "content": {
               "application/gzip": {
                 "schema": {
@@ -185,6 +236,15 @@
           },
           "402": {
             "description": "Payment required. The response includes x402 payment requirements in the PAYMENT-REQUIRED header.",
+            "headers": {
+              "PAYMENT-REQUIRED": {
+                "description": "Base64-encoded x402 v2 PaymentRequired challenge.",
+                "schema": {
+                  "type": "string",
+                  "contentEncoding": "base64"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
