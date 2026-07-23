@@ -6,6 +6,8 @@ Agent Commerce Guard is a local-first CLI and skill pack for builders adding x40
 
 ![Agent Commerce Guard preview](https://agent-commerce-guard.vercel.app/og-image.png)
 
+[![Agent Skills installs](https://www.skills.sh/b/fxjim/agent-commerce-guard)](https://www.skills.sh/fxjim/agent-commerce-guard/buy-agent-commerce-guard)
+
 Use the GitHub Sponsor button or the Base payment page to buy the `1 USDC` launch pass.
 
 ## Install The Buyer Skill
@@ -14,12 +16,20 @@ Install the free public buyer workflow for Codex, Claude Code, Cursor, and other
 Agent Skills-compatible assistants:
 
 ```bash
+npx skills add https://github.com/fxjim/agent-commerce-guard --skill buy-agent-commerce-guard
+```
+
+The same skill is also available from the canonical product domain:
+
+```bash
 npx skills add https://agent-commerce-guard.vercel.app --skill buy-agent-commerce-guard
 ```
 
 The skill preflights the public offer and requires explicit approval before any
 Base MCP, x402, browser-wallet, or manual payment. Its source is available at
 [`skills/buy-agent-commerce-guard/SKILL.md`](./skills/buy-agent-commerce-guard/SKILL.md).
+Its indexed directory page is available on
+[skills.sh](https://www.skills.sh/fxjim/agent-commerce-guard/buy-agent-commerce-guard).
 The paid product package remains available only after a verified `1 USDC`
 payment.
 
