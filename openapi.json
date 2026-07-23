@@ -5,6 +5,10 @@
     "version": "0.1.0",
     "summary": "x402-paid agent workflow validator and command-risk scorer.",
     "description": "Agent Commerce Guard provides x402-paid policy evaluation and package download endpoints for autonomous agents that need approval gates before wallet spend, deployments, social posts, token launches, destructive commands, or credential access.",
+    "x-guidance": "Use POST /api/x402-evaluate to review an agent action or workflow against approval gates. Use GET /api/x402-download to purchase the installable CLI, policy templates, examples, and buyer skill. Both paid routes cost exactly 1 USD in Base USDC and return an x402 payment challenge before access.",
+    "contact": {
+      "url": "https://github.com/fxjim/agent-commerce-guard/issues/1"
+    },
     "license": {
       "name": "Agent Commerce Guard Commercial Evaluation License",
       "url": "https://agent-commerce-guard.vercel.app/LICENSE.md"
@@ -16,6 +20,9 @@
       "url": "https://agent-commerce-guard.vercel.app"
     }
   ],
+  "x-agentcash-guidance": {
+    "llmsTxtUrl": "https://agent-commerce-guard.vercel.app/llms.txt"
+  },
   "tags": [
     {
       "name": "x402",
@@ -42,11 +49,24 @@
     "/api/x402-evaluate": {
       "post": {
         "operationId": "paidPolicyEvaluation",
+        "security": [],
         "tags": [
           "x402"
         ],
         "summary": "Run a paid policy evaluation.",
         "description": "Returns a sanitized policy decision for one action or a batch of up to 10 actions after a 1 USDC x402 payment on Base mainnet.",
+        "x-payment-info": {
+          "price": {
+            "mode": "fixed",
+            "currency": "USD",
+            "amount": "1.000000"
+          },
+          "protocols": [
+            {
+              "x402": {}
+            }
+          ]
+        },
         "x-x402": {
           "scheme": "exact",
           "network": "eip155:8453",
@@ -123,11 +143,24 @@
     "/api/x402-download": {
       "get": {
         "operationId": "paidPackageDownload",
+        "security": [],
         "tags": [
           "x402"
         ],
         "summary": "Download the paid package after x402 payment.",
         "description": "Streams the Agent Commerce Guard tarball after a 1 USDC x402 payment on Base mainnet.",
+        "x-payment-info": {
+          "price": {
+            "mode": "fixed",
+            "currency": "USD",
+            "amount": "1.000000"
+          },
+          "protocols": [
+            {
+              "x402": {}
+            }
+          ]
+        },
         "x-x402": {
           "scheme": "exact",
           "network": "eip155:8453",
@@ -166,6 +199,7 @@
     "/api/package-metadata": {
       "get": {
         "operationId": "packageMetadata",
+        "security": [],
         "tags": [
           "artifact"
         ],
@@ -191,6 +225,7 @@
     "/api/status": {
       "get": {
         "operationId": "serviceStatus",
+        "security": [],
         "tags": [
           "status"
         ],
@@ -216,6 +251,7 @@
     "/api/demo-evaluate": {
       "get": {
         "operationId": "demoPolicyEvaluation",
+        "security": [],
         "tags": [
           "demo"
         ],
@@ -235,6 +271,7 @@
       },
       "post": {
         "operationId": "demoPolicyEvaluationForInput",
+        "security": [],
         "tags": [
           "demo"
         ],
@@ -266,6 +303,7 @@
     "/api/base-payment-status": {
       "get": {
         "operationId": "basePaymentStatus",
+        "security": [],
         "tags": [
           "base-checkout"
         ],
