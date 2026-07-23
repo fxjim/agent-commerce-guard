@@ -44,6 +44,10 @@ GitHub Pages well-known license mirror: https://fxjim.github.io/agent-commerce-g
 GitHub Pages pay page: https://fxjim.github.io/agent-commerce-guard/pay/
 GitHub Pages short payment request mirror: https://fxjim.github.io/agent-commerce-guard/pay.json
 GitHub Pages well-known short payment request mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/pay.json
+Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/base-mcp.json
+Well-known Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/.well-known/base-mcp.json
+GitHub Pages Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/base-mcp.json
+GitHub Pages well-known Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json
 Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json
 Well-known short payment request: https://agent-commerce-guard.vercel.app/.well-known/pay.json
 Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
@@ -89,6 +93,7 @@ The Base Launch Pass costs 1 USDC on Base mainnet.
 - x402 amount: 1000000 atomic USDC
 - x402 discovery tags: agent-commerce, agent-safety, agent-workflow, workflow-validation, command-risk, destructive-actions, wallet-spend, approval-gates, guardrails, autonomous-agents, codex, x402
 - Free demo responses include `purchase`, `purchaseGuideUrl`, and `nextActions` with exact x402 inspect/pay commands. The demo still does not echo submitted action text.
+- Base MCP buyers can load https://agent-commerce-guard.vercel.app/base-mcp.json or its GitHub Pages mirror for a natural-language purchase prompt with exact payment and explicit approval constraints.
 - Purchase questions and x402 integration support: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion and product context: https://github.com/fxjim/agent-commerce-guard/discussions/2
 

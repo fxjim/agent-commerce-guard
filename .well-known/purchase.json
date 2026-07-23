@@ -34,6 +34,10 @@
     "paymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
     "shortPaymentRequestQr": "https://agent-commerce-guard.vercel.app/qr",
     "wellKnownPaymentRequestQr": "https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg",
+    "baseMcp": "https://agent-commerce-guard.vercel.app/base-mcp.json",
+    "wellKnownBaseMcp": "https://agent-commerce-guard.vercel.app/.well-known/base-mcp.json",
+    "githubPagesBaseMcp": "https://fxjim.github.io/agent-commerce-guard/base-mcp.json",
+    "githubPagesWellKnownBaseMcp": "https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json",
     "githubPages": "https://fxjim.github.io/agent-commerce-guard/",
     "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
     "launchDiscussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
@@ -191,6 +195,14 @@
     "npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-evaluate --json",
     "npx awal@2.0.3 x402 details https://agent-commerce-guard.vercel.app/api/x402-download --json"
   ],
+  "baseMcpPurchase": {
+    "guideUrl": "https://agent-commerce-guard.vercel.app/base-mcp.json",
+    "wellKnownGuideUrl": "https://agent-commerce-guard.vercel.app/.well-known/base-mcp.json",
+    "githubPagesGuideUrl": "https://fxjim.github.io/agent-commerce-guard/base-mcp.json",
+    "githubPagesWellKnownGuideUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json",
+    "purchasePrompt": "Using Base MCP, prepare a transfer of exactly 1 USDC on Base mainnet (chain ID 8453) to 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f. Confirm the token is Base USDC at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 and the atomic amount is 1000000. Follow the current Base MCP approval flow and wait for my explicit approval before submission. After confirmation, return the transaction hash and open https://agent-commerce-guard.vercel.app/success?tx={tx} with {tx} replaced by that hash.",
+    "requiresExplicitApproval": true
+  },
   "manualPayment": {
     "humanCheckout": "https://agent-commerce-guard.vercel.app/pay",
     "canonicalHumanCheckout": "https://agent-commerce-guard.vercel.app/base-pay",

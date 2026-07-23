@@ -19,6 +19,9 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 - Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
 - Short Base payment request: https://agent-commerce-guard.vercel.app/pay.json
+- Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/base-mcp.json
+- Pages Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/base-mcp.json
+- Pages well-known Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json
 - Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
 - Vercel LLM summary: https://agent-commerce-guard.vercel.app/llms.txt
 - Vercel well-known LLM summary: https://agent-commerce-guard.vercel.app/.well-known/llms.txt
@@ -43,6 +46,10 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 - Pages sitemap: https://fxjim.github.io/agent-commerce-guard/sitemap.xml
 
 The launch pass costs `1 USDC` on Base mainnet and unlocks the packaged CLI, examples, templates, local evaluator, and installable guardrail skill.
+
+## Base MCP Purchase
+
+Load the product-specific recipe at https://agent-commerce-guard.vercel.app/base-mcp.json. It tells an authorized Base MCP assistant to discover its current tool catalog, verify exact Base USDC payment fields, require explicit approval, return the confirmed transaction hash, and open the success unlock page.
 
 ## Agent-Native x402
 

@@ -19,6 +19,12 @@
     <loc>https://fxjim.github.io/agent-commerce-guard/pay.json</loc>
   </url>
   <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/base-mcp.json</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json</loc>
+  </url>
+  <url>
     <loc>https://fxjim.github.io/agent-commerce-guard/payment-request.svg</loc>
   </url>
   <url>

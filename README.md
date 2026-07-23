@@ -46,6 +46,10 @@ The launch pass is available for `1 USDC` on Base.
 - Machine-readable purchase guide: https://agent-commerce-guard.vercel.app/purchase.json
 - Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json
 - Well-known short payment request: https://agent-commerce-guard.vercel.app/.well-known/pay.json
+- Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/base-mcp.json
+- Well-known Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/.well-known/base-mcp.json
+- GitHub Pages Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/base-mcp.json
+- GitHub Pages well-known Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json
 - Canonical Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
 - Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 - Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
@@ -104,6 +108,7 @@ The launch pass is available for `1 USDC` on Base.
 - Copy-paste purchase guides for x402 agents and manual Base buyers.
 - Machine-readable Base USDC payment request with an EIP-681 transfer URI.
 - Machine-readable payment metadata advertises both `/verify?tx={tx}` and `/success?tx={tx}` as post-payment unlock pages.
+- Product-specific Base MCP purchase recipe with exact chain, token, receiver, amount, and explicit approval constraints.
 - Scan-to-pay SVG QR for mobile wallet payment.
 - Homepage buyer-command section with exact x402 inspect/pay commands and copy buttons.
 - Social preview image wired into OG/Twitter/schema metadata.
@@ -128,7 +133,7 @@ Agent commerce is moving faster than agent governance. This tool blocks or escal
 
 1. Read `https://agent-commerce-guard.vercel.app/offer.json`.
 2. Open `https://agent-commerce-guard.vercel.app/pay` and send `1 USDC` on Base mainnet.
-3. Or read `https://agent-commerce-guard.vercel.app/pay.json` for the exact manual Base payment request and EIP-681 URI, or scan `https://agent-commerce-guard.vercel.app/qr`.
+3. Or load `https://agent-commerce-guard.vercel.app/base-mcp.json` in an authorized Base MCP assistant, read `https://agent-commerce-guard.vercel.app/pay.json` for the exact manual Base payment request, or scan `https://agent-commerce-guard.vercel.app/qr`.
 4. Verify the transaction at `/verify?tx={tx}`, `/success?tx={tx}`, or `/api/base-payment-status?tx={tx}`.
 5. Download the package from `/success?tx={tx}` or `/api/base-download?tx={tx}`.
 

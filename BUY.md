@@ -38,6 +38,23 @@ https://agent-commerce-guard.vercel.app/agent.json
 https://agent-commerce-guard.vercel.app/.well-known/agent.json
 ```
 
+## Buy With Base MCP
+
+Base MCP purchase recipe:
+
+```text
+https://agent-commerce-guard.vercel.app/base-mcp.json
+https://agent-commerce-guard.vercel.app/.well-known/base-mcp.json
+https://fxjim.github.io/agent-commerce-guard/base-mcp.json
+https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json
+```
+
+Give an authorized Base MCP assistant this prompt:
+
+```text
+Using Base MCP, prepare a transfer of exactly 1 USDC on Base mainnet (chain ID 8453) to 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f. Confirm the token is Base USDC at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 and the atomic amount is 1000000. Follow the current Base MCP approval flow and wait for my explicit approval before submission. After confirmation, return the transaction hash and open https://agent-commerce-guard.vercel.app/success?tx={tx} with {tx} replaced by that hash.
+```
+
 ## Pay For A Policy Evaluation
 
 ```bash
