@@ -6,9 +6,21 @@ Agent Commerce Guard is a local-first CLI and skill pack for builders adding x40
 
 ![Agent Commerce Guard preview](https://agent-commerce-guard.vercel.app/og-image.png)
 
+[![GitHub Action smoke](https://github.com/fxjim/agent-commerce-guard/actions/workflows/action-smoke.yml/badge.svg)](https://github.com/fxjim/agent-commerce-guard/actions/workflows/action-smoke.yml)
 [![Agent Skills installs](https://www.skills.sh/b/fxjim/agent-commerce-guard)](https://www.skills.sh/fxjim/agent-commerce-guard/buy-agent-commerce-guard)
 
-Use the GitHub Sponsor button or the Base payment page to buy the `1 USDC` launch pass.
+[Try the free evaluator](https://agent-commerce-guard.vercel.app/#demo) |
+[Add the GitHub Action](#github-action) |
+[Buy the private package for 1 USDC](https://agent-commerce-guard.vercel.app/pay)
+
+| | Free hosted preflight | Private local package |
+| --- | --- | --- |
+| Best for | Public CI action manifests | Private or sensitive agent workflows |
+| Execution | Hosted evaluator, up to 5 actions / 20 KB | Local CLI, HTTP evaluator, skills, policies, and templates |
+| Price | Free | 1 USDC on Base |
+
+The checkout verifies the Base USDC transaction server-side before unlocking
+the private package.
 
 ## Install The Buyer Skill
 
