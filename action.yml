@@ -1,5 +1,5 @@
 name: Agent Commerce Guard Preflight
-description: Evaluate up to five planned autonomous-agent actions before they run.
+description: Preflight AI-agent wallet spend, deployments, destructive commands, tokens, and credentials before execution.
 author: fxjim
 
 inputs:
@@ -22,6 +22,12 @@ outputs:
   deny:
     description: Number of actions denied.
     value: ${{ steps.evaluate.outputs.deny }}
+  checkout-url:
+    description: Human checkout for the private local package, priced at 1 USDC on Base.
+    value: ${{ steps.evaluate.outputs.checkout-url }}
+  x402-evaluate-url:
+    description: Paid x402 workflow-evaluation API.
+    value: ${{ steps.evaluate.outputs.x402-evaluate-url }}
 
 runs:
   using: composite

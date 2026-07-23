@@ -50,6 +50,10 @@ hosted evaluator, prints sanitized decisions, and can fail on denied actions or
 actions requiring review. It rejects obvious secret-bearing JSON keys before
 the request.
 
+The Action also exposes `checkout-url` for the private local package and
+`x402-evaluate-url` for the paid workflow API. The job summary links directly
+to both purchase paths after every completed evaluation.
+
 Do not submit secrets, private source, credentials, or sensitive customer data.
 Use the paid local package when an action manifest cannot leave the runner.
 See [`examples/github-actions/`](./examples/github-actions/) for a complete

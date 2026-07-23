@@ -35,7 +35,11 @@ jobs:
           ACG_ALLOW: ${{ steps.guard.outputs.allow }}
           ACG_REVIEW: ${{ steps.guard.outputs.review }}
           ACG_DENY: ${{ steps.guard.outputs.deny }}
+          ACG_CHECKOUT_URL: ${{ steps.guard.outputs.checkout-url }}
+          ACG_X402_EVALUATE_URL: ${{ steps.guard.outputs.x402-evaluate-url }}
         run: |
           test "$ACG_ALLOW" = "1"
           test "$ACG_REVIEW" = "0"
           test "$ACG_DENY" = "0"
+          test "$ACG_CHECKOUT_URL" = "https://agent-commerce-guard.vercel.app/pay"
+          test "$ACG_X402_EVALUATE_URL" = "https://agent-commerce-guard.vercel.app/api/x402-evaluate"

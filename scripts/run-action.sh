@@ -2,6 +2,8 @@
 set -euo pipefail
 
 readonly endpoint="https://agent-commerce-guard.vercel.app/api/demo-evaluate"
+readonly checkout_url="https://agent-commerce-guard.vercel.app/pay"
+readonly x402_evaluate_url="https://agent-commerce-guard.vercel.app/api/x402-evaluate"
 readonly max_body_bytes=20000
 readonly max_actions=5
 
@@ -106,6 +108,8 @@ if [[ -n "${GITHUB_OUTPUT:-}" ]]; then
     printf 'allow=%s\n' "$allow"
     printf 'review=%s\n' "$review"
     printf 'deny=%s\n' "$deny"
+    printf 'checkout-url=%s\n' "$checkout_url"
+    printf 'x402-evaluate-url=%s\n' "$x402_evaluate_url"
   } >> "$GITHUB_OUTPUT"
 fi
 
@@ -117,7 +121,8 @@ if [[ -n "${GITHUB_STEP_SUMMARY:-}" ]]; then
     printf '| Allow | %s |\n' "$allow"
     printf '| Review | %s |\n' "$review"
     printf '| Deny | %s |\n\n' "$deny"
-    printf '[Inspect the paid evaluator or package](https://agent-commerce-guard.vercel.app/buy).\n'
+    printf '[Buy the private local package for 1 USDC](%s) | [Use the paid x402 evaluator](%s)\n' \
+      "$checkout_url" "$x402_evaluate_url"
   } >> "$GITHUB_STEP_SUMMARY"
 fi
 
