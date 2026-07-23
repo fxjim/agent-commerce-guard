@@ -38,6 +38,20 @@ https://agent-commerce-guard.vercel.app/agent.json
 https://agent-commerce-guard.vercel.app/.well-known/agent.json
 ```
 
+Install the approval-gated buyer skill from either owned discovery origin:
+
+```bash
+npx skills add https://agent-commerce-guard.vercel.app --skill buy-agent-commerce-guard
+npx skills add https://fxjim.github.io/agent-commerce-guard --skill buy-agent-commerce-guard
+```
+
+Buyer skill discovery:
+
+```text
+https://agent-commerce-guard.vercel.app/.well-known/skills/index.json
+https://fxjim.github.io/agent-commerce-guard/.well-known/skills/index.json
+```
+
 ## Buy With Base MCP
 
 Base MCP purchase recipe:

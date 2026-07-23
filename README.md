@@ -14,7 +14,7 @@ Install the free public buyer workflow for Codex, Claude Code, Cursor, and other
 Agent Skills-compatible assistants:
 
 ```bash
-npx skills add fxjim/agent-commerce-guard --skill buy-agent-commerce-guard
+npx skills add https://agent-commerce-guard.vercel.app --skill buy-agent-commerce-guard
 ```
 
 The skill preflights the public offer and requires explicit approval before any
@@ -66,6 +66,8 @@ The launch pass is available for `1 USDC` on Base.
 - GitHub Pages Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/base-mcp.json
 - GitHub Pages well-known Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json
 - Public buyer skill: https://github.com/fxjim/agent-commerce-guard/tree/main/skills/buy-agent-commerce-guard
+- Canonical buyer-skill index: https://agent-commerce-guard.vercel.app/.well-known/skills/index.json
+- GitHub Pages buyer-skill index: https://fxjim.github.io/agent-commerce-guard/.well-known/skills/index.json
 - Canonical Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
 - Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 - Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
