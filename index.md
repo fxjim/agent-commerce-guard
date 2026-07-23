@@ -8,6 +8,7 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 
 - Live product: https://agent-commerce-guard.vercel.app
 - Base checkout: https://agent-commerce-guard.vercel.app/pay
+- Base Account checkout: the official `/pay` page leads with a user-confirmed 1 USDC payment and verifies the returned transaction server-side before unlock.
 - Checkout alias: https://agent-commerce-guard.vercel.app/checkout
 - Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
 - Success unlock page: https://agent-commerce-guard.vercel.app/success?tx={tx}

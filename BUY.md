@@ -85,14 +85,25 @@ npx awal@2.0.3 x402 pay https://agent-commerce-guard.vercel.app/api/x402-evaluat
 npx awal@2.0.3 x402 pay https://agent-commerce-guard.vercel.app/api/x402-download --max-amount 1000000
 ```
 
-## Manual Base Payment
+## Pay With Base Account
+
+The official checkout leads with the Base Account payment control for a one-tap
+1 USDC payment on Base mainnet. Review and confirm the payment in Base Account;
+the package unlocks only after the returned transaction is verified server-side.
+
+```text
+https://agent-commerce-guard.vercel.app/pay
+https://agent-commerce-guard.vercel.app/checkout
+```
+
+## Browser Wallet Or Manual Base Payment
 
 - Chain: Base mainnet, chain id `8453`
 - Token: USDC, `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`
 - Amount: `1 USDC`
 - Receiver: `0xc356556Bc6025aA3536df188BD72A5F4E0fE214f`
 
-Pay with a browser wallet:
+Pay with a browser wallet or open the exact payment URI:
 
 ```text
 https://agent-commerce-guard.vercel.app/pay

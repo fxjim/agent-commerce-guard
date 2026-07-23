@@ -64,6 +64,7 @@ Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
 The Base Launch Pass costs 1 USDC on Base mainnet.
 
+- Base Account checkout: https://agent-commerce-guard.vercel.app/pay leads with the official Base Account control for a user-confirmed 1 USDC payment; the returned transaction is verified server-side before unlock.
 - Receiver: 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f
 - USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
 - Chain ID: 8453

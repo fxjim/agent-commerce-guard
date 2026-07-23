@@ -66,5 +66,14 @@
     "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
     "githubPagesWellKnownUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
   },
-  "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
+  "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
+  "baseAccountCheckout": {
+    "available": true,
+    "checkoutUrl": "https://agent-commerce-guard.vercel.app/pay",
+    "amountUsdc": "1.00",
+    "currency": "USDC",
+    "network": "Base mainnet",
+    "requiresUserConfirmation": true,
+    "serverSideVerificationRequired": true
+  }
 }

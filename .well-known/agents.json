@@ -168,7 +168,16 @@
     "paymentRequestQr": "https://agent-commerce-guard.vercel.app/qr",
     "canonicalPaymentRequestQr": "https://agent-commerce-guard.vercel.app/payment-request.svg",
     "successPage": "https://agent-commerce-guard.vercel.app/success",
-    "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
+    "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
+    "baseAccountCheckout": {
+      "available": true,
+      "checkoutUrl": "https://agent-commerce-guard.vercel.app/pay",
+      "amountUsdc": "1.00",
+      "currency": "USDC",
+      "network": "Base mainnet",
+      "requiresUserConfirmation": true,
+      "serverSideVerificationRequired": true
+    }
   },
   "inboundAgentHandoff": {
     "audience": "Autonomous agents, TaskMarket runners, and GitHub contributors responding to the launch/support issue.",

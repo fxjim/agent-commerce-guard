@@ -92,7 +92,16 @@
       "launchDiscussionUrl": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
       "verifyUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}",
       "downloadUrlTemplate": "https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}",
-      "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
+      "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
+      "baseAccountCheckout": {
+        "available": true,
+        "checkoutUrl": "https://agent-commerce-guard.vercel.app/pay",
+        "amountUsdc": "1.00",
+        "currency": "USDC",
+        "network": "Base mainnet",
+        "requiresUserConfirmation": true,
+        "serverSideVerificationRequired": true
+      }
     },
     {
       "id": "x402-agent-download",

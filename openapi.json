@@ -587,6 +587,9 @@
             "format": "uri-template",
             "example": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
             "description": "Post-payment success page URL template. Replace {tx} with the Base transaction hash to verify payment and unlock the paid package."
+          },
+          "baseAccountCheckout": {
+            "$ref": "#/components/schemas/BaseAccountCheckout"
           }
         }
       },
@@ -805,6 +808,9 @@
               "paymentUri": {
                 "type": "string",
                 "description": "EIP-681 ERC-20 transfer URI for exact 1 USDC on Base."
+              },
+              "baseAccountCheckout": {
+                "$ref": "#/components/schemas/BaseAccountCheckout"
               }
             }
           },
@@ -938,6 +944,49 @@
             "type": "string",
             "format": "uri",
             "example": "https://agent-commerce-guard.vercel.app/.well-known/license.md"
+          }
+        }
+      },
+      "BaseAccountCheckout": {
+        "type": "object",
+        "required": [
+          "available",
+          "checkoutUrl",
+          "amountUsdc",
+          "currency",
+          "network",
+          "requiresUserConfirmation",
+          "serverSideVerificationRequired"
+        ],
+        "properties": {
+          "available": {
+            "type": "boolean",
+            "const": true
+          },
+          "checkoutUrl": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/pay"
+          },
+          "amountUsdc": {
+            "type": "string",
+            "const": "1.00"
+          },
+          "currency": {
+            "type": "string",
+            "const": "USDC"
+          },
+          "network": {
+            "type": "string",
+            "const": "Base mainnet"
+          },
+          "requiresUserConfirmation": {
+            "type": "boolean",
+            "const": true
+          },
+          "serverSideVerificationRequired": {
+            "type": "boolean",
+            "const": true
           }
         }
       }

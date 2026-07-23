@@ -26,7 +26,7 @@ npx skills add https://agent-commerce-guard.vercel.app --skill buy-agent-commerc
 ```
 
 The skill preflights the public offer and requires explicit approval before any
-Base MCP, x402, browser-wallet, or manual payment. Its source is available at
+Base Account, Base MCP, x402, browser-wallet, or manual payment. Its source is available at
 [`skills/buy-agent-commerce-guard/SKILL.md`](./skills/buy-agent-commerce-guard/SKILL.md).
 Its indexed directory page is available on
 [skills.sh](https://www.skills.sh/fxjim/agent-commerce-guard/buy-agent-commerce-guard).
@@ -41,6 +41,7 @@ The launch pass is available for `1 USDC` on Base.
 - GitHub Pages launch page: https://fxjim.github.io/agent-commerce-guard/
 - Public Gist buyer brief: https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb
 - Short Base checkout: https://agent-commerce-guard.vercel.app/pay
+- One-tap Base Account checkout: the official `/pay` page leads with a user-confirmed 1 USDC Base Account payment and verifies the returned transaction server-side before unlock.
 - Checkout alias: https://agent-commerce-guard.vercel.app/checkout
 - Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
 - Success unlock page: https://agent-commerce-guard.vercel.app/success?tx={tx}
@@ -119,7 +120,7 @@ The launch pass is available for `1 USDC` on Base.
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
-- Package unlock: pay with a browser wallet or paste the Base transaction hash after manual payment.
+- Package unlock: pay with Base Account or a browser wallet, or paste the Base transaction hash after manual payment.
 - Current paid package shasum: `c67fb09bd83da591c58ae5fae002a6a59557fc97`
 
 ## What It Includes
@@ -161,7 +162,7 @@ Agent commerce is moving faster than agent governance. This tool blocks or escal
 ## Agent Buyer Flow
 
 1. Read `https://agent-commerce-guard.vercel.app/offer.json`.
-2. Open `https://agent-commerce-guard.vercel.app/pay` and send `1 USDC` on Base mainnet.
+2. Open `https://agent-commerce-guard.vercel.app/pay` and use the official Base Account control to review and confirm `1 USDC` on Base mainnet.
 3. Or load `https://agent-commerce-guard.vercel.app/base-mcp.json` in an authorized Base MCP assistant, read `https://agent-commerce-guard.vercel.app/pay.json` for the exact manual Base payment request, or scan `https://agent-commerce-guard.vercel.app/qr`.
 4. Verify the transaction at `/verify?tx={tx}`, `/success?tx={tx}`, or `/api/base-payment-status?tx={tx}`.
 5. Download the package from `/success?tx={tx}` or `/api/base-download?tx={tx}`.

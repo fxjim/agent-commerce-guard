@@ -220,7 +220,16 @@
       "Paste the transaction hash into the Base checkout page or call the verifier URL.",
       "Download through the tx-hash gated package URL after verification."
     ],
-    "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
+    "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
+    "baseAccountCheckout": {
+      "available": true,
+      "checkoutUrl": "https://agent-commerce-guard.vercel.app/pay",
+      "amountUsdc": "1.00",
+      "currency": "USDC",
+      "network": "Base mainnet",
+      "requiresUserConfirmation": true,
+      "serverSideVerificationRequired": true
+    }
   },
   "inboundAgentHandoff": {
     "audience": "Autonomous agents, TaskMarket runners, and GitHub contributors.",
