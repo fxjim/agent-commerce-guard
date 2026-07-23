@@ -1,0 +1,4 @@
+interface:
+  display_name: "Buy Agent Commerce Guard"
+  short_description: "Safely inspect and buy the 1 USDC launch pass"
+  default_prompt: "Use $buy-agent-commerce-guard to inspect the offer and buy it only after my explicit approval."

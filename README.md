@@ -8,6 +8,21 @@ Agent Commerce Guard is a local-first CLI and skill pack for builders adding x40
 
 Use the GitHub Sponsor button or the Base payment page to buy the `1 USDC` launch pass.
 
+## Install The Buyer Skill
+
+Install the free public buyer workflow for Codex, Claude Code, Cursor, and other
+Agent Skills-compatible assistants:
+
+```bash
+npx skills add fxjim/agent-commerce-guard --skill buy-agent-commerce-guard
+```
+
+The skill preflights the public offer and requires explicit approval before any
+Base MCP, x402, browser-wallet, or manual payment. Its source is available at
+[`skills/buy-agent-commerce-guard/SKILL.md`](./skills/buy-agent-commerce-guard/SKILL.md).
+The paid product package remains available only after a verified `1 USDC`
+payment.
+
 ## Launch Pass
 
 The launch pass is available for `1 USDC` on Base.
@@ -50,6 +65,7 @@ The launch pass is available for `1 USDC` on Base.
 - Well-known Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/.well-known/base-mcp.json
 - GitHub Pages Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/base-mcp.json
 - GitHub Pages well-known Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json
+- Public buyer skill: https://github.com/fxjim/agent-commerce-guard/tree/main/skills/buy-agent-commerce-guard
 - Canonical Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
 - Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 - Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
@@ -109,6 +125,7 @@ The launch pass is available for `1 USDC` on Base.
 - Machine-readable Base USDC payment request with an EIP-681 transfer URI.
 - Machine-readable payment metadata advertises both `/verify?tx={tx}` and `/success?tx={tx}` as post-payment unlock pages.
 - Product-specific Base MCP purchase recipe with exact chain, token, receiver, amount, and explicit approval constraints.
+- Free installable buyer skill with preflight, approval, verification, and unlock steps.
 - Scan-to-pay SVG QR for mobile wallet payment.
 - Homepage buyer-command section with exact x402 inspect/pay commands and copy buttons.
 - Social preview image wired into OG/Twitter/schema metadata.

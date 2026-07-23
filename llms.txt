@@ -65,6 +65,8 @@ Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 Agent x402 paid evaluation: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 Hosted demo endpoint: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 GitHub launch repo: https://github.com/fxjim/agent-commerce-guard
+Public buyer skill: https://github.com/fxjim/agent-commerce-guard/tree/main/skills/buy-agent-commerce-guard
+Buyer skill install command: npx skills add fxjim/agent-commerce-guard --skill buy-agent-commerce-guard
 Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
@@ -94,6 +96,7 @@ The Base Launch Pass costs 1 USDC on Base mainnet.
 - x402 discovery tags: agent-commerce, agent-safety, agent-workflow, workflow-validation, command-risk, destructive-actions, wallet-spend, approval-gates, guardrails, autonomous-agents, codex, x402
 - Free demo responses include `purchase`, `purchaseGuideUrl`, and `nextActions` with exact x402 inspect/pay commands. The demo still does not echo submitted action text.
 - Base MCP buyers can load https://agent-commerce-guard.vercel.app/base-mcp.json or its GitHub Pages mirror for a natural-language purchase prompt with exact payment and explicit approval constraints.
+- Agent Skills-compatible buyers can install `buy-agent-commerce-guard` from https://github.com/fxjim/agent-commerce-guard/tree/main/skills/buy-agent-commerce-guard for an approval-gated preflight, purchase, verification, and unlock workflow.
 - Purchase questions and x402 integration support: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion and product context: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
