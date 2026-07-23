@@ -1,0 +1,41 @@
+name: Action smoke test
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - action.yml
+      - scripts/run-action.sh
+      - examples/github-actions/**
+      - .github/workflows/action-smoke.yml
+  pull_request:
+    paths:
+      - action.yml
+      - scripts/run-action.sh
+      - examples/github-actions/**
+      - .github/workflows/action-smoke.yml
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: guard
+        uses: ./
+        with:
+          manifest: examples/github-actions/actions.json
+          fail-on: review
+      - name: Assert decision counts
+        env:
+          ACG_ALLOW: ${{ steps.guard.outputs.allow }}
+          ACG_REVIEW: ${{ steps.guard.outputs.review }}
+          ACG_DENY: ${{ steps.guard.outputs.deny }}
+        run: |
+          test "$ACG_ALLOW" = "1"
+          test "$ACG_REVIEW" = "0"
+          test "$ACG_DENY" = "0"

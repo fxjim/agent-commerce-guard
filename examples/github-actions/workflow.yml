@@ -1,0 +1,18 @@
+name: Agent commerce preflight
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: fxjim/agent-commerce-guard@v1
+        with:
+          manifest: agent-commerce-actions.json
+          fail-on: deny

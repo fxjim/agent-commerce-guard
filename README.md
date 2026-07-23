@@ -33,6 +33,28 @@ Its indexed directory page is available on
 The paid product package remains available only after a verified `1 USDC`
 payment.
 
+## GitHub Action
+
+Run the free hosted policy preflight in an `ubuntu-latest` workflow:
+
+```yaml
+- uses: fxjim/agent-commerce-guard@v1
+  with:
+    manifest: agent-commerce-actions.json
+    fail-on: deny
+```
+
+The manifest may be a single action, an action array, or an object with an
+`actions` array. The Action sends at most five actions and 20 KB to the public
+hosted evaluator, prints sanitized decisions, and can fail on denied actions or
+actions requiring review. It rejects obvious secret-bearing JSON keys before
+the request.
+
+Do not submit secrets, private source, credentials, or sensitive customer data.
+Use the paid local package when an action manifest cannot leave the runner.
+See [`examples/github-actions/`](./examples/github-actions/) for a complete
+workflow and harmless example manifest.
+
 ## Launch Pass
 
 The launch pass is available for `1 USDC` on Base.
@@ -118,6 +140,7 @@ The launch pass is available for `1 USDC` on Base.
 - Social preview image: https://agent-commerce-guard.vercel.app/og-image.png
 - Robots/sitemap discovery: https://agent-commerce-guard.vercel.app/robots.txt
 - Hosted demo: https://agent-commerce-guard.vercel.app/api/demo-evaluate
+- Free GitHub Action: ./action.yml
 - Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Public launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 - Package unlock: pay with Base Account or a browser wallet, or paste the Base transaction hash after manual payment.
@@ -132,6 +155,7 @@ The launch pass is available for `1 USDC` on Base.
 - Local HTTP evaluator.
 - Vercel-gated download flow.
 - Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
+- Free GitHub Action for CI policy preflight with local secret-key rejection and configurable failure behavior.
 - Demo responses include paid purchase metadata and exact x402 next-action commands.
 - Agent/plugin manifests for coding-agent, OpenAPI, x402, and LLM discovery.
 - Copy-paste purchase guides for x402 agents and manual Base buyers.

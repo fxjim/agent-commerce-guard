@@ -1,0 +1,11 @@
+{
+  "actions": [
+    {
+      "id": "read-service-status",
+      "actor": "github-actions",
+      "action": "Read the public Agent Commerce Guard service status",
+      "target": "https://agent-commerce-guard.vercel.app/status.json",
+      "readOnly": true
+    }
+  ]
+}

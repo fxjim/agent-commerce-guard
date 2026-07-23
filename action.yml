@@ -1,0 +1,39 @@
+name: Agent Commerce Guard Preflight
+description: Evaluate up to five planned autonomous-agent actions before they run.
+author: fxjim
+
+inputs:
+  manifest:
+    description: Path to a JSON action manifest in the checked-out repository.
+    required: true
+    default: agent-commerce-actions.json
+  fail-on:
+    description: Fail on deny, review, or never. Defaults to deny.
+    required: false
+    default: deny
+
+outputs:
+  allow:
+    description: Number of actions allowed by the policy evaluator.
+    value: ${{ steps.evaluate.outputs.allow }}
+  review:
+    description: Number of actions requiring review.
+    value: ${{ steps.evaluate.outputs.review }}
+  deny:
+    description: Number of actions denied.
+    value: ${{ steps.evaluate.outputs.deny }}
+
+runs:
+  using: composite
+  steps:
+    - id: evaluate
+      name: Evaluate action manifest
+      shell: bash
+      env:
+        ACG_MANIFEST: ${{ inputs.manifest }}
+        ACG_FAIL_ON: ${{ inputs.fail-on }}
+      run: '"$GITHUB_ACTION_PATH/scripts/run-action.sh"'
+
+branding:
+  icon: shield
+  color: blue
