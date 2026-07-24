@@ -25,9 +25,9 @@ tested without writing a manifest first.
 | Execution | Hosted evaluator, up to 5 actions / 20 KB | Local CLI, HTTP evaluator, skills, policies, and templates |
 | Price | Free | 1 USDC on Base |
 
-The checkout links to the full sample report and support before payment, then
-verifies the Base USDC transaction server-side before unlocking the private
-package.
+The checkout links to the full sample report, Base MCP purchase recipe, and
+support before payment, then verifies the Base USDC transaction server-side
+before unlocking the private package.
 
 The public package proof shows the exact CLI report format and file inventory
 before payment. Canonical tests compare the samples to the current policy
