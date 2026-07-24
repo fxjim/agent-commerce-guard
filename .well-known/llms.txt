@@ -52,6 +52,8 @@ Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 Agent x402 paid evaluation: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 Hosted demo endpoint: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 Policy-only free review endpoint: https://agent-commerce-guard.vercel.app/api/policy-review
+Policy-only remote MCP server: https://agent-commerce-guard.vercel.app/api/mcp
+MCP Registry metadata: https://agent-commerce-guard.vercel.app/server.json
 GitHub launch repo: https://github.com/fxjim/agent-commerce-guard
 Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2

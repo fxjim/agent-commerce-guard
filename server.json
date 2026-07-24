@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.fxjim/agent-commerce-guard",
+  "title": "Agent Commerce Guard",
+  "description": "Policy-only approval and evidence review for AI-agent commerce actions.",
+  "repository": {
+    "url": "https://github.com/fxjim/agent-commerce-guard",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agent-commerce-guard.vercel.app/api/mcp"
+    }
+  ]
+}

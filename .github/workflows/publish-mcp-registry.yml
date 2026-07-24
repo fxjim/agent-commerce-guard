@@ -1,0 +1,66 @@
+name: Publish MCP Registry
+
+on:
+  push:
+    tags:
+      - "mcp-server-v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Validate remote MCP endpoint
+        run: |
+          response="$(
+            curl --fail --silent --show-error \
+              --request POST \
+              --header 'Content-Type: application/json' \
+              --header 'Accept: application/json, text/event-stream' \
+              --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"mcp-registry-publish","version":"1.0.0"}}}' \
+              https://agent-commerce-guard.vercel.app/api/mcp
+          )"
+          jq -e '
+            .result.serverInfo.name == "agent-commerce-guard" and
+            .result.serverInfo.version == "1.0.0"
+          ' <<<"$response"
+
+      - name: Validate Registry metadata
+        run: |
+          response="$(
+            curl --fail --silent --show-error \
+              --request POST \
+              --header 'Content-Type: application/json' \
+              --data-binary @server.json \
+              https://registry.modelcontextprotocol.io/v0.1/validate
+          )"
+          jq -e '.valid == true and (.issues | length) == 0' <<<"$response"
+
+      - name: Install MCP publisher
+        env:
+          MCP_PUBLISHER_VERSION: v1.7.9
+          MCP_PUBLISHER_SHA256: ab128162b0616090b47cf245afe0a23f3ef08936fdce19074f5ba0a4469281ac
+        run: |
+          asset="mcp-publisher_linux_amd64.tar.gz"
+          curl --fail --location --silent --show-error \
+            --output "$asset" \
+            "https://github.com/modelcontextprotocol/registry/releases/download/${MCP_PUBLISHER_VERSION}/${asset}"
+          echo "${MCP_PUBLISHER_SHA256}  ${asset}" | sha256sum --check
+          tar xzf "$asset" mcp-publisher
+          ./mcp-publisher --version
+
+      - name: Authenticate to MCP Registry
+        run: ./mcp-publisher login github-oidc
+
+      - name: Publish remote server
+        run: ./mcp-publisher publish

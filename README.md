@@ -55,6 +55,20 @@ The
 [official Awesome Copilot review](https://github.com/github/awesome-copilot/issues/2413)
 is ready for review after passing its automated quality gates.
 
+## Remote MCP Server
+
+Connect an MCP client to the public, stateless Streamable HTTP endpoint:
+
+```text
+https://agent-commerce-guard.vercel.app/api/mcp
+```
+
+The server exposes one read-only, non-destructive tool,
+`review_agent_commerce_actions`. It accepts up to five non-sensitive public
+actions and 20 KB, returns decisions and required evidence, and does not
+execute, pay, sign, deploy, post, or include purchase instructions in tool
+output. Registry metadata is available in [`server.json`](./server.json).
+
 ## Install The Buyer Skill
 
 Install the free public buyer workflow for Codex, Claude Code, Cursor, and other
