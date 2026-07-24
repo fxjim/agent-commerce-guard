@@ -13,6 +13,10 @@ Agent Commerce Guard is a local-first CLI and skill pack for builders adding x40
 [Add the GitHub Action](#github-action) |
 [Buy the private package for 1 USDC](https://agent-commerce-guard.vercel.app/pay)
 
+The live evaluator includes one-click presets for wallet spend, production
+deploys, token launches, and marketplace jobs, so each decision path can be
+tested without writing a manifest first.
+
 | | Free hosted preflight | Private local package |
 | --- | --- | --- |
 | Best for | Public CI action manifests | Private or sensitive agent workflows |
@@ -171,6 +175,7 @@ The launch pass is available for `1 USDC` on Base.
 - Local HTTP evaluator.
 - Vercel-gated download flow.
 - Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
+- One-click hosted demo presets for wallet spend, production deploys, token launches, and marketplace jobs.
 - Free GitHub Action for CI policy preflight with local secret-key rejection and configurable failure behavior.
 - Demo responses include paid purchase metadata and exact x402 next-action commands.
 - Agent/plugin manifests for coding-agent, OpenAPI, x402, and LLM discovery.

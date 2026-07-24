@@ -4,6 +4,8 @@ Agent Commerce Guard is a 1 USDC Base launch pass for AI-agent commerce approval
 
 Use it before an autonomous agent spends money, calls x402 services, deploys publicly, launches tokens, posts socially, edits billing or production state, runs destructive commands, or touches credentials.
 
+Try the free evaluator at https://agent-commerce-guard.vercel.app/#demo. Its one-click presets cover wallet spend, production deploys, token launches, and marketplace jobs before a buyer writes a custom manifest.
+
 ## Buy The Launch Pass
 
 - Live product: https://agent-commerce-guard.vercel.app
@@ -82,6 +84,7 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 - Approval log and launch checklist templates.
 - Local HTTP evaluator.
 - Hosted demo endpoint with sanitized responses.
+- One-click hosted demo presets for four representative commerce-risk paths.
 - Base tx-hash gated download flow.
 
 ## Public Links
