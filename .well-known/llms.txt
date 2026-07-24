@@ -10,19 +10,16 @@ Offer manifest: https://agent-commerce-guard.vercel.app/offer.json
 Well-known offer manifest: https://agent-commerce-guard.vercel.app/.well-known/agent-commerce-guard.json
 Well-known offer alias: https://agent-commerce-guard.vercel.app/.well-known/offer.json
 Well-known LLM summary: https://agent-commerce-guard.vercel.app/.well-known/llms.txt
-GitHub Pages offer mirror: https://fxjim.github.io/agent-commerce-guard/offer.json
-GitHub Pages well-known offer mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/agent-commerce-guard.json
-GitHub Pages well-known offer alias: https://fxjim.github.io/agent-commerce-guard/.well-known/offer.json
 OpenAPI spec: https://agent-commerce-guard.vercel.app/openapi.json
 Well-known OpenAPI spec: https://agent-commerce-guard.vercel.app/.well-known/openapi.json
-GitHub Pages OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json
-GitHub Pages well-known OpenAPI mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/openapi.json
 Agents manifest: https://agent-commerce-guard.vercel.app/agents.json
+Well-known agents manifest: https://agent-commerce-guard.vercel.app/.well-known/agents.json
 Singular agent manifest alias: https://agent-commerce-guard.vercel.app/agent.json
 Well-known singular agent manifest alias: https://agent-commerce-guard.vercel.app/.well-known/agent.json
-Well-known agents manifest: https://agent-commerce-guard.vercel.app/.well-known/agents.json
-GitHub Pages singular agent manifest: https://fxjim.github.io/agent-commerce-guard/agent.json
-GitHub Pages well-known singular agent manifest: https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json
+Well-known Agent Skills index: https://agent-commerce-guard.vercel.app/.well-known/skills/index.json
+Hosted free evaluator skill: https://agent-commerce-guard.vercel.app/.well-known/skills/try-agent-commerce-guard/SKILL.md
+Hosted buyer skill: https://agent-commerce-guard.vercel.app/.well-known/skills/buy-agent-commerce-guard/SKILL.md
+Skills directory listing: https://skills.sh/fxjim/agent-commerce-guard/buy-agent-commerce-guard
 Coding-agent quickstart: https://agent-commerce-guard.vercel.app/AGENTS.md
 Short purchase guide: https://agent-commerce-guard.vercel.app/buy
 Purchase guide: https://agent-commerce-guard.vercel.app/BUY.md
@@ -31,38 +28,31 @@ Well-known purchase guide: https://agent-commerce-guard.vercel.app/.well-known/p
 Short x402 manifest: https://agent-commerce-guard.vercel.app/x402
 Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
 Well-known package metadata: https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json
-GitHub Pages package metadata: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
-GitHub Pages well-known package metadata: https://fxjim.github.io/agent-commerce-guard/.well-known/package-metadata.json
 Service status: https://agent-commerce-guard.vercel.app/status.json
 Well-known service status: https://agent-commerce-guard.vercel.app/.well-known/status.json
-GitHub Pages service status: https://fxjim.github.io/agent-commerce-guard/status.json
-GitHub Pages well-known service status: https://fxjim.github.io/agent-commerce-guard/.well-known/status.json
-GitHub Pages pay page: https://fxjim.github.io/agent-commerce-guard/pay/
-GitHub Pages short payment request mirror: https://fxjim.github.io/agent-commerce-guard/pay.json
-GitHub Pages well-known short payment request mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/pay.json
+License terms: https://agent-commerce-guard.vercel.app/license
+License source: https://agent-commerce-guard.vercel.app/LICENSE.md
+Well-known license terms: https://agent-commerce-guard.vercel.app/.well-known/license.md
 Short Base USDC payment request: https://agent-commerce-guard.vercel.app/pay.json
 Well-known short payment request: https://agent-commerce-guard.vercel.app/.well-known/pay.json
+Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/base-mcp.json
+Well-known Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/.well-known/base-mcp.json
 Base USDC payment request: https://agent-commerce-guard.vercel.app/payment-request.json
 Well-known payment request: https://agent-commerce-guard.vercel.app/.well-known/payment-request.json
 Short Base USDC payment QR code: https://agent-commerce-guard.vercel.app/qr
 Base USDC payment QR code: https://agent-commerce-guard.vercel.app/payment-request.svg
 Well-known payment QR code: https://agent-commerce-guard.vercel.app/.well-known/payment-request.svg
 AI plugin manifest: https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json
-GitHub Pages AI plugin mirror: https://fxjim.github.io/agent-commerce-guard/.well-known/ai-plugin.json
 Short Base payment page: https://agent-commerce-guard.vercel.app/pay
 Checkout alias: https://agent-commerce-guard.vercel.app/checkout
+Base Account checkout: /pay leads with the official Base Account control for a user-confirmed 1 USDC payment on Base mainnet; the returned transaction is verified server-side before unlock.
 Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
 Base payment page: https://agent-commerce-guard.vercel.app/base-pay
 Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 Agent x402 paid evaluation: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 Hosted demo endpoint: https://agent-commerce-guard.vercel.app/api/demo-evaluate
+Policy-only free review endpoint: https://agent-commerce-guard.vercel.app/api/policy-review
 GitHub launch repo: https://github.com/fxjim/agent-commerce-guard
-Public free evaluator skill: https://github.com/fxjim/agent-commerce-guard/tree/main/skills/try-agent-commerce-guard
-Public buyer skill: https://github.com/fxjim/agent-commerce-guard/tree/main/skills/buy-agent-commerce-guard
-Canonical skill index: https://agent-commerce-guard.vercel.app/.well-known/skills/index.json
-GitHub Pages skill index: https://fxjim.github.io/agent-commerce-guard/.well-known/skills/index.json
-Free evaluator skill install command: npx skills add https://agent-commerce-guard.vercel.app --skill try-agent-commerce-guard
-Buyer skill install command: npx skills add https://agent-commerce-guard.vercel.app --skill buy-agent-commerce-guard
 Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
@@ -70,8 +60,8 @@ Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
 The Base Launch Pass costs 1 USDC on Base mainnet.
 
-- Base Account checkout: https://agent-commerce-guard.vercel.app/pay leads with the official Base Account control for a user-confirmed 1 USDC payment; the returned transaction is verified server-side before unlock.
-- Agent Skills-compatible users can install `try-agent-commerce-guard` for free hosted preflight of non-sensitive manifests, then use the local package for private workflows.
+- Install the free evaluator skill: `npx skills add https://agent-commerce-guard.vercel.app --skill try-agent-commerce-guard`
+- Install the buyer skill: `npx skills add https://agent-commerce-guard.vercel.app --skill buy-agent-commerce-guard`
 - Receiver: 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f
 - USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
 - Chain ID: 8453
@@ -80,17 +70,16 @@ The Base Launch Pass costs 1 USDC on Base mainnet.
 - Verify a payment API: https://agent-commerce-guard.vercel.app/api/base-payment-status?tx={tx}
 - Download after payment: https://agent-commerce-guard.vercel.app/api/base-download?tx={tx}
 - Verify the current paid package artifact: https://agent-commerce-guard.vercel.app/package-metadata.json
-- Verify the current paid package artifact through the GitHub Pages mirror: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
 - Preflight current service status: https://agent-commerce-guard.vercel.app/status.json
-- Preflight current service status through the GitHub Pages mirror: https://fxjim.github.io/agent-commerce-guard/status.json
 - EIP-681 payment URI: ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xc356556Bc6025aA3536df188BD72A5F4E0fE214f&uint256=1000000
-- x402 payment URI field: https://agent-commerce-guard.vercel.app/x402.json exposes paymentUri at the manifest top level and per paid resource.
 - QR code for the same payment URI: https://agent-commerce-guard.vercel.app/qr
 - Agent-native x402 paid download: https://agent-commerce-guard.vercel.app/api/x402-download
 - Agent-native x402 paid policy evaluation: POST https://agent-commerce-guard.vercel.app/api/x402-evaluate with JSON `{ "action": { ... } }` or `{ "actions": [ ... ] }`
 - x402 amount: 1000000 atomic USDC
 - x402 discovery tags: agent-commerce, agent-safety, agent-workflow, workflow-validation, command-risk, destructive-actions, wallet-spend, approval-gates, guardrails, autonomous-agents, codex, x402
 - Free demo responses include `purchase`, `purchaseGuideUrl`, and `nextActions` with exact x402 inspect/pay commands. The demo still does not echo submitted action text.
+- Policy-only review responses contain only `summary` and sanitized `results`; they omit purchase links, payment instructions, commands, and submitted action text.
+- Base MCP buyers can load https://agent-commerce-guard.vercel.app/base-mcp.json for a natural-language purchase prompt that requires exact chain, token, receiver, amount, and explicit approval checks.
 - Purchase questions and x402 integration support: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Launch discussion and product context: https://github.com/fxjim/agent-commerce-guard/discussions/2
 

@@ -5,6 +5,10 @@
     "version": "0.1.0",
     "summary": "x402-paid agent workflow validator and command-risk scorer.",
     "description": "Agent Commerce Guard provides x402-paid policy evaluation and package download endpoints for autonomous agents that need approval gates before wallet spend, deployments, social posts, token launches, destructive commands, or credential access.",
+    "x-guidance": "Use POST /api/x402-evaluate to review an agent action or workflow against approval gates. Use GET /api/x402-download to purchase the installable CLI, policy templates, examples, and buyer skill. Both paid routes cost exactly 1 USD in Base USDC and return an x402 payment challenge before access.",
+    "contact": {
+      "url": "https://github.com/fxjim/agent-commerce-guard/issues/1"
+    },
     "license": {
       "name": "Agent Commerce Guard Commercial Evaluation License",
       "url": "https://agent-commerce-guard.vercel.app/LICENSE.md"
@@ -16,6 +20,9 @@
       "url": "https://agent-commerce-guard.vercel.app"
     }
   ],
+  "x-agentcash-guidance": {
+    "llmsTxtUrl": "https://agent-commerce-guard.vercel.app/llms.txt"
+  },
   "tags": [
     {
       "name": "x402",
@@ -42,11 +49,24 @@
     "/api/x402-evaluate": {
       "post": {
         "operationId": "paidPolicyEvaluation",
+        "security": [],
         "tags": [
           "x402"
         ],
         "summary": "Run a paid policy evaluation.",
         "description": "Returns a sanitized policy decision for one action or a batch of up to 10 actions after a 1 USDC x402 payment on Base mainnet.",
+        "x-payment-info": {
+          "price": {
+            "mode": "fixed",
+            "currency": "USD",
+            "amount": "1.000000"
+          },
+          "protocols": [
+            {
+              "x402": {}
+            }
+          ]
+        },
         "x-x402": {
           "scheme": "exact",
           "network": "eip155:8453",
@@ -57,6 +77,18 @@
           "facilitator": "https://facilitator.xpay.sh",
           "discovery": "https://agent-commerce-guard.vercel.app/.well-known/x402"
         },
+        "parameters": [
+          {
+            "name": "PAYMENT-SIGNATURE",
+            "in": "header",
+            "required": false,
+            "description": "Base64-encoded x402 v2 PaymentPayload supplied when retrying the request after receiving a 402 challenge.",
+            "schema": {
+              "type": "string",
+              "contentEncoding": "base64"
+            }
+          }
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -96,6 +128,15 @@
         "responses": {
           "200": {
             "description": "Paid policy evaluation result.",
+            "headers": {
+              "PAYMENT-RESPONSE": {
+                "description": "Base64-encoded x402 v2 SettlementResponse describing the payment result.",
+                "schema": {
+                  "type": "string",
+                  "contentEncoding": "base64"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -106,6 +147,15 @@
           },
           "402": {
             "description": "Payment required. The response includes x402 payment requirements in the PAYMENT-REQUIRED header.",
+            "headers": {
+              "PAYMENT-REQUIRED": {
+                "description": "Base64-encoded x402 v2 PaymentRequired challenge.",
+                "schema": {
+                  "type": "string",
+                  "contentEncoding": "base64"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -123,11 +173,24 @@
     "/api/x402-download": {
       "get": {
         "operationId": "paidPackageDownload",
+        "security": [],
         "tags": [
           "x402"
         ],
         "summary": "Download the paid package after x402 payment.",
         "description": "Streams the Agent Commerce Guard tarball after a 1 USDC x402 payment on Base mainnet.",
+        "x-payment-info": {
+          "price": {
+            "mode": "fixed",
+            "currency": "USD",
+            "amount": "1.000000"
+          },
+          "protocols": [
+            {
+              "x402": {}
+            }
+          ]
+        },
         "x-x402": {
           "scheme": "exact",
           "network": "eip155:8453",
@@ -138,9 +201,30 @@
           "facilitator": "https://facilitator.xpay.sh",
           "discovery": "https://agent-commerce-guard.vercel.app/.well-known/x402"
         },
+        "parameters": [
+          {
+            "name": "PAYMENT-SIGNATURE",
+            "in": "header",
+            "required": false,
+            "description": "Base64-encoded x402 v2 PaymentPayload supplied when retrying the request after receiving a 402 challenge.",
+            "schema": {
+              "type": "string",
+              "contentEncoding": "base64"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Paid package tarball.",
+            "headers": {
+              "PAYMENT-RESPONSE": {
+                "description": "Base64-encoded x402 v2 SettlementResponse describing the payment result.",
+                "schema": {
+                  "type": "string",
+                  "contentEncoding": "base64"
+                }
+              }
+            },
             "content": {
               "application/gzip": {
                 "schema": {
@@ -152,6 +236,15 @@
           },
           "402": {
             "description": "Payment required. The response includes x402 payment requirements in the PAYMENT-REQUIRED header.",
+            "headers": {
+              "PAYMENT-REQUIRED": {
+                "description": "Base64-encoded x402 v2 PaymentRequired challenge.",
+                "schema": {
+                  "type": "string",
+                  "contentEncoding": "base64"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -166,6 +259,7 @@
     "/api/package-metadata": {
       "get": {
         "operationId": "packageMetadata",
+        "security": [],
         "tags": [
           "artifact"
         ],
@@ -191,6 +285,7 @@
     "/api/status": {
       "get": {
         "operationId": "serviceStatus",
+        "security": [],
         "tags": [
           "status"
         ],
@@ -216,6 +311,7 @@
     "/api/demo-evaluate": {
       "get": {
         "operationId": "demoPolicyEvaluation",
+        "security": [],
         "tags": [
           "demo"
         ],
@@ -235,6 +331,7 @@
       },
       "post": {
         "operationId": "demoPolicyEvaluationForInput",
+        "security": [],
         "tags": [
           "demo"
         ],
@@ -263,9 +360,50 @@
         }
       }
     },
+    "/api/policy-review": {
+      "post": {
+        "operationId": "policyOnlyReview",
+        "security": [],
+        "tags": [
+          "demo",
+          "security"
+        ],
+        "summary": "Review a small non-sensitive action manifest without purchase metadata.",
+        "description": "Returns sanitized policy decisions and required evidence only. The response omits purchase links, payment instructions, commands, and submitted action text. Do not submit secrets or private data. Requests are limited to five actions and 20000 bytes.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActionEvaluationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sanitized policy-only evaluation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PolicyReviewResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request or request limits exceeded."
+          },
+          "405": {
+            "description": "Method not allowed."
+          }
+        }
+      }
+    },
     "/api/base-payment-status": {
       "get": {
         "operationId": "basePaymentStatus",
+        "security": [],
         "tags": [
           "base-checkout"
         ],
@@ -405,6 +543,83 @@
           }
         }
       },
+      "PolicyReviewResponse": {
+        "type": "object",
+        "required": [
+          "summary",
+          "results"
+        ],
+        "properties": {
+          "summary": {
+            "type": "object",
+            "required": [
+              "allow",
+              "review",
+              "deny"
+            ],
+            "properties": {
+              "allow": {
+                "type": "integer"
+              },
+              "review": {
+                "type": "integer"
+              },
+              "deny": {
+                "type": "integer"
+              }
+            }
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "decision",
+                "severity",
+                "findings",
+                "reasons",
+                "requiredEvidence"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "review",
+                    "deny"
+                  ]
+                },
+                "severity": {
+                  "type": "string"
+                },
+                "findings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                },
+                "reasons": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "requiredEvidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "PurchaseInfo": {
         "type": "object",
         "properties": {
@@ -443,6 +658,9 @@
           "checkoutAlias": {
             "type": "string",
             "format": "uri"
+          },
+          "baseAccountCheckout": {
+            "$ref": "#/components/schemas/BaseAccountCheckout"
           },
           "shortPaymentRequest": {
             "type": "string",
@@ -486,12 +704,7 @@
           },
           "successPageUrlTemplate": {
             "type": "string",
-            "format": "uri-template",
-            "example": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
-            "description": "Post-payment success page URL template. Replace {tx} with the Base transaction hash to verify payment and unlock the paid package."
-          },
-          "baseAccountCheckout": {
-            "$ref": "#/components/schemas/BaseAccountCheckout"
+            "format": "uri-template"
           }
         }
       },
@@ -602,9 +815,7 @@
           },
           "successPageUrlTemplate": {
             "type": "string",
-            "format": "uri-template",
-            "example": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
-            "description": "Post-payment success page URL template. Replace {tx} with the Base transaction hash to verify payment and unlock the paid package."
+            "example": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
           }
         }
       },
@@ -695,6 +906,9 @@
                 "type": "string",
                 "format": "uri"
               },
+              "baseAccountCheckout": {
+                "$ref": "#/components/schemas/BaseAccountCheckout"
+              },
               "shortPaymentRequest": {
                 "type": "string",
                 "format": "uri"
@@ -710,9 +924,6 @@
               "paymentUri": {
                 "type": "string",
                 "description": "EIP-681 ERC-20 transfer URI for exact 1 USDC on Base."
-              },
-              "baseAccountCheckout": {
-                "$ref": "#/components/schemas/BaseAccountCheckout"
               }
             }
           },
@@ -733,9 +944,7 @@
               },
               "successPageUrlTemplate": {
                 "type": "string",
-                "format": "uri-template",
-                "example": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
-                "description": "Post-payment success page URL template. Replace {tx} with the Base transaction hash to verify payment and unlock the paid package."
+                "format": "uri-template"
               }
             }
           },
@@ -816,39 +1025,6 @@
           }
         }
       },
-      "LicenseInfo": {
-        "type": "object",
-        "required": [
-          "name",
-          "type",
-          "url"
-        ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "example": "Agent Commerce Guard Commercial Evaluation License"
-          },
-          "type": {
-            "type": "string",
-            "example": "commercial-evaluation"
-          },
-          "url": {
-            "type": "string",
-            "format": "uri",
-            "example": "https://agent-commerce-guard.vercel.app/LICENSE.md"
-          },
-          "cleanUrl": {
-            "type": "string",
-            "format": "uri",
-            "example": "https://agent-commerce-guard.vercel.app/license"
-          },
-          "wellKnownUrl": {
-            "type": "string",
-            "format": "uri",
-            "example": "https://agent-commerce-guard.vercel.app/.well-known/license.md"
-          }
-        }
-      },
       "BaseAccountCheckout": {
         "type": "object",
         "required": [
@@ -889,6 +1065,39 @@
           "serverSideVerificationRequired": {
             "type": "boolean",
             "const": true
+          }
+        }
+      },
+      "LicenseInfo": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "url"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Agent Commerce Guard Commercial Evaluation License"
+          },
+          "type": {
+            "type": "string",
+            "example": "commercial-evaluation"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/LICENSE.md"
+          },
+          "cleanUrl": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/license"
+          },
+          "wellKnownUrl": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/.well-known/license.md"
           }
         }
       }

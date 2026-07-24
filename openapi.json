@@ -360,6 +360,46 @@
         }
       }
     },
+    "/api/policy-review": {
+      "post": {
+        "operationId": "policyOnlyReview",
+        "security": [],
+        "tags": [
+          "demo",
+          "security"
+        ],
+        "summary": "Review a small non-sensitive action manifest without purchase metadata.",
+        "description": "Returns sanitized policy decisions and required evidence only. The response omits purchase links, payment instructions, commands, and submitted action text. Do not submit secrets or private data. Requests are limited to five actions and 20000 bytes.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActionEvaluationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sanitized policy-only evaluation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PolicyReviewResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request or request limits exceeded."
+          },
+          "405": {
+            "description": "Method not allowed."
+          }
+        }
+      }
+    },
     "/api/base-payment-status": {
       "get": {
         "operationId": "basePaymentStatus",
@@ -503,6 +543,83 @@
           }
         }
       },
+      "PolicyReviewResponse": {
+        "type": "object",
+        "required": [
+          "summary",
+          "results"
+        ],
+        "properties": {
+          "summary": {
+            "type": "object",
+            "required": [
+              "allow",
+              "review",
+              "deny"
+            ],
+            "properties": {
+              "allow": {
+                "type": "integer"
+              },
+              "review": {
+                "type": "integer"
+              },
+              "deny": {
+                "type": "integer"
+              }
+            }
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "decision",
+                "severity",
+                "findings",
+                "reasons",
+                "requiredEvidence"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "review",
+                    "deny"
+                  ]
+                },
+                "severity": {
+                  "type": "string"
+                },
+                "findings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                },
+                "reasons": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "requiredEvidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "PurchaseInfo": {
         "type": "object",
         "properties": {
@@ -541,6 +658,9 @@
           "checkoutAlias": {
             "type": "string",
             "format": "uri"
+          },
+          "baseAccountCheckout": {
+            "$ref": "#/components/schemas/BaseAccountCheckout"
           },
           "shortPaymentRequest": {
             "type": "string",
@@ -584,12 +704,7 @@
           },
           "successPageUrlTemplate": {
             "type": "string",
-            "format": "uri-template",
-            "example": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
-            "description": "Post-payment success page URL template. Replace {tx} with the Base transaction hash to verify payment and unlock the paid package."
-          },
-          "baseAccountCheckout": {
-            "$ref": "#/components/schemas/BaseAccountCheckout"
+            "format": "uri-template"
           }
         }
       },
@@ -700,9 +815,7 @@
           },
           "successPageUrlTemplate": {
             "type": "string",
-            "format": "uri-template",
-            "example": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
-            "description": "Post-payment success page URL template. Replace {tx} with the Base transaction hash to verify payment and unlock the paid package."
+            "example": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
           }
         }
       },
@@ -793,6 +906,9 @@
                 "type": "string",
                 "format": "uri"
               },
+              "baseAccountCheckout": {
+                "$ref": "#/components/schemas/BaseAccountCheckout"
+              },
               "shortPaymentRequest": {
                 "type": "string",
                 "format": "uri"
@@ -808,9 +924,6 @@
               "paymentUri": {
                 "type": "string",
                 "description": "EIP-681 ERC-20 transfer URI for exact 1 USDC on Base."
-              },
-              "baseAccountCheckout": {
-                "$ref": "#/components/schemas/BaseAccountCheckout"
               }
             }
           },
@@ -831,9 +944,7 @@
               },
               "successPageUrlTemplate": {
                 "type": "string",
-                "format": "uri-template",
-                "example": "https://agent-commerce-guard.vercel.app/success?tx={tx}",
-                "description": "Post-payment success page URL template. Replace {tx} with the Base transaction hash to verify payment and unlock the paid package."
+                "format": "uri-template"
               }
             }
           },
@@ -914,39 +1025,6 @@
           }
         }
       },
-      "LicenseInfo": {
-        "type": "object",
-        "required": [
-          "name",
-          "type",
-          "url"
-        ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "example": "Agent Commerce Guard Commercial Evaluation License"
-          },
-          "type": {
-            "type": "string",
-            "example": "commercial-evaluation"
-          },
-          "url": {
-            "type": "string",
-            "format": "uri",
-            "example": "https://agent-commerce-guard.vercel.app/LICENSE.md"
-          },
-          "cleanUrl": {
-            "type": "string",
-            "format": "uri",
-            "example": "https://agent-commerce-guard.vercel.app/license"
-          },
-          "wellKnownUrl": {
-            "type": "string",
-            "format": "uri",
-            "example": "https://agent-commerce-guard.vercel.app/.well-known/license.md"
-          }
-        }
-      },
       "BaseAccountCheckout": {
         "type": "object",
         "required": [
@@ -987,6 +1065,39 @@
           "serverSideVerificationRequired": {
             "type": "boolean",
             "const": true
+          }
+        }
+      },
+      "LicenseInfo": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "url"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Agent Commerce Guard Commercial Evaluation License"
+          },
+          "type": {
+            "type": "string",
+            "example": "commercial-evaluation"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/LICENSE.md"
+          },
+          "cleanUrl": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/license"
+          },
+          "wellKnownUrl": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://agent-commerce-guard.vercel.app/.well-known/license.md"
           }
         }
       }

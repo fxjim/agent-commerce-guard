@@ -1,0 +1,23 @@
+{
+  "name": "agent-commerce-guard",
+  "description": "Preflight small, non-sensitive AI-agent commerce action manifests with an approval-gate evaluator before execution.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jimmy Holman",
+    "url": "https://github.com/fxjim"
+  },
+  "repository": "https://github.com/fxjim/agent-commerce-guard",
+  "homepage": "https://agent-commerce-guard.vercel.app",
+  "license": "MIT",
+  "keywords": [
+    "agent-security",
+    "approval-gates",
+    "commerce",
+    "copilot",
+    "x402",
+    "base"
+  ],
+  "skills": [
+    "./skills/agent-commerce-action-review/"
+  ]
+}
