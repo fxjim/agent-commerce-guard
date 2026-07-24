@@ -67,7 +67,7 @@ The server exposes one read-only, non-destructive tool,
 `review_agent_commerce_actions`. It accepts up to five non-sensitive public
 actions and 20 KB, returns decisions and required evidence, and does not
 execute, pay, sign, deploy, post, or include purchase instructions in tool
-output. MCP `1.1.0` also exposes one public JSON resource,
+output. MCP `1.1.1` also exposes one public JSON resource,
 `https://agent-commerce-guard.vercel.app/offer.json`, so clients can discover
 the exact 1 USDC Base offer without mixing purchase data into policy-tool
 results. Registry metadata is available in [`server.json`](./server.json).

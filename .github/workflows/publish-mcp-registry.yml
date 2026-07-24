@@ -22,6 +22,7 @@ jobs:
 
       - name: Validate remote MCP endpoint
         run: |
+          expected_version="$(jq --raw-output '.version' server.json)"
           response="$(
             curl --fail --silent --show-error \
               --request POST \
@@ -30,9 +31,9 @@ jobs:
               --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"mcp-registry-publish","version":"1.0.0"}}}' \
               https://agent-commerce-guard.vercel.app/api/mcp
           )"
-          jq -e '
+          jq -e --arg expected_version "$expected_version" '
             .result.serverInfo.name == "agent-commerce-guard" and
-            .result.serverInfo.version == "1.0.0"
+            .result.serverInfo.version == $expected_version
           ' <<<"$response"
 
       - name: Validate Registry metadata
