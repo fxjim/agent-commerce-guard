@@ -6,6 +6,41 @@
     <title>Agent Commerce Guard</title>
     <meta name="description" content="1 USDC Base/x402 launch pass for AI-agent commerce approval gates.">
     <link rel="canonical" href="https://fxjim.github.io/agent-commerce-guard/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["SoftwareApplication", "Product"],
+        "name": "Agent Commerce Guard",
+        "url": "https://fxjim.github.io/agent-commerce-guard/",
+        "image": "https://agent-commerce-guard.vercel.app/og-image.png",
+        "description": "Approval gates and receipts for AI agents before wallet spend, paid API calls, public deploys, token launches, social posts, destructive commands, or credential access.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS, Linux, Windows",
+        "offers": {
+          "@type": "Offer",
+          "price": "1.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://agent-commerce-guard.vercel.app/pay",
+          "category": "DigitalProduct",
+          "paymentAccepted": "USDC on Base mainnet"
+        },
+        "potentialAction": [
+          {
+            "@type": "BuyAction",
+            "target": "https://agent-commerce-guard.vercel.app/pay",
+            "price": "1.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "ViewAction",
+            "target": "https://agent-commerce-guard.vercel.app/sample-report",
+            "name": "Inspect a full sample CLI report"
+          }
+        ],
+        "softwareHelp": "https://github.com/fxjim/agent-commerce-guard/issues/1"
+      }
+    </script>
     <style>
       :root {
         color-scheme: light;
@@ -161,6 +196,7 @@
             <a class="button" href="./mcp/">MCP Setup</a>
             <a class="button" href="https://agent-commerce-guard.vercel.app/buy">Purchase Guide</a>
             <a class="button" href="https://agent-commerce-guard.vercel.app/verify">Verify Tx</a>
+            <a class="button" href="https://github.com/fxjim/agent-commerce-guard/issues/1">Support</a>
             <a class="button" href="https://gist.github.com/fxjim/869cada8014dc52f520cccbce655f0eb">Gist Brief</a>
           </div>
         </div>

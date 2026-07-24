@@ -12,7 +12,9 @@ Preview the regression-tested CLI report and tarball-backed file inventory at ht
 
 - Live product: https://agent-commerce-guard.vercel.app
 - Base checkout: https://agent-commerce-guard.vercel.app/pay
-- Base Account checkout: the official `/pay` page leads with a user-confirmed 1 USDC payment and verifies the returned transaction server-side before unlock.
+- Base Account checkout: the official `/pay` page leads with a user-confirmed 1 USDC payment, links to proof and support before payment, and verifies the returned transaction server-side before unlock.
+- Full sample CLI report: https://agent-commerce-guard.vercel.app/sample-report
+- Support: https://github.com/fxjim/agent-commerce-guard/issues/1
 - Checkout alias: https://agent-commerce-guard.vercel.app/checkout
 - Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
 - Success unlock page: https://agent-commerce-guard.vercel.app/success?tx={tx}

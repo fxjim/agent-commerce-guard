@@ -12,7 +12,8 @@ Agent Commerce Guard is a local-first CLI and skill pack for builders adding x40
 [Try the free evaluator](https://agent-commerce-guard.vercel.app/#demo) |
 [Preview the paid package](https://fxjim.github.io/agent-commerce-guard/sample/) |
 [Add the GitHub Action](#github-action) |
-[Buy the private package for 1 USDC](https://agent-commerce-guard.vercel.app/pay)
+[Buy the private package for 1 USDC](https://agent-commerce-guard.vercel.app/pay) |
+[Get support](https://github.com/fxjim/agent-commerce-guard/issues/1)
 
 The live evaluator includes one-click presets for wallet spend, production
 deploys, token launches, and marketplace jobs, so each decision path can be
@@ -24,8 +25,9 @@ tested without writing a manifest first.
 | Execution | Hosted evaluator, up to 5 actions / 20 KB | Local CLI, HTTP evaluator, skills, policies, and templates |
 | Price | Free | 1 USDC on Base |
 
-The checkout verifies the Base USDC transaction server-side before unlocking
-the private package.
+The checkout links to the full sample report and support before payment, then
+verifies the Base USDC transaction server-side before unlocking the private
+package.
 
 The public package proof shows the exact CLI report format and file inventory
 before payment. Canonical tests compare the samples to the current policy
