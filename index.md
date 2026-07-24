@@ -85,6 +85,7 @@ Both paid x402 endpoints return Base-mainnet `exact` payment requirements for `1
 - Local HTTP evaluator.
 - Hosted demo endpoint with sanitized responses.
 - One-click hosted demo presets for four representative commerce-risk paths.
+- Free evaluator skill for non-sensitive manifests with a private-workflow handoff to the local package.
 - Base tx-hash gated download flow.
 
 ## Public Links

@@ -57,6 +57,12 @@ Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 Agent x402 paid evaluation: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 Hosted demo endpoint: https://agent-commerce-guard.vercel.app/api/demo-evaluate
 GitHub launch repo: https://github.com/fxjim/agent-commerce-guard
+Public free evaluator skill: https://github.com/fxjim/agent-commerce-guard/tree/main/skills/try-agent-commerce-guard
+Public buyer skill: https://github.com/fxjim/agent-commerce-guard/tree/main/skills/buy-agent-commerce-guard
+Canonical skill index: https://agent-commerce-guard.vercel.app/.well-known/skills/index.json
+GitHub Pages skill index: https://fxjim.github.io/agent-commerce-guard/.well-known/skills/index.json
+Free evaluator skill install command: npx skills add https://agent-commerce-guard.vercel.app --skill try-agent-commerce-guard
+Buyer skill install command: npx skills add https://agent-commerce-guard.vercel.app --skill buy-agent-commerce-guard
 Pinned launch/support issue: https://github.com/fxjim/agent-commerce-guard/issues/1
 Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 
@@ -65,6 +71,7 @@ Launch discussion: https://github.com/fxjim/agent-commerce-guard/discussions/2
 The Base Launch Pass costs 1 USDC on Base mainnet.
 
 - Base Account checkout: https://agent-commerce-guard.vercel.app/pay leads with the official Base Account control for a user-confirmed 1 USDC payment; the returned transaction is verified server-side before unlock.
+- Agent Skills-compatible users can install `try-agent-commerce-guard` for free hosted preflight of non-sensitive manifests, then use the local package for private workflows.
 - Receiver: 0xc356556Bc6025aA3536df188BD72A5F4E0fE214f
 - USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
 - Chain ID: 8453

@@ -26,6 +26,19 @@ tested without writing a manifest first.
 The checkout verifies the Base USDC transaction server-side before unlocking
 the private package.
 
+## Install The Free Evaluator Skill
+
+Install a non-executing preflight workflow for public, non-sensitive action
+manifests:
+
+```bash
+npx skills add https://github.com/fxjim/agent-commerce-guard --skill try-agent-commerce-guard
+```
+
+The skill enforces the hosted-data boundary, evaluates at most five actions and
+20 KB through the free endpoint, and hands private workflows to the paid local
+package without initiating a payment.
+
 ## Install The Buyer Skill
 
 Install the free public buyer workflow for Codex, Claude Code, Cursor, and other
@@ -118,6 +131,7 @@ The launch pass is available for `1 USDC` on Base.
 - Well-known Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/.well-known/base-mcp.json
 - GitHub Pages Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/base-mcp.json
 - GitHub Pages well-known Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json
+- Public free evaluator skill: https://github.com/fxjim/agent-commerce-guard/tree/main/skills/try-agent-commerce-guard
 - Public buyer skill: https://github.com/fxjim/agent-commerce-guard/tree/main/skills/buy-agent-commerce-guard
 - Canonical buyer-skill index: https://agent-commerce-guard.vercel.app/.well-known/skills/index.json
 - GitHub Pages buyer-skill index: https://fxjim.github.io/agent-commerce-guard/.well-known/skills/index.json
@@ -176,6 +190,7 @@ The launch pass is available for `1 USDC` on Base.
 - Vercel-gated download flow.
 - Hosted demo endpoint that returns sanitized decisions without echoing submitted action text.
 - One-click hosted demo presets for wallet spend, production deploys, token launches, and marketplace jobs.
+- Free evaluator skill for non-sensitive action manifests with an explicit local-package handoff.
 - Free GitHub Action for CI policy preflight with local secret-key rejection and configurable failure behavior.
 - Demo responses include paid purchase metadata and exact x402 next-action commands.
 - Agent/plugin manifests for coding-agent, OpenAPI, x402, and LLM discovery.

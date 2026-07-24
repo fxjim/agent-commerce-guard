@@ -38,6 +38,13 @@ https://agent-commerce-guard.vercel.app/agent.json
 https://agent-commerce-guard.vercel.app/.well-known/agent.json
 ```
 
+Install the free evaluator skill for non-sensitive manifests:
+
+```bash
+npx skills add https://agent-commerce-guard.vercel.app --skill try-agent-commerce-guard
+npx skills add https://fxjim.github.io/agent-commerce-guard --skill try-agent-commerce-guard
+```
+
 Install the approval-gated buyer skill from either owned discovery origin:
 
 ```bash

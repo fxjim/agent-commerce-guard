@@ -1,6 +1,14 @@
 {
   "skills": [
     {
+      "name": "try-agent-commerce-guard",
+      "description": "Evaluate non-sensitive AI-agent commerce action manifests with the free Agent Commerce Guard hosted policy endpoint. Use when a user wants to preflight wallet spend, paid API calls, deployments, token launches, marketplace jobs, social actions, destructive commands, billing changes, or credential access before execution. Never send secrets, private source, customer data, or credentials to the hosted demo.",
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
       "name": "buy-agent-commerce-guard",
       "description": "Inspect and buy the Agent Commerce Guard 1 USDC Base launch pass through an authorized Base MCP wallet, x402 client, or browser wallet. Use when a user wants to evaluate the offer, confirm payment details, purchase the package, verify a Base transaction, or unlock the paid download. Require explicit approval before any payment and never request wallet secrets.",
       "files": [

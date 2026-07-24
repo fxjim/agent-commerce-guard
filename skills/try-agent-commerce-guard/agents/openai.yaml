@@ -1,0 +1,4 @@
+interface:
+  display_name: "Try Agent Commerce Guard"
+  short_description: "Preflight public agent actions for free"
+  default_prompt: "Use $try-agent-commerce-guard to preflight these non-sensitive agent actions without executing them."

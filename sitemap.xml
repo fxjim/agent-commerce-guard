@@ -82,6 +82,12 @@
     <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/skills/index.json</loc>
   </url>
   <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/skills/try-agent-commerce-guard/SKILL.md</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/skills/try-agent-commerce-guard/agents/openai.yaml</loc>
+  </url>
+  <url>
     <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/skills/buy-agent-commerce-guard/SKILL.md</loc>
   </url>
   <url>
