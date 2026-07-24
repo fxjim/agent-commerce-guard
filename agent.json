@@ -9,6 +9,7 @@
   "support": "https://github.com/fxjim/agent-commerce-guard/issues/1",
   "discussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
   "protocols": [
+    "mcp",
     "x402",
     "openapi",
     "llms.txt"
@@ -17,6 +18,10 @@
   "openapi": "https://agent-commerce-guard.vercel.app/openapi.json",
   "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
   "wellKnownLlms": "https://agent-commerce-guard.vercel.app/.well-known/llms.txt",
+  "mcpEndpoint": "https://agent-commerce-guard.vercel.app/api/mcp",
+  "mcpInstallGuide": "https://agent-commerce-guard.vercel.app/mcp",
+  "mcpRegistry": "https://registry.modelcontextprotocol.io/?search=agent-commerce-guard",
+  "githubPagesMcpInstallGuide": "https://fxjim.github.io/agent-commerce-guard/mcp/",
   "offer": "https://agent-commerce-guard.vercel.app/offer.json",
   "purchase": "https://agent-commerce-guard.vercel.app/purchase.json",
   "paymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
@@ -35,6 +40,9 @@
   "wellKnownX402Json": "https://agent-commerce-guard.vercel.app/.well-known/x402.json",
   "packageMetadataUrl": "https://agent-commerce-guard.vercel.app/package-metadata.json",
   "wellKnownPackageMetadataUrl": "https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json",
+  "sampleReportUrl": "https://agent-commerce-guard.vercel.app/sample-report",
+  "sampleReportJsonUrl": "https://agent-commerce-guard.vercel.app/sample-report.json",
+  "githubPagesSampleUrl": "https://fxjim.github.io/agent-commerce-guard/sample/",
   "aiPlugin": "https://agent-commerce-guard.vercel.app/.well-known/ai-plugin.json",
   "supportIssue": "https://github.com/fxjim/agent-commerce-guard/issues/1",
   "launchDiscussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
@@ -241,5 +249,14 @@
   "wellKnownStatusUrl": "https://agent-commerce-guard.vercel.app/.well-known/status.json",
   "githubPagesStatusUrl": "https://fxjim.github.io/agent-commerce-guard/status.json",
   "githubPagesWellKnownStatusUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json",
+  "license": {
+    "name": "Agent Commerce Guard Commercial Evaluation License",
+    "type": "commercial-evaluation",
+    "url": "https://agent-commerce-guard.vercel.app/LICENSE.md",
+    "cleanUrl": "https://agent-commerce-guard.vercel.app/license",
+    "wellKnownUrl": "https://agent-commerce-guard.vercel.app/.well-known/license.md",
+    "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
+    "githubPagesWellKnownUrl": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
+  },
   "successPageUrlTemplate": "https://agent-commerce-guard.vercel.app/success?tx={tx}"
 }

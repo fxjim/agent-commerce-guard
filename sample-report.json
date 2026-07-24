@@ -1,0 +1,107 @@
+{
+  "summary": {
+    "allow": 2,
+    "review": 0,
+    "deny": 2
+  },
+  "results": [
+    {
+      "id": "wallet-status",
+      "decision": "allow",
+      "severity": "low",
+      "findings": [],
+      "reasons": [
+        "Read-only or dry-run action; safe to run when output avoids secrets."
+      ],
+      "requiredEvidence": [],
+      "action": {
+        "id": "wallet-status",
+        "actor": "codex",
+        "action": "Read-only wallet balance check for Base account",
+        "target": "Base wallet",
+        "readOnly": true,
+        "raw": "wallet-status codex Read-only wallet balance check for Base account Base wallet"
+      }
+    },
+    {
+      "id": "x402-paid-api",
+      "decision": "deny",
+      "severity": "high",
+      "findings": [
+        {
+          "id": "financial_action",
+          "severity": "high",
+          "reason": "Action declares a non-zero amount or budget."
+        }
+      ],
+      "reasons": [
+        "Action declares a non-zero amount or budget.",
+        "Missing explicit approval for financial_action."
+      ],
+      "requiredEvidence": [
+        "Exact outbound action text or command",
+        "User/operator approval timestamp",
+        "Rollback or kill-switch path",
+        "Wallet/account/profile summary before and after",
+        "Spend, slippage, or downside scenario"
+      ],
+      "action": {
+        "id": "x402-paid-api",
+        "actor": "codex",
+        "action": "Register a paid x402 endpoint and charge $0.25 per evaluation",
+        "target": "public API",
+        "amountUsd": 0.25,
+        "approved": false,
+        "raw": "x402-paid-api codex Register a paid x402 endpoint and charge $0.25 per evaluation public API"
+      }
+    },
+    {
+      "id": "token-launch",
+      "decision": "deny",
+      "severity": "critical",
+      "findings": [
+        {
+          "id": "token_launch",
+          "severity": "critical",
+          "reason": "Creates or launches a token, which has compliance and reputational risk."
+        }
+      ],
+      "reasons": [
+        "Creates or launches a token, which has compliance and reputational risk.",
+        "Missing explicit approval for token_launch."
+      ],
+      "requiredEvidence": [
+        "Exact outbound action text or command",
+        "User/operator approval timestamp",
+        "Rollback or kill-switch path",
+        "Wallet/account/profile summary before and after",
+        "Spend, slippage, or downside scenario"
+      ],
+      "action": {
+        "id": "token-launch",
+        "actor": "agent",
+        "action": "Launch an agent token for the new product",
+        "target": "Base",
+        "approved": false,
+        "raw": "token-launch agent Launch an agent token for the new product Base"
+      }
+    },
+    {
+      "id": "landing-draft",
+      "decision": "allow",
+      "severity": "low",
+      "findings": [],
+      "reasons": [],
+      "requiredEvidence": [],
+      "action": {
+        "id": "landing-draft",
+        "actor": "codex",
+        "action": "Create local landing page draft",
+        "target": "local files",
+        "readOnly": false,
+        "approved": true,
+        "raw": "landing-draft codex Create local landing page draft local files"
+      }
+    }
+  ]
+}

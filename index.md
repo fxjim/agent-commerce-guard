@@ -6,6 +6,8 @@ Use it before an autonomous agent spends money, calls x402 services, deploys pub
 
 Try the free evaluator at https://agent-commerce-guard.vercel.app/#demo. Its one-click presets cover wallet spend, production deploys, token launches, and marketplace jobs before a buyer writes a custom manifest.
 
+Preview the regression-tested CLI report and tarball-backed file inventory at https://fxjim.github.io/agent-commerce-guard/sample/ before paying.
+
 ## Buy The Launch Pass
 
 - Live product: https://agent-commerce-guard.vercel.app
@@ -68,6 +70,10 @@ Load the product-specific recipe at https://agent-commerce-guard.vercel.app/base
 - OpenAPI spec mirror: https://fxjim.github.io/agent-commerce-guard/openapi.json
 - Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
 - Pages package metadata mirror: https://fxjim.github.io/agent-commerce-guard/package-metadata.json
+- Canonical sample CLI report: https://agent-commerce-guard.vercel.app/sample-report
+- Canonical sample report JSON: https://agent-commerce-guard.vercel.app/sample-report.json
+- Pages package preview: https://fxjim.github.io/agent-commerce-guard/sample/
+- Pages sample report JSON: https://fxjim.github.io/agent-commerce-guard/sample-report.json
 - Service status: https://agent-commerce-guard.vercel.app/status.json
 - Pages service status mirror: https://fxjim.github.io/agent-commerce-guard/status.json
 - Success unlock page: https://agent-commerce-guard.vercel.app/success?tx={tx}

@@ -51,8 +51,16 @@ Base payment page: https://agent-commerce-guard.vercel.app/base-pay
 Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 Agent x402 paid evaluation: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 Hosted demo endpoint: https://agent-commerce-guard.vercel.app/api/demo-evaluate
+Full sample CLI report: https://agent-commerce-guard.vercel.app/sample-report
+Machine-readable sample report: https://agent-commerce-guard.vercel.app/sample-report.json
+GitHub Pages package preview: https://fxjim.github.io/agent-commerce-guard/sample/
+Tarball-backed package contents and artifact proof: https://agent-commerce-guard.vercel.app/package-metadata.json
 Policy-only free review endpoint: https://agent-commerce-guard.vercel.app/api/policy-review
 Policy-only remote MCP server: https://agent-commerce-guard.vercel.app/api/mcp
+MCP client setup guide: https://agent-commerce-guard.vercel.app/mcp
+GitHub Pages MCP setup mirror: https://fxjim.github.io/agent-commerce-guard/mcp/
+Codex MCP command: `codex mcp add agent-commerce-guard --url https://agent-commerce-guard.vercel.app/api/mcp`
+Claude Code MCP command: `claude mcp add --transport http agent-commerce-guard https://agent-commerce-guard.vercel.app/api/mcp`
 MCP offer resource: https://agent-commerce-guard.vercel.app/offer.json
 MCP Registry metadata: https://agent-commerce-guard.vercel.app/server.json
 Official MCP Registry listing: https://registry.modelcontextprotocol.io/?search=agent-commerce-guard

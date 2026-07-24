@@ -10,6 +10,37 @@
     "shasumAlgorithm": "sha1",
     "verifyCommand": "shasum agent-commerce-guard-0.1.0.tgz"
   },
+  "packagePreview": {
+    "description": "Public proof of the CLI decision format and the buyer-relevant files inside the paid archive.",
+    "sampleReportMarkdown": "https://agent-commerce-guard.vercel.app/sample-report",
+    "sampleReportJson": "https://agent-commerce-guard.vercel.app/sample-report.json",
+    "githubPagesUrl": "https://fxjim.github.io/agent-commerce-guard/sample/",
+    "githubPagesSampleReportMarkdown": "https://fxjim.github.io/agent-commerce-guard/sample-report.md",
+    "githubPagesSampleReportJson": "https://fxjim.github.io/agent-commerce-guard/sample-report.json",
+    "contents": {
+      "runtime": [
+        "bin/agent-commerce-guard.js",
+        "src/cli.js",
+        "src/policy.js",
+        "src/report.js",
+        "src/scanner.js",
+        "src/server.js"
+      ],
+      "templates": [
+        "templates/action-manifest.example.json",
+        "templates/policy.example.json",
+        "templates/approval-log.md",
+        "templates/launch-checklist.md"
+      ],
+      "skills": [
+        "skills/agent-commerce-guardrails/SKILL.md"
+      ],
+      "documentation": [
+        "README.md",
+        "LICENSE.md"
+      ]
+    }
+  },
   "license": {
     "name": "Agent Commerce Guard Commercial Evaluation License",
     "type": "commercial-evaluation",
@@ -80,6 +111,11 @@
     "githubPagesWellKnownStatus": "https://fxjim.github.io/agent-commerce-guard/.well-known/status.json",
     "githubPagesAgentJson": "https://fxjim.github.io/agent-commerce-guard/agent.json",
     "githubPagesWellKnownAgentJson": "https://fxjim.github.io/agent-commerce-guard/.well-known/agent.json",
+    "sampleReportMarkdown": "https://agent-commerce-guard.vercel.app/sample-report",
+    "sampleReportJson": "https://agent-commerce-guard.vercel.app/sample-report.json",
+    "githubPagesSample": "https://fxjim.github.io/agent-commerce-guard/sample/",
+    "githubPagesSampleReportMarkdown": "https://fxjim.github.io/agent-commerce-guard/sample-report.md",
+    "githubPagesSampleReportJson": "https://fxjim.github.io/agent-commerce-guard/sample-report.json",
     "githubPagesLicense": "https://fxjim.github.io/agent-commerce-guard/LICENSE.md",
     "githubPagesWellKnownLicense": "https://fxjim.github.io/agent-commerce-guard/.well-known/license.md"
   },

@@ -123,4 +123,13 @@
   <url>
     <loc>https://fxjim.github.io/agent-commerce-guard/.well-known/x402.json</loc>
   </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/sample/</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/sample-report.md</loc>
+  </url>
+  <url>
+    <loc>https://fxjim.github.io/agent-commerce-guard/sample-report.json</loc>
+  </url>
 </urlset>

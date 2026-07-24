@@ -10,6 +10,7 @@ Agent Commerce Guard is a local-first CLI and skill pack for builders adding x40
 [![Agent Skills installs](https://www.skills.sh/b/fxjim/agent-commerce-guard)](https://www.skills.sh/fxjim/agent-commerce-guard/buy-agent-commerce-guard)
 
 [Try the free evaluator](https://agent-commerce-guard.vercel.app/#demo) |
+[Preview the paid package](https://fxjim.github.io/agent-commerce-guard/sample/) |
 [Add the GitHub Action](#github-action) |
 [Buy the private package for 1 USDC](https://agent-commerce-guard.vercel.app/pay)
 
@@ -25,6 +26,14 @@ tested without writing a manifest first.
 
 The checkout verifies the Base USDC transaction server-side before unlocking
 the private package.
+
+The public package proof shows the exact CLI report format and file inventory
+before payment. Canonical tests compare the samples to the current policy
+engine and verify each advertised file against the paid tarball:
+
+- https://agent-commerce-guard.vercel.app/sample-report
+- https://agent-commerce-guard.vercel.app/sample-report.json
+- https://fxjim.github.io/agent-commerce-guard/sample/
 
 ## Install The Free Evaluator Skill
 
@@ -176,6 +185,9 @@ The launch pass is available for `1 USDC` on Base.
 - Short x402 discovery: https://agent-commerce-guard.vercel.app/x402
 - Well-known x402 discovery: https://agent-commerce-guard.vercel.app/.well-known/x402
 - Package metadata: https://agent-commerce-guard.vercel.app/package-metadata.json
+- Sample CLI report: https://agent-commerce-guard.vercel.app/sample-report
+- Machine-readable sample report: https://agent-commerce-guard.vercel.app/sample-report.json
+- GitHub Pages package preview: https://fxjim.github.io/agent-commerce-guard/sample/
 - Well-known package metadata: https://agent-commerce-guard.vercel.app/.well-known/package-metadata.json
 - Service status: https://agent-commerce-guard.vercel.app/status.json
 - Well-known service status: https://agent-commerce-guard.vercel.app/.well-known/status.json
