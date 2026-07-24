@@ -39,6 +39,22 @@ The skill enforces the hosted-data boundary, evaluates at most five actions and
 20 KB through the free endpoint, and hands private workflows to the paid local
 package without initiating a payment.
 
+## GitHub Copilot Plugin
+
+Install the policy-only review plugin directly from GitHub:
+
+```bash
+copilot plugin install fxjim/agent-commerce-guard:plugins/agent-commerce-guard
+```
+
+The plugin's skill uses `/api/policy-review`, returns only decisions and
+required evidence, and includes no checkout or payment links. Its immutable
+`1.0.0` source is tagged
+[`copilot-plugin-v1.0.0`](https://github.com/fxjim/agent-commerce-guard/tree/copilot-plugin-v1.0.0/plugins/agent-commerce-guard).
+The
+[official Awesome Copilot review](https://github.com/github/awesome-copilot/issues/2413)
+is ready for review after passing its automated quality gates.
+
 ## Install The Buyer Skill
 
 Install the free public buyer workflow for Codex, Claude Code, Cursor, and other
@@ -100,6 +116,7 @@ The launch pass is available for `1 USDC` on Base.
 - Checkout alias: https://agent-commerce-guard.vercel.app/checkout
 - Short payment verifier: https://agent-commerce-guard.vercel.app/verify?tx={tx}
 - Success unlock page: https://agent-commerce-guard.vercel.app/success?tx={tx}
+- Policy-only review API: https://agent-commerce-guard.vercel.app/api/policy-review
 - Agent x402 download: https://agent-commerce-guard.vercel.app/api/x402-download
 - Agent x402 evaluation API: https://agent-commerce-guard.vercel.app/api/x402-evaluate
 - Agent-readable offer: https://agent-commerce-guard.vercel.app/offer.json
