@@ -68,6 +68,9 @@ The server exposes one read-only, non-destructive tool,
 actions and 20 KB, returns decisions and required evidence, and does not
 execute, pay, sign, deploy, post, or include purchase instructions in tool
 output. Registry metadata is available in [`server.json`](./server.json).
+The official Registry lists
+[`io.github.fxjim/agent-commerce-guard`](https://registry.modelcontextprotocol.io/?search=agent-commerce-guard)
+as an active remote server.
 
 ## Install The Buyer Skill
 
