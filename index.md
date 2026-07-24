@@ -25,6 +25,8 @@ Try the free evaluator at https://agent-commerce-guard.vercel.app/#demo. Its one
 - Base MCP purchase recipe: https://agent-commerce-guard.vercel.app/base-mcp.json
 - Pages Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/base-mcp.json
 - Pages well-known Base MCP purchase recipe: https://fxjim.github.io/agent-commerce-guard/.well-known/base-mcp.json
+- Remote MCP setup: https://agent-commerce-guard.vercel.app/mcp
+- Pages MCP setup mirror: https://fxjim.github.io/agent-commerce-guard/mcp/
 - Short scan-to-pay QR: https://agent-commerce-guard.vercel.app/qr
 - Vercel LLM summary: https://agent-commerce-guard.vercel.app/llms.txt
 - Vercel well-known LLM summary: https://agent-commerce-guard.vercel.app/.well-known/llms.txt

@@ -63,6 +63,34 @@ Connect an MCP client to the public, stateless Streamable HTTP endpoint:
 https://agent-commerce-guard.vercel.app/api/mcp
 ```
 
+Codex:
+
+```bash
+codex mcp add agent-commerce-guard --url https://agent-commerce-guard.vercel.app/api/mcp
+```
+
+Claude Code:
+
+```bash
+claude mcp add --transport http agent-commerce-guard https://agent-commerce-guard.vercel.app/api/mcp
+```
+
+VS Code `mcp.json`:
+
+```json
+{
+  "servers": {
+    "agent-commerce-guard": {
+      "type": "http",
+      "url": "https://agent-commerce-guard.vercel.app/api/mcp"
+    }
+  }
+}
+```
+
+Setup and verification: [Vercel guide](https://agent-commerce-guard.vercel.app/mcp)
+or [GitHub Pages mirror](https://fxjim.github.io/agent-commerce-guard/mcp/).
+
 The server exposes one read-only, non-destructive tool,
 `review_agent_commerce_actions`. It accepts up to five non-sensitive public
 actions and 20 KB, returns decisions and required evidence, and does not

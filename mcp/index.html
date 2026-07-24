@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connect Agent Commerce Guard MCP</title>
+    <meta
+      name="description"
+      content="Copy-ready Codex, Claude Code, and VS Code setup for the policy-only Agent Commerce Guard remote MCP server."
+    >
+    <link rel="canonical" href="https://agent-commerce-guard.vercel.app/mcp">
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f7f8fb;
+        --fg: #17202a;
+        --muted: #53606f;
+        --border: #d8dee8;
+        --accent: #067a68;
+        --code: #101918;
+        --code-fg: #f2f7f5;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111418;
+          --fg: #eef3f8;
+          --muted: #a7b1bd;
+          --border: #2a323d;
+          --accent: #74d8c6;
+          --code: #090d0d;
+          --code-fg: #eef8f5;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+      }
+
+      main {
+        width: min(860px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 64px;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 0 0 14px;
+        font-size: clamp(2rem, 7vw, 4rem);
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.3rem;
+        letter-spacing: 0;
+      }
+
+      p {
+        max-width: 720px;
+        margin: 0 0 18px;
+        color: var(--muted);
+      }
+
+      section {
+        padding: 26px 0;
+        border-top: 1px solid var(--border);
+      }
+
+      pre {
+        margin: 12px 0 0;
+        padding: 18px;
+        overflow-x: auto;
+        border-radius: 6px;
+        color: var(--code-fg);
+        background: var(--code);
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.9rem;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: minmax(130px, 190px) minmax(0, 1fr);
+        gap: 8px 16px;
+        margin: 24px 0 34px;
+      }
+
+      .meta dt {
+        color: var(--muted);
+      }
+
+      .meta dd {
+        margin: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 42px;
+        padding: 0 15px;
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .button.primary {
+        color: #fff;
+        background: #067a68;
+      }
+
+      @media (max-width: 560px) {
+        main {
+          padding-top: 32px;
+        }
+
+        .meta {
+          grid-template-columns: 1fr;
+          gap: 2px;
+        }
+
+        .meta dd {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Connect Agent Commerce Guard MCP</h1>
+      <p>
+        Add the public policy-only server to an MCP client, review proposed
+        commerce actions, and inspect the separate 1 USDC Base offer resource.
+      </p>
+
+      <dl class="meta">
+        <dt>Endpoint</dt>
+        <dd>https://agent-commerce-guard.vercel.app/api/mcp</dd>
+        <dt>Registry name</dt>
+        <dd>io.github.fxjim/agent-commerce-guard</dd>
+        <dt>Version</dt>
+        <dd>1.1.1</dd>
+        <dt>Tool</dt>
+        <dd>review_agent_commerce_actions</dd>
+        <dt>Offer resource</dt>
+        <dd>https://agent-commerce-guard.vercel.app/offer.json</dd>
+      </dl>
+
+      <section>
+        <h2>Codex</h2>
+        <pre><code>codex mcp add agent-commerce-guard --url https://agent-commerce-guard.vercel.app/api/mcp</code></pre>
+      </section>
+
+      <section>
+        <h2>Claude Code</h2>
+        <pre><code>claude mcp add --transport http agent-commerce-guard https://agent-commerce-guard.vercel.app/api/mcp</code></pre>
+      </section>
+
+      <section>
+        <h2>VS Code mcp.json</h2>
+        <pre><code>{
+  "servers": {
+    "agent-commerce-guard": {
+      "type": "http",
+      "url": "https://agent-commerce-guard.vercel.app/api/mcp"
+    }
+  }
+}</code></pre>
+      </section>
+
+      <section>
+        <h2>Safety boundary</h2>
+        <p>
+          The tool is read-only and non-destructive. It returns sanitized
+          policy decisions and cannot sign, send, swap, deploy, publish, or
+          purchase. Payment counts only after onchain Base USDC evidence or the
+          live transaction verifier confirms it.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://agent-commerce-guard.vercel.app/mcp">Open Canonical Guide</a>
+          <a class="button" href="https://registry.modelcontextprotocol.io/?search=agent-commerce-guard">MCP Registry</a>
+          <a class="button" href="https://agent-commerce-guard.vercel.app/pay">1 USDC Checkout</a>
+          <a class="button" href="https://agent-commerce-guard.vercel.app/verify">Verify Payment</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

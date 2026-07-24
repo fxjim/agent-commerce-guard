@@ -9,6 +9,7 @@
   "support": "https://github.com/fxjim/agent-commerce-guard/issues/1",
   "discussion": "https://github.com/fxjim/agent-commerce-guard/discussions/2",
   "protocols": [
+    "mcp",
     "x402",
     "openapi",
     "llms.txt"
@@ -17,6 +18,10 @@
   "openapi": "https://agent-commerce-guard.vercel.app/openapi.json",
   "llms": "https://agent-commerce-guard.vercel.app/llms.txt",
   "wellKnownLlms": "https://agent-commerce-guard.vercel.app/.well-known/llms.txt",
+  "mcpEndpoint": "https://agent-commerce-guard.vercel.app/api/mcp",
+  "mcpInstallGuide": "https://agent-commerce-guard.vercel.app/mcp",
+  "mcpRegistry": "https://registry.modelcontextprotocol.io/?search=agent-commerce-guard",
+  "githubPagesMcpInstallGuide": "https://fxjim.github.io/agent-commerce-guard/mcp/",
   "offer": "https://agent-commerce-guard.vercel.app/offer.json",
   "purchase": "https://agent-commerce-guard.vercel.app/purchase.json",
   "paymentRequest": "https://agent-commerce-guard.vercel.app/payment-request.json",
