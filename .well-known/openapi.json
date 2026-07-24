@@ -408,8 +408,8 @@
           "mcp",
           "security"
         ],
-        "summary": "Use the policy-only Agent Commerce Guard MCP server.",
-        "description": "Stateless Streamable HTTP MCP endpoint exposing one read-only tool: review_agent_commerce_actions. The tool accepts at most five non-sensitive public actions and 20000 bytes, returns decisions and required evidence only, and does not execute, pay, sign, deploy, post, or reveal purchase instructions.",
+        "summary": "Use the Agent Commerce Guard MCP server.",
+        "description": "Stateless Streamable HTTP MCP endpoint exposing one policy-only read-only tool, review_agent_commerce_actions, plus a public offer resource at https://agent-commerce-guard.vercel.app/offer.json. The tool accepts at most five non-sensitive public actions and 20000 bytes, returns decisions and required evidence only, and does not execute, pay, sign, deploy, post, or reveal purchase instructions.",
         "requestBody": {
           "required": true,
           "content": {
